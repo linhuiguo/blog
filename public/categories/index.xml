@@ -2,10 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Categories on 先生靠谱的技术博客</title>
-    <link>https://blog.linhuiguo.pages.dev/categories/</link>
+    <link>https://mr-reliable-blog.pages.dev/categories/</link>
     <description>Recent content in Categories on 先生靠谱的技术博客</description>
     <generator>Hugo</generator>
     <language>zh-CN</language>
-    <atom:link href="https://blog.linhuiguo.pages.dev/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 29 Jun 2026 18:00:00 +0800</lastBuildDate>
+    <atom:link href="https://mr-reliable-blog.pages.dev/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AI 大模型</title>
+      <link>https://mr-reliable-blog.pages.dev/categories/ai-%E5%A4%A7%E6%A8%A1%E5%9E%8B/</link>
+      <pubDate>Mon, 29 Jun 2026 18:00:00 +0800</pubDate>
+      <guid>https://mr-reliable-blog.pages.dev/categories/ai-%E5%A4%A7%E6%A8%A1%E5%9E%8B/</guid>
+      <description></description>
+    </item>
   </channel>
 </rss>
