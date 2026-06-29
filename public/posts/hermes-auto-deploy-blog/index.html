@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="zh" dir="auto" data-theme="dark">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>AI 一句话帮你部署博客：Hugo &#43; GitHub &#43; Cloudflare Pages 完整教程 | 千华落影</title>
+<meta name="keywords" content="AI, Hermes, 博客部署, Cloudflare, Hugo, 教程">
+<meta name="description" content="用 AI 代理（Hermes）一句话完成博客搭建：Hugo &#43; GitHub &#43; Cloudflare Pages，从零到上线全流程。">
+<meta name="author" content="千华落影">
+<link rel="canonical" href="https://0149.cc.cd/posts/hermes-auto-deploy-blog/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.89ca4972ab5e6aaa05e9a0dae0c4bb64b26585bc79e36f5cf33614eea0283abe.css" integrity="sha256-icpJcqteaqoF6aDa4MS7ZLJlhbx5429c8zYU7qAoOr4=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://0149.cc.cd/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://0149.cc.cd/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://0149.cc.cd/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://0149.cc.cd/apple-touch-icon.png">
+<link rel="mask-icon" href="https://0149.cc.cd/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="zh" href="https://0149.cc.cd/posts/hermes-auto-deploy-blog/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "light") {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script><meta property="og:url" content="https://0149.cc.cd/posts/hermes-auto-deploy-blog/">
+  <meta property="og:site_name" content="千华落影">
+  <meta property="og:title" content="AI 一句话帮你部署博客：Hugo &#43; GitHub &#43; Cloudflare Pages 完整教程">
+  <meta property="og:description" content="用 AI 代理（Hermes）一句话完成博客搭建：Hugo &#43; GitHub &#43; Cloudflare Pages，从零到上线全流程。">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2026-06-29T10:00:00+08:00">
+    <meta property="article:modified_time" content="2026-06-29T10:00:00+08:00">
+    <meta property="article:tag" content="AI">
+    <meta property="article:tag" content="Hermes">
+    <meta property="article:tag" content="博客部署">
+    <meta property="article:tag" content="Cloudflare">
+    <meta property="article:tag" content="Hugo">
+    <meta property="article:tag" content="教程">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="AI 一句话帮你部署博客：Hugo &#43; GitHub &#43; Cloudflare Pages 完整教程">
+  <meta name="twitter:description" content="用 AI 代理（Hermes）一句话完成博客搭建：Hugo &#43; GitHub &#43; Cloudflare Pages，从零到上线全流程。">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://0149.cc.cd/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "AI 一句话帮你部署博客：Hugo + GitHub + Cloudflare Pages 完整教程",
+      "item": "https://0149.cc.cd/posts/hermes-auto-deploy-blog/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "AI 一句话帮你部署博客：Hugo + GitHub + Cloudflare Pages 完整教程",
+  "name": "AI 一句话帮你部署博客：Hugo \u002b GitHub \u002b Cloudflare Pages 完整教程",
+  "description": "用 AI 代理（Hermes）一句话完成博客搭建：Hugo + GitHub + Cloudflare Pages，从零到上线全流程。",
+  "keywords": [
+    "AI", "Hermes", "博客部署", "Cloudflare", "Hugo", "教程"
+  ],
+  "articleBody": "前言 本教程记录了用 AI 代理（Hermes）全自动完成博客搭建的全过程。整个流程只需要对 AI 说一句\"帮我部署博客\"，它会自动完成所有操作。\n最终效果：博客地址 www.0149.cc.cd，基于 Hugo + PaperMod 主题，部署在 Cloudflare Pages。\n技术栈 组件 用途 Hugo 静态博客引擎 PaperMod 博客主题（暗黑模式） GitHub 代码托管 Cloudflare Pages 免费部署 0149.cc.cd 自定义域名 第一步：安装 Hugo Hugo 是一个静态网站生成器，速度快、配置简单。\n# 安装 Hugo（需要 Node.js） npm install -g hugo-extended # 验证安装 hugo version # 输出类似：hugo v0.163.3+extended 第二步：创建博客项目 # 创建博客目录 hugo new site blog-site cd blog-site # 安装 PaperMod 主题 git init git submodule add --depth=1 https://github.com/adityatelange/hugo-PaperMod.git themes/PaperMod 第三步：配置博客 创建 hugo.toml 配置文件：\nbaseURL = \"https://www.0149.cc.cd/\" languageCode = \"zh\" defaultContentLanguage = \"zh\" title = \"千华落影\" theme = \"PaperMod\" paginate = 10 [params] author = \"千华落影\" description = \"分享 AI、编程、部署等技术文章\" defaultTheme = \"dark\" ShowReadingTime = true ShowShareButtons = false ShowPostNavLinks = true ShowBreadCrumbs = true ShowCodeCopyButtons = true ShowWordCount = true ShowToc = true [params.homeInfoParams] Title = \"👋 你好，我是千华落影\" Content = \"一个技术博主，分享 AI 大模型、本地部署、编程开发等实用教程。\" [[params.socialIcons]] name = \"github\" url = \"https://github.com/linhuiguo\" 第四步：创建第一篇文章 # 创建文章 hugo new content posts/my-first-post.md 编辑 content/posts/my-first-post.md：\n--- title: \"我的第一篇文章\" date: 2026-06-29T10:00:00+08:00 draft: false tags: [\"博客\", \"教程\"] categories: [\"技术\"] --- ## 开始写内容 这里是文章正文。 第五步：本地预览 # 启动本地服务器 hugo server -D # 浏览器访问 # http://localhost:1313 -D 参数表示包含草稿文章。预览满意后，按 Ctrl+C 停止服务器。\n第六步：推送到 GitHub 6.1 创建 GitHub 仓库 在 GitHub 网页端创建一个新仓库，例如 blog。\n6.2 推送代码 cd blog-site # 初始化 Git git init git add -A git commit -m \"feat: initial blog setup\" # 关联远程仓库 git remote add origin https://github.com/linhuiguo/blog.git # 推送 git push -u origin main 第七步：Cloudflare Pages 部署 7.1 安装 Wrangler CLI Wrangler 是 Cloudflare 的命令行工具。\nnpm install -g wrangler 7.2 登录 Cloudflare wrangler login 会打开浏览器，完成 OAuth 授权。\n7.3 创建 Pages 项目 cd blog-site # 创建 Pages 项目 wrangler pages project create blog --production-branch main 7.4 部署 # 构建 Hugo 站点 hugo # 部署到 Cloudflare Pages wrangler pages deploy public --project-name blog --branch main 部署完成后，会得到一个 xxx.pages.dev 的临时地址。\n7.5 设置 Hugo 版本（重要） Cloudflare Pages 需要知道 Hugo 版本，否则可能构建失败。\n# 在 Cloudflare Pages 控制台设置环境变量： # HUGO_VERSION = 0.163.3 或者通过 CLI：\nwrangler pages deployment create --project-name blog \\ --branch main \\ --env HUGO_VERSION=0.163.3 第八步：绑定自定义域名 8.1 在 Cloudflare Pages 添加域名 # 通过 API 添加自定义域名 curl -X POST \\ -H \"Authorization: Bearer $CF_TOKEN\" \\ -H \"Content-Type: application/json\" \\ \"https://api.cloudflare.com/client/v4/accounts/$ACCOUNT_ID/pages/projects/blog/domains\" \\ -d '{\"name\":\"www.0149.cc.cd\"}' 8.2 配置 DNS 记录 在 Cloudflare DNS 控制台添加 CNAME 记录：\n类型 名称 目标 代理状态 CNAME www blog.pages.dev 已代理 CNAME @ blog.pages.dev 已代理 8.3 等待 SSL 证书 绑定域名后，Cloudflare 会自动签发 SSL 证书，通常几分钟内生效。\n第九步：验证部署 # 检查博客是否可访问 curl -I https://www.0149.cc.cd # 应该返回 HTTP/2 200 发布新文章 以后发布新文章的流程：\n# 1. 创建新文章 hugo new content posts/new-article.md # 2. 编辑文章内容 # 用你喜欢的编辑器打开 content/posts/new-article.md # 3. 本地预览 hugo server -D # 4. 提交并推送 git add -A git commit -m \"feat: add new article\" git push # 5. Cloudflare Pages 自动部署 # 推送到 GitHub 后，Cloudflare Pages 会自动触发构建和部署 项目结构 blog-site/ ├── hugo.toml # Hugo 配置文件 ├── content/ │ ├── posts/ # 文章目录 │ │ ├── my-first-post.md │ │ └── new-article.md │ └── search.md # 搜索页面 ├── themes/ │ └── PaperMod/ # 主题（git submodule） └── public/ # 构建输出（自动生成） 总结 步骤 操作 安装 Hugo npm install -g hugo-extended 创建项目 hugo new site blog-site 安装主题 git submodule add PaperMod 写文章 hugo new content posts/xxx.md 本地预览 hugo server -D 推送 GitHub git push 部署 CF Pages wrangler pages deploy 绑定域名 添加 CNAME 记录 整个流程大约需要 30-60 分钟（首次），后续发布文章只需写 Markdown + git push。\n参考资料 Hugo 官方文档 Cloudflare Pages 文档 PaperMod 主题 Wrangler CLI 文档 ",
+  "wordCount" : "528",
+  "inLanguage": "zh",
+  "datePublished": "2026-06-29T10:00:00+08:00",
+  "dateModified": "2026-06-29T10:00:00+08:00",
+  "author":{
+    "@type": "Person",
+    "name": "千华落影"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://0149.cc.cd/posts/hermes-auto-deploy-blog/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "千华落影",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://0149.cc.cd/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+<body id="top">
+    <header class="header">
+    <nav class="header-nav">
+        <div class="logo">
+            <a href="https://0149.cc.cd/" accesskey="h" title="千华落影 (Alt + H)">千华落影</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" class="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg class="moon" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg class="sun" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu" class="menu">
+            <li>
+                <a href="https://0149.cc.cd/posts/" title="文章">
+                    <span>文章</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://0149.cc.cd/tags/" title="标签">
+                    <span>标签</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://0149.cc.cd/categories/" title="分类">
+                    <span>分类</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://0149.cc.cd/search/" title="搜索 (Alt &#43; /)" accesskey=/>
+                    <span>搜索</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <nav class="breadcrumbs" role="navigation" aria-label="Breadcrumb">
+            <a href="/">主页</a>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right">
+                <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
+            <a href="/posts/">Posts</a>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right">
+        <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+</nav>
+    <h1 class="post-title entry-hint-parent">
+      AI 一句话帮你部署博客：Hugo &#43; GitHub &#43; Cloudflare Pages 完整教程
+    </h1>
+    <div class="post-meta">
+
+<span title='2026-06-29 10:00:00 +0800 CST'>2026年6月29日</span>&nbsp;·&nbsp;<span>3 分钟</span>&nbsp;·&nbsp;<span>528 字</span>&nbsp;·&nbsp;<span>千华落影</span>
+
+</div>
+  </header> <details class="toc" >
+    <summary accesskey="c" title="(Alt + C)">
+        <span class="title">目录</span>
+    </summary>
+
+    <div class="inner"><ul>
+            <li>
+                <a href="#%e5%89%8d%e8%a8%80" aria-label="前言">前言</a></li>
+            <li>
+                <a href="#%e6%8a%80%e6%9c%af%e6%a0%88" aria-label="技术栈">技术栈</a></li>
+            <li>
+                <a href="#%e7%ac%ac%e4%b8%80%e6%ad%a5%e5%ae%89%e8%a3%85-hugo" aria-label="第一步：安装 Hugo">第一步：安装 Hugo</a></li>
+            <li>
+                <a href="#%e7%ac%ac%e4%ba%8c%e6%ad%a5%e5%88%9b%e5%bb%ba%e5%8d%9a%e5%ae%a2%e9%a1%b9%e7%9b%ae" aria-label="第二步：创建博客项目">第二步：创建博客项目</a></li>
+            <li>
+                <a href="#%e7%ac%ac%e4%b8%89%e6%ad%a5%e9%85%8d%e7%bd%ae%e5%8d%9a%e5%ae%a2" aria-label="第三步：配置博客">第三步：配置博客</a></li>
+            <li>
+                <a href="#%e7%ac%ac%e5%9b%9b%e6%ad%a5%e5%88%9b%e5%bb%ba%e7%ac%ac%e4%b8%80%e7%af%87%e6%96%87%e7%ab%a0" aria-label="第四步：创建第一篇文章">第四步：创建第一篇文章</a></li>
+            <li>
+                <a href="#%e7%ac%ac%e4%ba%94%e6%ad%a5%e6%9c%ac%e5%9c%b0%e9%a2%84%e8%a7%88" aria-label="第五步：本地预览">第五步：本地预览</a></li>
+            <li>
+                <a href="#%e7%ac%ac%e5%85%ad%e6%ad%a5%e6%8e%a8%e9%80%81%e5%88%b0-github" aria-label="第六步：推送到 GitHub">第六步：推送到 GitHub</a><ul>
+                    
+            <li>
+                <a href="#61-%e5%88%9b%e5%bb%ba-github-%e4%bb%93%e5%ba%93" aria-label="6.1 创建 GitHub 仓库">6.1 创建 GitHub 仓库</a></li>
+            <li>
+                <a href="#62-%e6%8e%a8%e9%80%81%e4%bb%a3%e7%a0%81" aria-label="6.2 推送代码">6.2 推送代码</a></li></ul>
+            </li>
+            <li>
+                <a href="#%e7%ac%ac%e4%b8%83%e6%ad%a5cloudflare-pages-%e9%83%a8%e7%bd%b2" aria-label="第七步：Cloudflare Pages 部署">第七步：Cloudflare Pages 部署</a><ul>
+                    
+            <li>
+                <a href="#71-%e5%ae%89%e8%a3%85-wrangler-cli" aria-label="7.1 安装 Wrangler CLI">7.1 安装 Wrangler CLI</a></li>
+            <li>
+                <a href="#72-%e7%99%bb%e5%bd%95-cloudflare" aria-label="7.2 登录 Cloudflare">7.2 登录 Cloudflare</a></li>
+            <li>
+                <a href="#73-%e5%88%9b%e5%bb%ba-pages-%e9%a1%b9%e7%9b%ae" aria-label="7.3 创建 Pages 项目">7.3 创建 Pages 项目</a></li>
+            <li>
+                <a href="#74-%e9%83%a8%e7%bd%b2" aria-label="7.4 部署">7.4 部署</a></li>
+            <li>
+                <a href="#75-%e8%ae%be%e7%bd%ae-hugo-%e7%89%88%e6%9c%ac%e9%87%8d%e8%a6%81" aria-label="7.5 设置 Hugo 版本（重要）">7.5 设置 Hugo 版本（重要）</a></li></ul>
+            </li>
+            <li>
+                <a href="#%e7%ac%ac%e5%85%ab%e6%ad%a5%e7%bb%91%e5%ae%9a%e8%87%aa%e5%ae%9a%e4%b9%89%e5%9f%9f%e5%90%8d" aria-label="第八步：绑定自定义域名">第八步：绑定自定义域名</a><ul>
+                    
+            <li>
+                <a href="#81-%e5%9c%a8-cloudflare-pages-%e6%b7%bb%e5%8a%a0%e5%9f%9f%e5%90%8d" aria-label="8.1 在 Cloudflare Pages 添加域名">8.1 在 Cloudflare Pages 添加域名</a></li>
+            <li>
+                <a href="#82-%e9%85%8d%e7%bd%ae-dns-%e8%ae%b0%e5%bd%95" aria-label="8.2 配置 DNS 记录">8.2 配置 DNS 记录</a></li>
+            <li>
+                <a href="#83-%e7%ad%89%e5%be%85-ssl-%e8%af%81%e4%b9%a6" aria-label="8.3 等待 SSL 证书">8.3 等待 SSL 证书</a></li></ul>
+            </li>
+            <li>
+                <a href="#%e7%ac%ac%e4%b9%9d%e6%ad%a5%e9%aa%8c%e8%af%81%e9%83%a8%e7%bd%b2" aria-label="第九步：验证部署">第九步：验证部署</a></li>
+            <li>
+                <a href="#%e5%8f%91%e5%b8%83%e6%96%b0%e6%96%87%e7%ab%a0" aria-label="发布新文章">发布新文章</a></li>
+            <li>
+                <a href="#%e9%a1%b9%e7%9b%ae%e7%bb%93%e6%9e%84" aria-label="项目结构">项目结构</a></li>
+            <li>
+                <a href="#%e6%80%bb%e7%bb%93" aria-label="总结">总结</a></li>
+            <li>
+                <a href="#%e5%8f%82%e8%80%83%e8%b5%84%e6%96%99" aria-label="参考资料">参考资料</a>
+            </li>
+        </ul>
+    </div>
+</details>
+
+  <div class="post-content md-content"><h2 id="前言">前言<a hidden class="anchor" aria-hidden="true" href="#前言">#</a></h2>
+<p>本教程记录了用 AI 代理（Hermes）全自动完成博客搭建的全过程。整个流程只需要对 AI 说一句&quot;帮我部署博客&quot;，它会自动完成所有操作。</p>
+<p>最终效果：博客地址 <a href="https://www.0149.cc.cd">www.0149.cc.cd</a>，基于 Hugo + PaperMod 主题，部署在 Cloudflare Pages。</p>
+<h2 id="技术栈">技术栈<a hidden class="anchor" aria-hidden="true" href="#技术栈">#</a></h2>
+<table>
+	<thead>
+			<tr>
+					<th>组件</th>
+					<th>用途</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>Hugo</td>
+					<td>静态博客引擎</td>
+			</tr>
+			<tr>
+					<td>PaperMod</td>
+					<td>博客主题（暗黑模式）</td>
+			</tr>
+			<tr>
+					<td>GitHub</td>
+					<td>代码托管</td>
+			</tr>
+			<tr>
+					<td>Cloudflare Pages</td>
+					<td>免费部署</td>
+			</tr>
+			<tr>
+					<td>0149.cc.cd</td>
+					<td>自定义域名</td>
+			</tr>
+	</tbody>
+</table>
+<h2 id="第一步安装-hugo">第一步：安装 Hugo<a hidden class="anchor" aria-hidden="true" href="#第一步安装-hugo">#</a></h2>
+<p>Hugo 是一个静态网站生成器，速度快、配置简单。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#6272a4"># 安装 Hugo（需要 Node.js）</span>
+</span></span><span style="display:flex;"><span>npm install -g hugo-extended
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># 验证安装</span>
+</span></span><span style="display:flex;"><span>hugo version
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># 输出类似：hugo v0.163.3+extended</span>
+</span></span></code></pre></div><h2 id="第二步创建博客项目">第二步：创建博客项目<a hidden class="anchor" aria-hidden="true" href="#第二步创建博客项目">#</a></h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#6272a4"># 创建博客目录</span>
+</span></span><span style="display:flex;"><span>hugo new site blog-site
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">cd</span> blog-site
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># 安装 PaperMod 主题</span>
+</span></span><span style="display:flex;"><span>git init
+</span></span><span style="display:flex;"><span>git submodule add --depth<span style="color:#ff79c6">=</span><span style="color:#bd93f9">1</span> https://github.com/adityatelange/hugo-PaperMod.git themes/PaperMod
+</span></span></code></pre></div><h2 id="第三步配置博客">第三步：配置博客<a hidden class="anchor" aria-hidden="true" href="#第三步配置博客">#</a></h2>
+<p>创建 <code>hugo.toml</code> 配置文件：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span>baseURL = <span style="color:#f1fa8c">&#34;https://www.0149.cc.cd/&#34;</span>
+</span></span><span style="display:flex;"><span>languageCode = <span style="color:#f1fa8c">&#34;zh&#34;</span>
+</span></span><span style="display:flex;"><span>defaultContentLanguage = <span style="color:#f1fa8c">&#34;zh&#34;</span>
+</span></span><span style="display:flex;"><span>title = <span style="color:#f1fa8c">&#34;千华落影&#34;</span>
+</span></span><span style="display:flex;"><span>theme = <span style="color:#f1fa8c">&#34;PaperMod&#34;</span>
+</span></span><span style="display:flex;"><span>paginate = <span style="color:#bd93f9">10</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[params]
+</span></span><span style="display:flex;"><span>  author = <span style="color:#f1fa8c">&#34;千华落影&#34;</span>
+</span></span><span style="display:flex;"><span>  description = <span style="color:#f1fa8c">&#34;分享 AI、编程、部署等技术文章&#34;</span>
+</span></span><span style="display:flex;"><span>  defaultTheme = <span style="color:#f1fa8c">&#34;dark&#34;</span>
+</span></span><span style="display:flex;"><span>  ShowReadingTime = <span style="color:#ff79c6">true</span>
+</span></span><span style="display:flex;"><span>  ShowShareButtons = <span style="color:#ff79c6">false</span>
+</span></span><span style="display:flex;"><span>  ShowPostNavLinks = <span style="color:#ff79c6">true</span>
+</span></span><span style="display:flex;"><span>  ShowBreadCrumbs = <span style="color:#ff79c6">true</span>
+</span></span><span style="display:flex;"><span>  ShowCodeCopyButtons = <span style="color:#ff79c6">true</span>
+</span></span><span style="display:flex;"><span>  ShowWordCount = <span style="color:#ff79c6">true</span>
+</span></span><span style="display:flex;"><span>  ShowToc = <span style="color:#ff79c6">true</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  [params.homeInfoParams]
+</span></span><span style="display:flex;"><span>    Title = <span style="color:#f1fa8c">&#34;👋 你好，我是千华落影&#34;</span>
+</span></span><span style="display:flex;"><span>    Content = <span style="color:#f1fa8c">&#34;一个技术博主，分享 AI 大模型、本地部署、编程开发等实用教程。&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[[params.socialIcons]]
+</span></span><span style="display:flex;"><span>  name = <span style="color:#f1fa8c">&#34;github&#34;</span>
+</span></span><span style="display:flex;"><span>  url = <span style="color:#f1fa8c">&#34;https://github.com/linhuiguo&#34;</span>
+</span></span></code></pre></div><h2 id="第四步创建第一篇文章">第四步：创建第一篇文章<a hidden class="anchor" aria-hidden="true" href="#第四步创建第一篇文章">#</a></h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#6272a4"># 创建文章</span>
+</span></span><span style="display:flex;"><span>hugo new content posts/my-first-post.md
+</span></span></code></pre></div><p>编辑 <code>content/posts/my-first-post.md</code>：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span>title: &#34;我的第一篇文章&#34;
+</span></span><span style="display:flex;"><span>date: 2026-06-29T10:00:00+08:00
+</span></span><span style="display:flex;"><span>draft: false
+</span></span><span style="display:flex;"><span>tags: [&#34;博客&#34;, &#34;教程&#34;]
+</span></span><span style="display:flex;"><span>categories: [&#34;技术&#34;]
+</span></span><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">## 开始写内容
+</span></span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>这里是文章正文。
+</span></span></code></pre></div><h2 id="第五步本地预览">第五步：本地预览<a hidden class="anchor" aria-hidden="true" href="#第五步本地预览">#</a></h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#6272a4"># 启动本地服务器</span>
+</span></span><span style="display:flex;"><span>hugo server -D
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># 浏览器访问</span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># http://localhost:1313</span>
+</span></span></code></pre></div><p><code>-D</code> 参数表示包含草稿文章。预览满意后，按 <code>Ctrl+C</code> 停止服务器。</p>
+<h2 id="第六步推送到-github">第六步：推送到 GitHub<a hidden class="anchor" aria-hidden="true" href="#第六步推送到-github">#</a></h2>
+<h3 id="61-创建-github-仓库">6.1 创建 GitHub 仓库<a hidden class="anchor" aria-hidden="true" href="#61-创建-github-仓库">#</a></h3>
+<p>在 GitHub 网页端创建一个新仓库，例如 <code>blog</code>。</p>
+<h3 id="62-推送代码">6.2 推送代码<a hidden class="anchor" aria-hidden="true" href="#62-推送代码">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">cd</span> blog-site
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># 初始化 Git</span>
+</span></span><span style="display:flex;"><span>git init
+</span></span><span style="display:flex;"><span>git add -A
+</span></span><span style="display:flex;"><span>git commit -m <span style="color:#f1fa8c">&#34;feat: initial blog setup&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># 关联远程仓库</span>
+</span></span><span style="display:flex;"><span>git remote add origin https://github.com/linhuiguo/blog.git
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># 推送</span>
+</span></span><span style="display:flex;"><span>git push -u origin main
+</span></span></code></pre></div><h2 id="第七步cloudflare-pages-部署">第七步：Cloudflare Pages 部署<a hidden class="anchor" aria-hidden="true" href="#第七步cloudflare-pages-部署">#</a></h2>
+<h3 id="71-安装-wrangler-cli">7.1 安装 Wrangler CLI<a hidden class="anchor" aria-hidden="true" href="#71-安装-wrangler-cli">#</a></h3>
+<p>Wrangler 是 Cloudflare 的命令行工具。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>npm install -g wrangler
+</span></span></code></pre></div><h3 id="72-登录-cloudflare">7.2 登录 Cloudflare<a hidden class="anchor" aria-hidden="true" href="#72-登录-cloudflare">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>wrangler login
+</span></span></code></pre></div><p>会打开浏览器，完成 OAuth 授权。</p>
+<h3 id="73-创建-pages-项目">7.3 创建 Pages 项目<a hidden class="anchor" aria-hidden="true" href="#73-创建-pages-项目">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">cd</span> blog-site
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># 创建 Pages 项目</span>
+</span></span><span style="display:flex;"><span>wrangler pages project create blog --production-branch main
+</span></span></code></pre></div><h3 id="74-部署">7.4 部署<a hidden class="anchor" aria-hidden="true" href="#74-部署">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#6272a4"># 构建 Hugo 站点</span>
+</span></span><span style="display:flex;"><span>hugo
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># 部署到 Cloudflare Pages</span>
+</span></span><span style="display:flex;"><span>wrangler pages deploy public --project-name blog --branch main
+</span></span></code></pre></div><p>部署完成后，会得到一个 <code>xxx.pages.dev</code> 的临时地址。</p>
+<h3 id="75-设置-hugo-版本重要">7.5 设置 Hugo 版本（重要）<a hidden class="anchor" aria-hidden="true" href="#75-设置-hugo-版本重要">#</a></h3>
+<p>Cloudflare Pages 需要知道 Hugo 版本，否则可能构建失败。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#6272a4"># 在 Cloudflare Pages 控制台设置环境变量：</span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># HUGO_VERSION = 0.163.3</span>
+</span></span></code></pre></div><p>或者通过 CLI：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>wrangler pages deployment create --project-name blog <span style="color:#f1fa8c">\
+</span></span></span><span style="display:flex;"><span>  --branch main <span style="color:#f1fa8c">\
+</span></span></span><span style="display:flex;"><span>  --env <span style="color:#8be9fd;font-style:italic">HUGO_VERSION</span><span style="color:#ff79c6">=</span>0.163.3
+</span></span></code></pre></div><h2 id="第八步绑定自定义域名">第八步：绑定自定义域名<a hidden class="anchor" aria-hidden="true" href="#第八步绑定自定义域名">#</a></h2>
+<h3 id="81-在-cloudflare-pages-添加域名">8.1 在 Cloudflare Pages 添加域名<a hidden class="anchor" aria-hidden="true" href="#81-在-cloudflare-pages-添加域名">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#6272a4"># 通过 API 添加自定义域名</span>
+</span></span><span style="display:flex;"><span>curl -X POST <span style="color:#f1fa8c">\
+</span></span></span><span style="display:flex;"><span>  -H <span style="color:#f1fa8c">&#34;Authorization: Bearer </span><span style="color:#8be9fd;font-style:italic">$CF_TOKEN</span><span style="color:#f1fa8c">&#34;</span> <span style="color:#f1fa8c">\
+</span></span></span><span style="display:flex;"><span>  -H <span style="color:#f1fa8c">&#34;Content-Type: application/json&#34;</span> <span style="color:#f1fa8c">\
+</span></span></span><span style="display:flex;"><span>  <span style="color:#f1fa8c">&#34;https://api.cloudflare.com/client/v4/accounts/</span><span style="color:#8be9fd;font-style:italic">$ACCOUNT_ID</span><span style="color:#f1fa8c">/pages/projects/blog/domains&#34;</span> <span style="color:#f1fa8c">\
+</span></span></span><span style="display:flex;"><span>  -d <span style="color:#f1fa8c">&#39;{&#34;name&#34;:&#34;www.0149.cc.cd&#34;}&#39;</span>
+</span></span></code></pre></div><h3 id="82-配置-dns-记录">8.2 配置 DNS 记录<a hidden class="anchor" aria-hidden="true" href="#82-配置-dns-记录">#</a></h3>
+<p>在 Cloudflare DNS 控制台添加 CNAME 记录：</p>
+<table>
+	<thead>
+			<tr>
+					<th>类型</th>
+					<th>名称</th>
+					<th>目标</th>
+					<th>代理状态</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>CNAME</td>
+					<td><code>www</code></td>
+					<td><code>blog.pages.dev</code></td>
+					<td>已代理</td>
+			</tr>
+			<tr>
+					<td>CNAME</td>
+					<td><code>@</code></td>
+					<td><code>blog.pages.dev</code></td>
+					<td>已代理</td>
+			</tr>
+	</tbody>
+</table>
+<h3 id="83-等待-ssl-证书">8.3 等待 SSL 证书<a hidden class="anchor" aria-hidden="true" href="#83-等待-ssl-证书">#</a></h3>
+<p>绑定域名后，Cloudflare 会自动签发 SSL 证书，通常几分钟内生效。</p>
+<h2 id="第九步验证部署">第九步：验证部署<a hidden class="anchor" aria-hidden="true" href="#第九步验证部署">#</a></h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#6272a4"># 检查博客是否可访问</span>
+</span></span><span style="display:flex;"><span>curl -I https://www.0149.cc.cd
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># 应该返回 HTTP/2 200</span>
+</span></span></code></pre></div><h2 id="发布新文章">发布新文章<a hidden class="anchor" aria-hidden="true" href="#发布新文章">#</a></h2>
+<p>以后发布新文章的流程：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#6272a4"># 1. 创建新文章</span>
+</span></span><span style="display:flex;"><span>hugo new content posts/new-article.md
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># 2. 编辑文章内容</span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># 用你喜欢的编辑器打开 content/posts/new-article.md</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># 3. 本地预览</span>
+</span></span><span style="display:flex;"><span>hugo server -D
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># 4. 提交并推送</span>
+</span></span><span style="display:flex;"><span>git add -A
+</span></span><span style="display:flex;"><span>git commit -m <span style="color:#f1fa8c">&#34;feat: add new article&#34;</span>
+</span></span><span style="display:flex;"><span>git push
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># 5. Cloudflare Pages 自动部署</span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4"># 推送到 GitHub 后，Cloudflare Pages 会自动触发构建和部署</span>
+</span></span></code></pre></div><h2 id="项目结构">项目结构<a hidden class="anchor" aria-hidden="true" href="#项目结构">#</a></h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>blog-site/
+</span></span><span style="display:flex;"><span>├── hugo.toml                 # Hugo 配置文件
+</span></span><span style="display:flex;"><span>├── content/
+</span></span><span style="display:flex;"><span>│   ├── posts/                # 文章目录
+</span></span><span style="display:flex;"><span>│   │   ├── my-first-post.md
+</span></span><span style="display:flex;"><span>│   │   └── new-article.md
+</span></span><span style="display:flex;"><span>│   └── search.md             # 搜索页面
+</span></span><span style="display:flex;"><span>├── themes/
+</span></span><span style="display:flex;"><span>│   └── PaperMod/             # 主题（git submodule）
+</span></span><span style="display:flex;"><span>└── public/                   # 构建输出（自动生成）
+</span></span></code></pre></div><h2 id="总结">总结<a hidden class="anchor" aria-hidden="true" href="#总结">#</a></h2>
+<table>
+	<thead>
+			<tr>
+					<th>步骤</th>
+					<th>操作</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>安装 Hugo</td>
+					<td><code>npm install -g hugo-extended</code></td>
+			</tr>
+			<tr>
+					<td>创建项目</td>
+					<td><code>hugo new site blog-site</code></td>
+			</tr>
+			<tr>
+					<td>安装主题</td>
+					<td><code>git submodule add</code> PaperMod</td>
+			</tr>
+			<tr>
+					<td>写文章</td>
+					<td><code>hugo new content posts/xxx.md</code></td>
+			</tr>
+			<tr>
+					<td>本地预览</td>
+					<td><code>hugo server -D</code></td>
+			</tr>
+			<tr>
+					<td>推送 GitHub</td>
+					<td><code>git push</code></td>
+			</tr>
+			<tr>
+					<td>部署 CF Pages</td>
+					<td><code>wrangler pages deploy</code></td>
+			</tr>
+			<tr>
+					<td>绑定域名</td>
+					<td>添加 CNAME 记录</td>
+			</tr>
+	</tbody>
+</table>
+<p>整个流程大约需要 30-60 分钟（首次），后续发布文章只需写 Markdown + git push。</p>
+<h2 id="参考资料">参考资料<a hidden class="anchor" aria-hidden="true" href="#参考资料">#</a></h2>
+<ul>
+<li><a href="https://gohugo.io/documentation/">Hugo 官方文档</a></li>
+<li><a href="https://developers.cloudflare.com/pages/">Cloudflare Pages 文档</a></li>
+<li><a href="https://github.com/adityatelange/hugo-PaperMod">PaperMod 主题</a></li>
+<li><a href="https://developers.cloudflare.com/workers/wrangler/">Wrangler CLI 文档</a></li>
+</ul>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://0149.cc.cd/tags/ai/">AI</a></li>
+      <li><a href="https://0149.cc.cd/tags/hermes/">Hermes</a></li>
+      <li><a href="https://0149.cc.cd/tags/%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2/">博客部署</a></li>
+      <li><a href="https://0149.cc.cd/tags/cloudflare/">Cloudflare</a></li>
+      <li><a href="https://0149.cc.cd/tags/hugo/">Hugo</a></li>
+      <li><a href="https://0149.cc.cd/tags/%E6%95%99%E7%A8%8B/">教程</a></li>
+    </ul>
+<nav class="paginav">
+  <a class="prev" href="https://0149.cc.cd/posts/qwen36-uncensored-windows-llamacpp/">
+    <span class="title">« 上一页</span>
+    <span>Qwen3.6 越狱版来了！Windows 本地部署 35B 模型｜llama.cpp 完整教程</span>
+  </a>
+</nav>
+
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2026 <a href="https://0149.cc.cd/">千华落影</a></span> · 
+
+    
+    
+    <span>
+        Powered by
+        <a href="https://gohugo.io/?utm_source=papermod" rel="noopener" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" id="top-link" class="top-link hidden" aria-label="go to top" title="Go to Top (Alt + G)" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevrons-up">
+        <polyline points="17 11 12 6 7 11"></polyline>
+        <polyline points="17 18 12 13 7 18"></polyline>
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var toplink = document.getElementById("top-link");
+    window.onscroll = function () {
+        const scrollThreshold = window.innerHeight;
+        if (document.body.scrollTop > scrollThreshold || document.documentElement.scrollTop > scrollThreshold) {
+            toplink.classList.remove("hidden");
+        } else {
+            toplink.classList.add("hidden");
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = '复制';
+
+        function copyingDone() {
+            copybutton.innerHTML = '已复制！';
+            setTimeout(() => {
+                copybutton.innerHTML = '复制';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>
