@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>本地部署 on 先生靠谱的技术博客</title>
-    <link>https://mr-reliable-blog.pages.dev/tags/%E6%9C%AC%E5%9C%B0%E9%83%A8%E7%BD%B2/</link>
-    <description>Recent content in 本地部署 on 先生靠谱的技术博客</description>
+    <title>本地部署 on 千华落影</title>
+    <link>https://0149.cc.cd/tags/%E6%9C%AC%E5%9C%B0%E9%83%A8%E7%BD%B2/</link>
+    <description>Recent content in 本地部署 on 千华落影</description>
     <generator>Hugo</generator>
     <language>zh-CN</language>
     <lastBuildDate>Mon, 29 Jun 2026 18:00:00 +0800</lastBuildDate>
-    <atom:link href="https://mr-reliable-blog.pages.dev/tags/%E6%9C%AC%E5%9C%B0%E9%83%A8%E7%BD%B2/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://0149.cc.cd/tags/%E6%9C%AC%E5%9C%B0%E9%83%A8%E7%BD%B2/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Qwen3.6 越狱版来了！Windows 本地部署 35B 模型｜llama.cpp 完整教程</title>
-      <link>https://mr-reliable-blog.pages.dev/posts/qwen36-local-deploy/</link>
+      <link>https://0149.cc.cd/posts/qwen36-local-deploy/</link>
       <pubDate>Mon, 29 Jun 2026 18:00:00 +0800</pubDate>
-      <guid>https://mr-reliable-blog.pages.dev/posts/qwen36-local-deploy/</guid>
+      <guid>https://0149.cc.cd/posts/qwen36-local-deploy/</guid>
       <description>手把手教你在 Windows 上用 llama.cpp 部署 Qwen3.6-35B 无审查模型，支持 RTX3070 8G 显存。</description>
     </item>
     <item>
       <title>Qwen3.6 越狱版来了！Windows 本地部署 35B 模型｜llama.cpp 完整教程</title>
-      <link>https://mr-reliable-blog.pages.dev/posts/qwen36-uncensored-windows-llamacpp/</link>
+      <link>https://0149.cc.cd/posts/qwen36-uncensored-windows-llamacpp/</link>
       <pubDate>Mon, 29 Jun 2026 18:00:00 +0800</pubDate>
-      <guid>https://mr-reliable-blog.pages.dev/posts/qwen36-uncensored-windows-llamacpp/</guid>
+      <guid>https://0149.cc.cd/posts/qwen36-uncensored-windows-llamacpp/</guid>
       <description>手把手教你在 Windows 上用 llama.cpp 部署 Qwen3.6-35B 无审查模型，支持 CUDA/Vulkan/CPU 全平台。</description>
     </item>
   </channel>

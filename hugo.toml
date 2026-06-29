@@ -1,12 +1,12 @@
-baseURL = "https://mr-reliable-blog.pages.dev/"
+baseURL = "https://0149.cc.cd/"
 languageCode = "zh-CN"
 defaultContentLanguage = "zh"
-title = "先生靠谱的技术博客"
+title = "千华落影"
 theme = "PaperMod"
 paginate = 10
 
 [params]
-  author = "先生靠谱"
+  author = "千华落影"
   description = "分享 AI、编程、部署等技术文章"
   defaultTheme = "dark"
   ShowReadingTime = true
@@ -20,7 +20,7 @@ paginate = 10
   comments = false
 
   [params.homeInfoParams]
-    Title = "👋 你好，我是先生靠谱"
+    Title = "👋 你好，我是千华落影"
     Content = "一个技术博主，分享 AI 大模型、本地部署、编程开发等实用教程。"
 
   [[params.socialIcons]]
