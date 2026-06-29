@@ -6,8 +6,15 @@
     <description>Recent content in OpenAI on 千华落影</description>
     <generator>Hugo</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Mon, 29 Jun 2026 14:00:00 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 29 Jun 2026 17:00:00 +0800</lastBuildDate>
     <atom:link href="https://0149.cc.cd/tags/openai/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>白嫖 GPT-5.5！微软 Copilot 变成免费 API，本地 AI Agent 直接对接</title>
+      <link>https://0149.cc.cd/posts/copilot-free-api/</link>
+      <pubDate>Mon, 29 Jun 2026 17:00:00 +0800</pubDate>
+      <guid>https://0149.cc.cd/posts/copilot-free-api/</guid>
+      <description>Windows-Copilot-API 开源项目将微软 Copilot 封装成 OpenAI 兼容 API，无需 API Key，免费调用 GPT-4o、GPT-5.5 等模型，直接对接本地 AI Agent。</description>
+    </item>
     <item>
       <title>GPT-Image-2 实测：与谷歌、豆包文生图效果对比</title>
       <link>https://0149.cc.cd/posts/gpt-image2-review/</link>

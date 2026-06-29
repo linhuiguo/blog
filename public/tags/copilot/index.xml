@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Copilot on 千华落影</title>
+    <link>https://0149.cc.cd/tags/copilot/</link>
+    <description>Recent content in Copilot on 千华落影</description>
+    <generator>Hugo</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Mon, 29 Jun 2026 17:00:00 +0800</lastBuildDate>
+    <atom:link href="https://0149.cc.cd/tags/copilot/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>白嫖 GPT-5.5！微软 Copilot 变成免费 API，本地 AI Agent 直接对接</title>
+      <link>https://0149.cc.cd/posts/copilot-free-api/</link>
+      <pubDate>Mon, 29 Jun 2026 17:00:00 +0800</pubDate>
+      <guid>https://0149.cc.cd/posts/copilot-free-api/</guid>
+      <description>Windows-Copilot-API 开源项目将微软 Copilot 封装成 OpenAI 兼容 API，无需 API Key，免费调用 GPT-4o、GPT-5.5 等模型，直接对接本地 AI Agent。</description>
+    </item>
+  </channel>
+</rss>
