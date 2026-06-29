@@ -15,5 +15,12 @@
       <guid>https://0149.cc.cd/posts/qwen36-uncensored-windows-llamacpp/</guid>
       <description>手把手教你在 Windows 上用 llama.cpp 部署 Qwen3.6-35B 无审查模型，支持 CUDA/Vulkan/CPU 全平台。</description>
     </item>
+    <item>
+      <title>OpenClaw 本地部署完整教程：Ollama &#43; OpenClaw 免费 AI 助手</title>
+      <link>https://0149.cc.cd/posts/openclaw-local-deploy/</link>
+      <pubDate>Mon, 29 Jun 2026 15:00:00 +0800</pubDate>
+      <guid>https://0149.cc.cd/posts/openclaw-local-deploy/</guid>
+      <description>通过 Ollama + OpenClaw 实现 100% 本地运行的 AI 助手，免费、断网可用、多模型切换，支持 GPT-OSS / Qwen 3 / GLM 4.7 等主流大模型。</description>
+    </item>
   </channel>
 </rss>
