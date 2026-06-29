@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>文生图 on 千华落影</title>
+    <link>https://0149.cc.cd/tags/%E6%96%87%E7%94%9F%E5%9B%BE/</link>
+    <description>Recent content in 文生图 on 千华落影</description>
+    <generator>Hugo</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Mon, 29 Jun 2026 13:00:00 +0800</lastBuildDate>
+    <atom:link href="https://0149.cc.cd/tags/%E6%96%87%E7%94%9F%E5%9B%BE/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AI 文生图提示词宝库：2.8k star 开源项目，让你的图片更真实</title>
+      <link>https://0149.cc.cd/posts/ai-image-prompts-guide/</link>
+      <pubDate>Mon, 29 Jun 2026 13:00:00 +0800</pubDate>
+      <guid>https://0149.cc.cd/posts/ai-image-prompts-guide/</guid>
+      <description>分享一个 star 达 2.8k 的文生图提示词开源项目 gpt4o-image-prompts，内含大量高质量提示词示例，搭配豆包、Gemini 等 AI 工具，轻松生成真实感十足的图片。</description>
+    </item>
+  </channel>
+</rss>
