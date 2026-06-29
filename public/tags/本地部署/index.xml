@@ -16,6 +16,13 @@
       <description>手把手教你在 Windows 上用 llama.cpp 部署 Qwen3.6-35B 无审查模型，支持 CUDA/Vulkan/CPU 全平台。</description>
     </item>
     <item>
+      <title>Ollama &#43; Codex App 本地 AI 编程：断网也能自动写代码</title>
+      <link>https://0149.cc.cd/posts/ollama-codex-local-coding/</link>
+      <pubDate>Mon, 29 Jun 2026 16:00:00 +0800</pubDate>
+      <guid>https://0149.cc.cd/posts/ollama-codex-local-coding/</guid>
+      <description>最新版 Ollama 正式支持接入 Codex App，本地大模型直接变身 AI 自动编程 Agent，断网也能用，零 API 费用。</description>
+    </item>
+    <item>
       <title>OpenClaw 本地部署完整教程：Ollama &#43; OpenClaw 免费 AI 助手</title>
       <link>https://0149.cc.cd/posts/openclaw-local-deploy/</link>
       <pubDate>Mon, 29 Jun 2026 15:00:00 +0800</pubDate>

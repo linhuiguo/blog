@@ -6,8 +6,15 @@
     <description>Recent content in Codex on 千华落影</description>
     <generator>Hugo</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Mon, 29 Jun 2026 12:00:00 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 29 Jun 2026 16:00:00 +0800</lastBuildDate>
     <atom:link href="https://0149.cc.cd/tags/codex/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ollama &#43; Codex App 本地 AI 编程：断网也能自动写代码</title>
+      <link>https://0149.cc.cd/posts/ollama-codex-local-coding/</link>
+      <pubDate>Mon, 29 Jun 2026 16:00:00 +0800</pubDate>
+      <guid>https://0149.cc.cd/posts/ollama-codex-local-coding/</guid>
+      <description>最新版 Ollama 正式支持接入 Codex App，本地大模型直接变身 AI 自动编程 Agent，断网也能用，零 API 费用。</description>
+    </item>
     <item>
       <title>Codex AI 完整使用教程：从下载安装到使用技巧全指南</title>
       <link>https://0149.cc.cd/posts/codex-ai-tutorial/</link>

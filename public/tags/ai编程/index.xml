@@ -1,26 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Agent on 千华落影</title>
-    <link>https://0149.cc.cd/tags/agent/</link>
-    <description>Recent content in Agent on 千华落影</description>
+    <title>AI编程 on 千华落影</title>
+    <link>https://0149.cc.cd/tags/ai%E7%BC%96%E7%A8%8B/</link>
+    <description>Recent content in AI编程 on 千华落影</description>
     <generator>Hugo</generator>
     <language>zh-CN</language>
     <lastBuildDate>Mon, 29 Jun 2026 16:00:00 +0800</lastBuildDate>
-    <atom:link href="https://0149.cc.cd/tags/agent/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://0149.cc.cd/tags/ai%E7%BC%96%E7%A8%8B/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Ollama &#43; Codex App 本地 AI 编程：断网也能自动写代码</title>
       <link>https://0149.cc.cd/posts/ollama-codex-local-coding/</link>
       <pubDate>Mon, 29 Jun 2026 16:00:00 +0800</pubDate>
       <guid>https://0149.cc.cd/posts/ollama-codex-local-coding/</guid>
       <description>最新版 Ollama 正式支持接入 Codex App，本地大模型直接变身 AI 自动编程 Agent，断网也能用，零 API 费用。</description>
-    </item>
-    <item>
-      <title>Hermes Agent 桌面版正式发布！Windows / macOS / Linux 全平台支持，小白也能轻松上手！</title>
-      <link>https://0149.cc.cd/posts/hermes-desktop-release/</link>
-      <pubDate>Mon, 29 Jun 2026 11:00:00 +0800</pubDate>
-      <guid>https://0149.cc.cd/posts/hermes-desktop-release/</guid>
-      <description>Hermes Agent 官方桌面版正式发布，支持 Windows、macOS、Linux 三大平台，图形化界面安装配置，小白也能轻松上手。</description>
     </item>
   </channel>
 </rss>
