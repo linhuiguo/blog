@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="zh" dir="auto" data-theme="dark">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Qwen3.6 越狱版来了！Windows 本地部署 35B 模型｜llama.cpp 完整教程 | 先生靠谱的技术博客</title>
+<meta name="keywords" content="AI, llama.cpp, Qwen, 本地部署, Windows">
+<meta name="description" content="手把手教你在 Windows 上用 llama.cpp 部署 Qwen3.6-35B 无审查模型，支持 CUDA/Vulkan/CPU 全平台。">
+<meta name="author" content="先生靠谱">
+<link rel="canonical" href="https://mr-reliable-blog.pages.dev/posts/qwen36-uncensored-windows-llamacpp/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.89ca4972ab5e6aaa05e9a0dae0c4bb64b26585bc79e36f5cf33614eea0283abe.css" integrity="sha256-icpJcqteaqoF6aDa4MS7ZLJlhbx5429c8zYU7qAoOr4=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://mr-reliable-blog.pages.dev/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://mr-reliable-blog.pages.dev/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://mr-reliable-blog.pages.dev/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://mr-reliable-blog.pages.dev/apple-touch-icon.png">
+<link rel="mask-icon" href="https://mr-reliable-blog.pages.dev/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="zh" href="https://mr-reliable-blog.pages.dev/posts/qwen36-uncensored-windows-llamacpp/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "light") {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script><meta property="og:url" content="https://mr-reliable-blog.pages.dev/posts/qwen36-uncensored-windows-llamacpp/">
+  <meta property="og:site_name" content="先生靠谱的技术博客">
+  <meta property="og:title" content="Qwen3.6 越狱版来了！Windows 本地部署 35B 模型｜llama.cpp 完整教程">
+  <meta property="og:description" content="手把手教你在 Windows 上用 llama.cpp 部署 Qwen3.6-35B 无审查模型，支持 CUDA/Vulkan/CPU 全平台。">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2026-06-29T18:00:00+08:00">
+    <meta property="article:modified_time" content="2026-06-29T18:00:00+08:00">
+    <meta property="article:tag" content="AI">
+    <meta property="article:tag" content="Llama.cpp">
+    <meta property="article:tag" content="Qwen">
+    <meta property="article:tag" content="本地部署">
+    <meta property="article:tag" content="Windows">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Qwen3.6 越狱版来了！Windows 本地部署 35B 模型｜llama.cpp 完整教程">
+  <meta name="twitter:description" content="手把手教你在 Windows 上用 llama.cpp 部署 Qwen3.6-35B 无审查模型，支持 CUDA/Vulkan/CPU 全平台。">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://mr-reliable-blog.pages.dev/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Qwen3.6 越狱版来了！Windows 本地部署 35B 模型｜llama.cpp 完整教程",
+      "item": "https://mr-reliable-blog.pages.dev/posts/qwen36-uncensored-windows-llamacpp/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Qwen3.6 越狱版来了！Windows 本地部署 35B 模型｜llama.cpp 完整教程",
+  "name": "Qwen3.6 越狱版来了！Windows 本地部署 35B 模型｜llama.cpp 完整教程",
+  "description": "手把手教你在 Windows 上用 llama.cpp 部署 Qwen3.6-35B 无审查模型，支持 CUDA/Vulkan/CPU 全平台。",
+  "keywords": [
+    "AI", "llama.cpp", "Qwen", "本地部署", "Windows"
+  ],
+  "articleBody": "重要说明 本文是基于社区模型的本地部署教程。使用的是社区作者 HauhauCS 发布的 Uncensored 微调版本，不是 Qwen 官方发布的安全对齐模型。“减少拒答\"不等于回答正确，也不等于使用时没有法律和安全责任。不要把模型输出直接用于违法、有害、侵犯隐私或高风险决策。\n开始前的准备 64 位 Windows 电脑 足够的磁盘空间（主模型约 15 GB，视觉文件约 899 MB，还要留空间给解压文件和运行缓存） 足够的系统内存（模型文件能下载下来，不代表一定能在电脑上顺利加载） 如果使用 GPU 加速，需要确认显卡品牌、显存容量和可用的驱动环境 能够访问 GitHub 和 Hugging Face 下载页面 注意：本文使用 RTX 5070 Ti 16 GB 显卡测试，选择约 15 GB 的 IQ3_M 量化。显存不足时，llama.cpp 可以把部分计算放到 CPU 和系统内存，但速度会下降。不要简单理解为\"模型文件小于显存就一定能跑”。\n本期会用到的网址 llama.cpp 官方 GitHub 仓库 llama.cpp 官方 Releases 下载页 Hugging Face 模型仓库 llama.cpp 默认本地 WebUI 地址 目录 00:00 开场与效果介绍 00:30 下载 llama.cpp 01:20 选择 CPU / GPU 版本 02:10 下载 GGUF 模型 03:00 整理运行文件 04:00 配置启动脚本 05:00 启动本地服务 05:45 在浏览器中使用模型 06:10 测试生成完整网页 00:00 这期教程部署的是什么 本教程演示的是 HauhauCS/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive。模型以 GGUF 格式发布，可以使用 llama.cpp 在本机运行。\n模型仓库标注为 35B 总参数、约 3B 激活参数的 MoE 模型，并支持文本和视觉输入。本教程使用 llama.cpp 自带的 llama-server，启动后通过浏览器访问本地聊天界面。\n本地运行的优势是对话主要在自己的电脑中处理，不需要按次调用云端 API。不过模型文件很大，下载、加载速度和生成速度都取决于硬件。\n00:30 打开 llama.cpp 并进入下载页 第一步：打开官方 GitHub 仓库 浏览器访问 github.com/ggml-org/llama.cpp。确认仓库所有者是 ggml-org，避免下载名字相似的第三方程序。\n第二步：进入 Releases 在仓库右侧找到 Releases，点击最新版本。版本会持续更新，通常应优先选择当前最新稳定构建。\n第三步：展开下载文件 在 Release 页面向下滚动到 Assets。文件很多，必须先判断自己的系统架构和加速后端，不要随便下载第一个压缩包。\n01:20 根据电脑选择 llama.cpp 构建 硬件情况 优先查看的构建 说明 NVIDIA 显卡 Windows x64 CUDA 选择与驱动兼容的 CUDA 版本 AMD 显卡 HIP 或 Vulkan HIP 面向 AMD GPU；兼容性不确定时可查看 Vulkan 构建 Intel 或其他支持 Vulkan 的 GPU Vulkan 实际支持情况取决于显卡和驱动 不使用 GPU Windows x64 CPU 可以运行，但 35B 模型通常会明显更慢 选择 CUDA 13.3 x64 本教程电脑使用 RTX 5070 Ti，因此点击 Windows x64 的 CUDA 13 构建，下载文件名类似 llama-b9673-bin-win-cuda-13.3-x64.zip。\n等待压缩包下载完成 下载完成后，把压缩包放到容易找到的位置。\n解压全部文件 右键压缩包，选择解压到独立文件夹。不要直接在压缩包预览窗口中运行 llama-server.exe，否则相关 DLL 和模型路径容易找不到。\n02:10 下载 Qwen3.6 35B GGUF 模型 第一步：在 llama.cpp 文件夹中创建 models 目录 打开刚刚解压的 llama.cpp 文件夹，在根目录中新建文件夹，命名为 models。这个目录用来集中存放主模型和视觉投影文件。\n第二步：打开模型仓库 访问 HauhauCS/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive。\n第三步：理解量化文件的区别 页面 Downloads 区域列出多个 GGUF 文件。量化越高，文件越大，通常质量越好，同时需要更多内存。主要比较以下两项：\nIQ2_M：约 11 GB，资源占用较低，质量损失更明显 IQ3_M：约 15 GB，本教程使用的版本 第四步：在任务管理器查看显存 按 Ctrl + Shift + Esc 打开任务管理器，进入性能，点击左侧的 GPU。查看\"专用 GPU 内存\"总容量。\n第五步：根据总内存能力选择量化 建议 4 GB 或 6 GB 显存尝试约 11 GB 的 IQ2_M，8 GB 及以上尝试约 15 GB 的 IQ3_M。这依赖 CPU 分层和系统内存，不代表模型能全部装进显存。内存不足时会加载失败，内存刚好够时也可能因为上下文缓存而崩溃。\n如果不确定，先下载较小的 IQ2_M。确认能够稳定启动后，再考虑更高质量的量化。\n第六步：下载 IQ3_M 主模型 点击以下文件：\nQwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive-IQ3_M.gguf 第七步：下载 mmproj 视觉文件 同一页面还要下载：\nmmproj-Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive-f16.gguf 该文件约 899 MB，用于图像等多模态输入。如果只打算文字对话，可以不启用视觉文件；但要完整复现教程配置，应当一起下载。\n03:00 整理模型和运行文件 第一步：把两个 GGUF 文件移入 models 回到 llama.cpp 解压目录，打开刚才创建的 models 文件夹。将 IQ3_M 主模型和 mmproj 文件一起拖进去。\n第二步：确认根目录中存在 llama-server.exe 返回上一层。根目录应该能看到 llama-server.exe 以及随构建附带的 DLL。如果只有模型文件，没有可执行文件，说明下载或解压的包不对。\n第三步：把启动脚本放在根目录 将名为 start.bat 的启动脚本放在 llama.cpp 根目录，与 llama-server.exe 同级。\n推荐的文件夹结构 llama-b9673-bin-win-cuda-13.3-x64/ ├── llama-server.exe ├── start.bat ├── 其他 DLL 和程序文件 └── models/ ├── Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive-IQ3_M.gguf └── mmproj-Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive-f16.gguf 04:00 创建可用的启动脚本 第一步：新建 start.bat 在 llama.cpp 根目录空白处右键，新建文本文档。打开资源管理器的查看 → 显示，启用\"文件扩展名\"，然后把文件重命名为 start.bat。\n第二步：写入启动命令 右键 start.bat，选择编辑，写入以下内容：\n@echo off cd /d \"%~dp0\" llama-server.exe ^ -m \"models\\Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive-IQ3_M.gguf\" ^ --mmproj \"models\\mmproj-Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive-f16.gguf\" ^ --jinja ^ -c 131072 ^ -ngl 99 ^ --host 127.0.0.1 ^ --port 8080 pause 第三步：按自己的文件名修改路径 如果下载的是 IQ2_M 或其他量化，必须修改 -m 后面的文件名。文件名需要与 models 文件夹里的实际文件完全一致。\n第四步：显存不足时降低 GPU 层数 -ngl 99 会尽可能把模型层卸载到 GPU。显存不足或启动时报 CUDA 内存错误时，可以把它改为较小数字，例如 -ngl 40，或者使用 -ngl 0 完全交给 CPU。数值越低，一般越慢。\n第五步：内存不足时降低上下文长度 教程控制台显示上下文长度为 131072，即脚本中的 -c 131072。这是很大的上下文，会额外占用内存。如果启动困难，可以先改成 -c 32768 或 -c 16384，确认模型能正常运行后再调整。\n05:00 启动 llama.cpp 本地服务 第一步：双击 start.bat 双击启动脚本。Windows 会打开命令提示符窗口，llama.cpp 开始读取 GGUF 模型。第一次加载通常需要更久，不要在模型仍然加载时关闭窗口。\n第二步：观察加载日志 正常情况下，窗口会持续输出模型结构、GPU 层、上下文和缓存信息。加载完成后显示服务器监听地址：\nhttp://127.0.0.1:8080 看到 server is listening on 之类的信息后，才说明 Web 服务已经可以访问。\n第三步：保持命令窗口开启 命令窗口就是本地模型服务。关闭窗口会立即停止模型，浏览器页面随后无法继续生成回答。\n05:45 在浏览器中打开 llama.cpp WebUI 第一步：复制本地地址 打开浏览器，在地址栏输入 http://127.0.0.1:8080。这是回环地址，只能访问当前电脑上的服务，不是互联网网站。\n第二步：确认聊天界面出现 页面打开后会显示 llama.cpp 自带的聊天界面。底部输入框附近可以看到当前加载的模型名称和量化。\n第三步：先发送简单测试消息 先输入\"你好\"，模型能够正常回复。用短消息测试可以快速判断模型是否加载成功，不必一开始就提交长任务。\n06:10 测试模型生成个人博客网页 第一步：输入网页生成要求 输入的核心要求是：开发一个个人博客主页，只使用 HTML。模型随后生成一整段 HTML 代码。\n第二步：等待代码生成完成 不要在模型仍然输出时提前复制。等代码块完整结束后，点击代码块右上角的复制按钮。\n第三步：创建 index.html 在桌面新建文本文档，启用文件扩展名显示，把它重命名为 index.html。Windows 提示更改扩展名可能导致文件不可用时，点击确认。\n第四步：用记事本粘贴代码 右键 index.html，选择用记事本编辑。粘贴模型生成的完整代码，按 Ctrl + S 保存。\n第五步：双击打开网页 保存后双击 index.html。系统会用默认浏览器打开本地页面。生成结果是一个包含标题、导航、文章列表和侧栏的个人博客主页。\n常见问题 双击 start.bat 后窗口立即关闭怎么办？ 在脚本最后保留 pause，重新运行后读取错误信息。最常见原因是模型文件名写错、相对路径不对、缺少 DLL，或者下载了不适合当前硬件的构建。\n提示找不到模型文件怎么办？ 检查 models 文件夹名称、脚本中的文件名和实际 GGUF 文件名。Windows 资源管理器应开启文件扩展名显示，避免文件名末尾藏着额外的 .txt。\n出现 CUDA out of memory 怎么办？ 降低 -ngl 数值，减小 -c 上下文长度，关闭占用显存的程序，或改用更小的 IQ2_M 量化。显存不足时不要反复强行启动同一配置。\n为什么 127.0.0.1:8080 打不开？ 确认 llama-server 命令窗口没有关闭，并且日志已经显示监听 8080 端口。如果端口被占用，可以把脚本改为 --port 8081，再访问 http://127.0.0.1:8081。\n模型加载成功但生成特别慢怎么办？ 查看命令窗口中的 token/s。模型可能大部分运行在 CPU，或者上下文设置过大。使用较小量化、增加合理的 GPU 卸载层数，通常能改善速度。\nmmproj 文件必须下载吗？ 纯文字对话不是必须。要使用图片输入等视觉能力，才需要 mmproj，并在启动命令中加入 --mmproj 参数。\n官方资料与相关链接 llama.cpp 官方仓库 llama.cpp 官方 Releases llama-server 官方使用文档 模型仓库 本文按 2026 年 6 月的教程整理。llama.cpp 构建编号、模型文件和下载页面可能更新。下载可执行文件和模型前，应重新核对项目所有者、文件名、许可证和页面说明。\n",
+  "wordCount" : "509",
+  "inLanguage": "zh",
+  "datePublished": "2026-06-29T18:00:00+08:00",
+  "dateModified": "2026-06-29T18:00:00+08:00",
+  "author":{
+    "@type": "Person",
+    "name": "先生靠谱"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://mr-reliable-blog.pages.dev/posts/qwen36-uncensored-windows-llamacpp/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "先生靠谱的技术博客",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://mr-reliable-blog.pages.dev/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+<body id="top">
+    <header class="header">
+    <nav class="header-nav">
+        <div class="logo">
+            <a href="https://mr-reliable-blog.pages.dev/" accesskey="h" title="先生靠谱的技术博客 (Alt + H)">先生靠谱的技术博客</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" class="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg class="moon" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg class="sun" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu" class="menu">
+            <li>
+                <a href="https://mr-reliable-blog.pages.dev/posts/" title="文章">
+                    <span>文章</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://mr-reliable-blog.pages.dev/tags/" title="标签">
+                    <span>标签</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://mr-reliable-blog.pages.dev/categories/" title="分类">
+                    <span>分类</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://mr-reliable-blog.pages.dev/search/" title="搜索 (Alt &#43; /)" accesskey=/>
+                    <span>搜索</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <nav class="breadcrumbs" role="navigation" aria-label="Breadcrumb">
+            <a href="/">主页</a>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right">
+                <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
+            <a href="/posts/">Posts</a>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right">
+        <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+</nav>
+    <h1 class="post-title entry-hint-parent">
+      Qwen3.6 越狱版来了！Windows 本地部署 35B 模型｜llama.cpp 完整教程
+    </h1>
+    <div class="post-meta">
+
+<span title='2026-06-29 18:00:00 +0800 CST'>2026年6月29日</span>&nbsp;·&nbsp;<span>3 分钟</span>&nbsp;·&nbsp;<span>509 字</span>&nbsp;·&nbsp;<span>先生靠谱</span>
+
+</div>
+  </header> <details class="toc" >
+    <summary accesskey="c" title="(Alt + C)">
+        <span class="title">目录</span>
+    </summary>
+
+    <div class="inner"><ul>
+            <li>
+                <a href="#%e9%87%8d%e8%a6%81%e8%af%b4%e6%98%8e" aria-label="重要说明">重要说明</a></li>
+            <li>
+                <a href="#%e5%bc%80%e5%a7%8b%e5%89%8d%e7%9a%84%e5%87%86%e5%a4%87" aria-label="开始前的准备">开始前的准备</a><ul>
+                    
+            <li>
+                <a href="#%e6%9c%ac%e6%9c%9f%e4%bc%9a%e7%94%a8%e5%88%b0%e7%9a%84%e7%bd%91%e5%9d%80" aria-label="本期会用到的网址">本期会用到的网址</a></li></ul>
+            </li>
+            <li>
+                <a href="#%e7%9b%ae%e5%bd%95" aria-label="目录">目录</a></li>
+            <li>
+                <a href="#0000-%e8%bf%99%e6%9c%9f%e6%95%99%e7%a8%8b%e9%83%a8%e7%bd%b2%e7%9a%84%e6%98%af%e4%bb%80%e4%b9%88" aria-label="00:00 这期教程部署的是什么">00:00 这期教程部署的是什么</a></li>
+            <li>
+                <a href="#0030-%e6%89%93%e5%bc%80-llamacpp-%e5%b9%b6%e8%bf%9b%e5%85%a5%e4%b8%8b%e8%bd%bd%e9%a1%b5" aria-label="00:30 打开 llama.cpp 并进入下载页">00:30 打开 llama.cpp 并进入下载页</a><ul>
+                    
+            <li>
+                <a href="#%e7%ac%ac%e4%b8%80%e6%ad%a5%e6%89%93%e5%bc%80%e5%ae%98%e6%96%b9-github-%e4%bb%93%e5%ba%93" aria-label="第一步：打开官方 GitHub 仓库">第一步：打开官方 GitHub 仓库</a></li>
+            <li>
+                <a href="#%e7%ac%ac%e4%ba%8c%e6%ad%a5%e8%bf%9b%e5%85%a5-releases" aria-label="第二步：进入 Releases">第二步：进入 Releases</a></li>
+            <li>
+                <a href="#%e7%ac%ac%e4%b8%89%e6%ad%a5%e5%b1%95%e5%bc%80%e4%b8%8b%e8%bd%bd%e6%96%87%e4%bb%b6" aria-label="第三步：展开下载文件">第三步：展开下载文件</a></li></ul>
+            </li>
+            <li>
+                <a href="#0120-%e6%a0%b9%e6%8d%ae%e7%94%b5%e8%84%91%e9%80%89%e6%8b%a9-llamacpp-%e6%9e%84%e5%bb%ba" aria-label="01:20 根据电脑选择 llama.cpp 构建">01:20 根据电脑选择 llama.cpp 构建</a><ul>
+                    
+            <li>
+                <a href="#%e9%80%89%e6%8b%a9-cuda-133-x64" aria-label="选择 CUDA 13.3 x64">选择 CUDA 13.3 x64</a></li>
+            <li>
+                <a href="#%e7%ad%89%e5%be%85%e5%8e%8b%e7%bc%a9%e5%8c%85%e4%b8%8b%e8%bd%bd%e5%ae%8c%e6%88%90" aria-label="等待压缩包下载完成">等待压缩包下载完成</a></li>
+            <li>
+                <a href="#%e8%a7%a3%e5%8e%8b%e5%85%a8%e9%83%a8%e6%96%87%e4%bb%b6" aria-label="解压全部文件">解压全部文件</a></li></ul>
+            </li>
+            <li>
+                <a href="#0210-%e4%b8%8b%e8%bd%bd-qwen36-35b-gguf-%e6%a8%a1%e5%9e%8b" aria-label="02:10 下载 Qwen3.6 35B GGUF 模型">02:10 下载 Qwen3.6 35B GGUF 模型</a><ul>
+                    
+            <li>
+                <a href="#%e7%ac%ac%e4%b8%80%e6%ad%a5%e5%9c%a8-llamacpp-%e6%96%87%e4%bb%b6%e5%a4%b9%e4%b8%ad%e5%88%9b%e5%bb%ba-models-%e7%9b%ae%e5%bd%95" aria-label="第一步：在 llama.cpp 文件夹中创建 models 目录">第一步：在 llama.cpp 文件夹中创建 models 目录</a></li>
+            <li>
+                <a href="#%e7%ac%ac%e4%ba%8c%e6%ad%a5%e6%89%93%e5%bc%80%e6%a8%a1%e5%9e%8b%e4%bb%93%e5%ba%93" aria-label="第二步：打开模型仓库">第二步：打开模型仓库</a></li>
+            <li>
+                <a href="#%e7%ac%ac%e4%b8%89%e6%ad%a5%e7%90%86%e8%a7%a3%e9%87%8f%e5%8c%96%e6%96%87%e4%bb%b6%e7%9a%84%e5%8c%ba%e5%88%ab" aria-label="第三步：理解量化文件的区别">第三步：理解量化文件的区别</a></li>
+            <li>
+                <a href="#%e7%ac%ac%e5%9b%9b%e6%ad%a5%e5%9c%a8%e4%bb%bb%e5%8a%a1%e7%ae%a1%e7%90%86%e5%99%a8%e6%9f%a5%e7%9c%8b%e6%98%be%e5%ad%98" aria-label="第四步：在任务管理器查看显存">第四步：在任务管理器查看显存</a></li>
+            <li>
+                <a href="#%e7%ac%ac%e4%ba%94%e6%ad%a5%e6%a0%b9%e6%8d%ae%e6%80%bb%e5%86%85%e5%ad%98%e8%83%bd%e5%8a%9b%e9%80%89%e6%8b%a9%e9%87%8f%e5%8c%96" aria-label="第五步：根据总内存能力选择量化">第五步：根据总内存能力选择量化</a></li>
+            <li>
+                <a href="#%e7%ac%ac%e5%85%ad%e6%ad%a5%e4%b8%8b%e8%bd%bd-iq3_m-%e4%b8%bb%e6%a8%a1%e5%9e%8b" aria-label="第六步：下载 IQ3_M 主模型">第六步：下载 IQ3_M 主模型</a></li>
+            <li>
+                <a href="#%e7%ac%ac%e4%b8%83%e6%ad%a5%e4%b8%8b%e8%bd%bd-mmproj-%e8%a7%86%e8%a7%89%e6%96%87%e4%bb%b6" aria-label="第七步：下载 mmproj 视觉文件">第七步：下载 mmproj 视觉文件</a></li></ul>
+            </li>
+            <li>
+                <a href="#0300-%e6%95%b4%e7%90%86%e6%a8%a1%e5%9e%8b%e5%92%8c%e8%bf%90%e8%a1%8c%e6%96%87%e4%bb%b6" aria-label="03:00 整理模型和运行文件">03:00 整理模型和运行文件</a><ul>
+                    
+            <li>
+                <a href="#%e7%ac%ac%e4%b8%80%e6%ad%a5%e6%8a%8a%e4%b8%a4%e4%b8%aa-gguf-%e6%96%87%e4%bb%b6%e7%a7%bb%e5%85%a5-models" aria-label="第一步：把两个 GGUF 文件移入 models">第一步：把两个 GGUF 文件移入 models</a></li>
+            <li>
+                <a href="#%e7%ac%ac%e4%ba%8c%e6%ad%a5%e7%a1%ae%e8%ae%a4%e6%a0%b9%e7%9b%ae%e5%bd%95%e4%b8%ad%e5%ad%98%e5%9c%a8-llama-serverexe" aria-label="第二步：确认根目录中存在 llama-server.exe">第二步：确认根目录中存在 llama-server.exe</a></li>
+            <li>
+                <a href="#%e7%ac%ac%e4%b8%89%e6%ad%a5%e6%8a%8a%e5%90%af%e5%8a%a8%e8%84%9a%e6%9c%ac%e6%94%be%e5%9c%a8%e6%a0%b9%e7%9b%ae%e5%bd%95" aria-label="第三步：把启动脚本放在根目录">第三步：把启动脚本放在根目录</a></li>
+            <li>
+                <a href="#%e6%8e%a8%e8%8d%90%e7%9a%84%e6%96%87%e4%bb%b6%e5%a4%b9%e7%bb%93%e6%9e%84" aria-label="推荐的文件夹结构">推荐的文件夹结构</a></li></ul>
+            </li>
+            <li>
+                <a href="#0400-%e5%88%9b%e5%bb%ba%e5%8f%af%e7%94%a8%e7%9a%84%e5%90%af%e5%8a%a8%e8%84%9a%e6%9c%ac" aria-label="04:00 创建可用的启动脚本">04:00 创建可用的启动脚本</a><ul>
+                    
+            <li>
+                <a href="#%e7%ac%ac%e4%b8%80%e6%ad%a5%e6%96%b0%e5%bb%ba-startbat" aria-label="第一步：新建 start.bat">第一步：新建 start.bat</a></li>
+            <li>
+                <a href="#%e7%ac%ac%e4%ba%8c%e6%ad%a5%e5%86%99%e5%85%a5%e5%90%af%e5%8a%a8%e5%91%bd%e4%bb%a4" aria-label="第二步：写入启动命令">第二步：写入启动命令</a></li>
+            <li>
+                <a href="#%e7%ac%ac%e4%b8%89%e6%ad%a5%e6%8c%89%e8%87%aa%e5%b7%b1%e7%9a%84%e6%96%87%e4%bb%b6%e5%90%8d%e4%bf%ae%e6%94%b9%e8%b7%af%e5%be%84" aria-label="第三步：按自己的文件名修改路径">第三步：按自己的文件名修改路径</a></li>
+            <li>
+                <a href="#%e7%ac%ac%e5%9b%9b%e6%ad%a5%e6%98%be%e5%ad%98%e4%b8%8d%e8%b6%b3%e6%97%b6%e9%99%8d%e4%bd%8e-gpu-%e5%b1%82%e6%95%b0" aria-label="第四步：显存不足时降低 GPU 层数">第四步：显存不足时降低 GPU 层数</a></li>
+            <li>
+                <a href="#%e7%ac%ac%e4%ba%94%e6%ad%a5%e5%86%85%e5%ad%98%e4%b8%8d%e8%b6%b3%e6%97%b6%e9%99%8d%e4%bd%8e%e4%b8%8a%e4%b8%8b%e6%96%87%e9%95%bf%e5%ba%a6" aria-label="第五步：内存不足时降低上下文长度">第五步：内存不足时降低上下文长度</a></li></ul>
+            </li>
+            <li>
+                <a href="#0500-%e5%90%af%e5%8a%a8-llamacpp-%e6%9c%ac%e5%9c%b0%e6%9c%8d%e5%8a%a1" aria-label="05:00 启动 llama.cpp 本地服务">05:00 启动 llama.cpp 本地服务</a><ul>
+                    
+            <li>
+                <a href="#%e7%ac%ac%e4%b8%80%e6%ad%a5%e5%8f%8c%e5%87%bb-startbat" aria-label="第一步：双击 start.bat">第一步：双击 start.bat</a></li>
+            <li>
+                <a href="#%e7%ac%ac%e4%ba%8c%e6%ad%a5%e8%a7%82%e5%af%9f%e5%8a%a0%e8%bd%bd%e6%97%a5%e5%bf%97" aria-label="第二步：观察加载日志">第二步：观察加载日志</a></li>
+            <li>
+                <a href="#%e7%ac%ac%e4%b8%89%e6%ad%a5%e4%bf%9d%e6%8c%81%e5%91%bd%e4%bb%a4%e7%aa%97%e5%8f%a3%e5%bc%80%e5%90%af" aria-label="第三步：保持命令窗口开启">第三步：保持命令窗口开启</a></li></ul>
+            </li>
+            <li>
+                <a href="#0545-%e5%9c%a8%e6%b5%8f%e8%a7%88%e5%99%a8%e4%b8%ad%e6%89%93%e5%bc%80-llamacpp-webui" aria-label="05:45 在浏览器中打开 llama.cpp WebUI">05:45 在浏览器中打开 llama.cpp WebUI</a><ul>
+                    
+            <li>
+                <a href="#%e7%ac%ac%e4%b8%80%e6%ad%a5%e5%a4%8d%e5%88%b6%e6%9c%ac%e5%9c%b0%e5%9c%b0%e5%9d%80" aria-label="第一步：复制本地地址">第一步：复制本地地址</a></li>
+            <li>
+                <a href="#%e7%ac%ac%e4%ba%8c%e6%ad%a5%e7%a1%ae%e8%ae%a4%e8%81%8a%e5%a4%a9%e7%95%8c%e9%9d%a2%e5%87%ba%e7%8e%b0" aria-label="第二步：确认聊天界面出现">第二步：确认聊天界面出现</a></li>
+            <li>
+                <a href="#%e7%ac%ac%e4%b8%89%e6%ad%a5%e5%85%88%e5%8f%91%e9%80%81%e7%ae%80%e5%8d%95%e6%b5%8b%e8%af%95%e6%b6%88%e6%81%af" aria-label="第三步：先发送简单测试消息">第三步：先发送简单测试消息</a></li></ul>
+            </li>
+            <li>
+                <a href="#0610-%e6%b5%8b%e8%af%95%e6%a8%a1%e5%9e%8b%e7%94%9f%e6%88%90%e4%b8%aa%e4%ba%ba%e5%8d%9a%e5%ae%a2%e7%bd%91%e9%a1%b5" aria-label="06:10 测试模型生成个人博客网页">06:10 测试模型生成个人博客网页</a><ul>
+                    
+            <li>
+                <a href="#%e7%ac%ac%e4%b8%80%e6%ad%a5%e8%be%93%e5%85%a5%e7%bd%91%e9%a1%b5%e7%94%9f%e6%88%90%e8%a6%81%e6%b1%82" aria-label="第一步：输入网页生成要求">第一步：输入网页生成要求</a></li>
+            <li>
+                <a href="#%e7%ac%ac%e4%ba%8c%e6%ad%a5%e7%ad%89%e5%be%85%e4%bb%a3%e7%a0%81%e7%94%9f%e6%88%90%e5%ae%8c%e6%88%90" aria-label="第二步：等待代码生成完成">第二步：等待代码生成完成</a></li>
+            <li>
+                <a href="#%e7%ac%ac%e4%b8%89%e6%ad%a5%e5%88%9b%e5%bb%ba-indexhtml" aria-label="第三步：创建 index.html">第三步：创建 index.html</a></li>
+            <li>
+                <a href="#%e7%ac%ac%e5%9b%9b%e6%ad%a5%e7%94%a8%e8%ae%b0%e4%ba%8b%e6%9c%ac%e7%b2%98%e8%b4%b4%e4%bb%a3%e7%a0%81" aria-label="第四步：用记事本粘贴代码">第四步：用记事本粘贴代码</a></li>
+            <li>
+                <a href="#%e7%ac%ac%e4%ba%94%e6%ad%a5%e5%8f%8c%e5%87%bb%e6%89%93%e5%bc%80%e7%bd%91%e9%a1%b5" aria-label="第五步：双击打开网页">第五步：双击打开网页</a></li></ul>
+            </li>
+            <li>
+                <a href="#%e5%b8%b8%e8%a7%81%e9%97%ae%e9%a2%98" aria-label="常见问题">常见问题</a><ul>
+                    
+            <li>
+                <a href="#%e5%8f%8c%e5%87%bb-startbat-%e5%90%8e%e7%aa%97%e5%8f%a3%e7%ab%8b%e5%8d%b3%e5%85%b3%e9%97%ad%e6%80%8e%e4%b9%88%e5%8a%9e" aria-label="双击 start.bat 后窗口立即关闭怎么办？">双击 start.bat 后窗口立即关闭怎么办？</a></li>
+            <li>
+                <a href="#%e6%8f%90%e7%a4%ba%e6%89%be%e4%b8%8d%e5%88%b0%e6%a8%a1%e5%9e%8b%e6%96%87%e4%bb%b6%e6%80%8e%e4%b9%88%e5%8a%9e" aria-label="提示找不到模型文件怎么办？">提示找不到模型文件怎么办？</a></li>
+            <li>
+                <a href="#%e5%87%ba%e7%8e%b0-cuda-out-of-memory-%e6%80%8e%e4%b9%88%e5%8a%9e" aria-label="出现 CUDA out of memory 怎么办？">出现 CUDA out of memory 怎么办？</a></li>
+            <li>
+                <a href="#%e4%b8%ba%e4%bb%80%e4%b9%88-1270018080-%e6%89%93%e4%b8%8d%e5%bc%80" aria-label="为什么 127.0.0.1:8080 打不开？">为什么 127.0.0.1:8080 打不开？</a></li>
+            <li>
+                <a href="#%e6%a8%a1%e5%9e%8b%e5%8a%a0%e8%bd%bd%e6%88%90%e5%8a%9f%e4%bd%86%e7%94%9f%e6%88%90%e7%89%b9%e5%88%ab%e6%85%a2%e6%80%8e%e4%b9%88%e5%8a%9e" aria-label="模型加载成功但生成特别慢怎么办？">模型加载成功但生成特别慢怎么办？</a></li>
+            <li>
+                <a href="#mmproj-%e6%96%87%e4%bb%b6%e5%bf%85%e9%a1%bb%e4%b8%8b%e8%bd%bd%e5%90%97" aria-label="mmproj 文件必须下载吗？">mmproj 文件必须下载吗？</a></li></ul>
+            </li>
+            <li>
+                <a href="#%e5%ae%98%e6%96%b9%e8%b5%84%e6%96%99%e4%b8%8e%e7%9b%b8%e5%85%b3%e9%93%be%e6%8e%a5" aria-label="官方资料与相关链接">官方资料与相关链接</a>
+            </li>
+        </ul>
+    </div>
+</details>
+
+  <div class="post-content md-content"><h2 id="重要说明">重要说明<a hidden class="anchor" aria-hidden="true" href="#重要说明">#</a></h2>
+<p>本文是基于社区模型的本地部署教程。使用的是社区作者 HauhauCS 发布的 Uncensored 微调版本，不是 Qwen 官方发布的安全对齐模型。&ldquo;减少拒答&quot;不等于回答正确，也不等于使用时没有法律和安全责任。不要把模型输出直接用于违法、有害、侵犯隐私或高风险决策。</p>
+<h2 id="开始前的准备">开始前的准备<a hidden class="anchor" aria-hidden="true" href="#开始前的准备">#</a></h2>
+<ul>
+<li>64 位 Windows 电脑</li>
+<li>足够的磁盘空间（主模型约 15 GB，视觉文件约 899 MB，还要留空间给解压文件和运行缓存）</li>
+<li>足够的系统内存（模型文件能下载下来，不代表一定能在电脑上顺利加载）</li>
+<li>如果使用 GPU 加速，需要确认显卡品牌、显存容量和可用的驱动环境</li>
+<li>能够访问 GitHub 和 Hugging Face 下载页面</li>
+</ul>
+<blockquote>
+<p><strong>注意</strong>：本文使用 RTX 5070 Ti 16 GB 显卡测试，选择约 15 GB 的 IQ3_M 量化。显存不足时，llama.cpp 可以把部分计算放到 CPU 和系统内存，但速度会下降。不要简单理解为&quot;模型文件小于显存就一定能跑&rdquo;。</p>
+</blockquote>
+<h3 id="本期会用到的网址">本期会用到的网址<a hidden class="anchor" aria-hidden="true" href="#本期会用到的网址">#</a></h3>
+<ul>
+<li><a href="https://github.com/ggml-org/llama.cpp">llama.cpp 官方 GitHub 仓库</a></li>
+<li><a href="https://github.com/ggml-org/llama.cpp/releases">llama.cpp 官方 Releases 下载页</a></li>
+<li><a href="https://huggingface.co/HauhauCS/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive">Hugging Face 模型仓库</a></li>
+<li><a href="http://127.0.0.1:8080/">llama.cpp 默认本地 WebUI 地址</a></li>
+</ul>
+<h2 id="目录">目录<a hidden class="anchor" aria-hidden="true" href="#目录">#</a></h2>
+<ol>
+<li><a href="#intro">00:00 开场与效果介绍</a></li>
+<li><a href="#download-llama">00:30 下载 llama.cpp</a></li>
+<li><a href="#select-build">01:20 选择 CPU / GPU 版本</a></li>
+<li><a href="#download-model">02:10 下载 GGUF 模型</a></li>
+<li><a href="#organize-files">03:00 整理运行文件</a></li>
+<li><a href="#script">04:00 配置启动脚本</a></li>
+<li><a href="#start-server">05:00 启动本地服务</a></li>
+<li><a href="#web-ui">05:45 在浏览器中使用模型</a></li>
+<li><a href="#test-code">06:10 测试生成完整网页</a></li>
+</ol>
+<h2 id="0000-这期教程部署的是什么">00:00 这期教程部署的是什么<a hidden class="anchor" aria-hidden="true" href="#0000-这期教程部署的是什么">#</a></h2>
+<p>本教程演示的是 <code>HauhauCS/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive</code>。模型以 GGUF 格式发布，可以使用 llama.cpp 在本机运行。</p>
+<p>模型仓库标注为 35B 总参数、约 3B 激活参数的 MoE 模型，并支持文本和视觉输入。本教程使用 llama.cpp 自带的 <code>llama-server</code>，启动后通过浏览器访问本地聊天界面。</p>
+<p>本地运行的优势是对话主要在自己的电脑中处理，不需要按次调用云端 API。不过模型文件很大，下载、加载速度和生成速度都取决于硬件。</p>
+<h2 id="0030-打开-llamacpp-并进入下载页">00:30 打开 llama.cpp 并进入下载页<a hidden class="anchor" aria-hidden="true" href="#0030-打开-llamacpp-并进入下载页">#</a></h2>
+<h3 id="第一步打开官方-github-仓库">第一步：打开官方 GitHub 仓库<a hidden class="anchor" aria-hidden="true" href="#第一步打开官方-github-仓库">#</a></h3>
+<p>浏览器访问 <a href="https://github.com/ggml-org/llama.cpp">github.com/ggml-org/llama.cpp</a>。确认仓库所有者是 <code>ggml-org</code>，避免下载名字相似的第三方程序。</p>
+<h3 id="第二步进入-releases">第二步：进入 Releases<a hidden class="anchor" aria-hidden="true" href="#第二步进入-releases">#</a></h3>
+<p>在仓库右侧找到 Releases，点击最新版本。版本会持续更新，通常应优先选择当前最新稳定构建。</p>
+<h3 id="第三步展开下载文件">第三步：展开下载文件<a hidden class="anchor" aria-hidden="true" href="#第三步展开下载文件">#</a></h3>
+<p>在 Release 页面向下滚动到 Assets。文件很多，必须先判断自己的系统架构和加速后端，不要随便下载第一个压缩包。</p>
+<h2 id="0120-根据电脑选择-llamacpp-构建">01:20 根据电脑选择 llama.cpp 构建<a hidden class="anchor" aria-hidden="true" href="#0120-根据电脑选择-llamacpp-构建">#</a></h2>
+<table>
+	<thead>
+			<tr>
+					<th>硬件情况</th>
+					<th>优先查看的构建</th>
+					<th>说明</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>NVIDIA 显卡</td>
+					<td>Windows x64 CUDA</td>
+					<td>选择与驱动兼容的 CUDA 版本</td>
+			</tr>
+			<tr>
+					<td>AMD 显卡</td>
+					<td>HIP 或 Vulkan</td>
+					<td>HIP 面向 AMD GPU；兼容性不确定时可查看 Vulkan 构建</td>
+			</tr>
+			<tr>
+					<td>Intel 或其他支持 Vulkan 的 GPU</td>
+					<td>Vulkan</td>
+					<td>实际支持情况取决于显卡和驱动</td>
+			</tr>
+			<tr>
+					<td>不使用 GPU</td>
+					<td>Windows x64 CPU</td>
+					<td>可以运行，但 35B 模型通常会明显更慢</td>
+			</tr>
+	</tbody>
+</table>
+<h3 id="选择-cuda-133-x64">选择 CUDA 13.3 x64<a hidden class="anchor" aria-hidden="true" href="#选择-cuda-133-x64">#</a></h3>
+<p>本教程电脑使用 RTX 5070 Ti，因此点击 Windows x64 的 CUDA 13 构建，下载文件名类似 <code>llama-b9673-bin-win-cuda-13.3-x64.zip</code>。</p>
+<h3 id="等待压缩包下载完成">等待压缩包下载完成<a hidden class="anchor" aria-hidden="true" href="#等待压缩包下载完成">#</a></h3>
+<p>下载完成后，把压缩包放到容易找到的位置。</p>
+<h3 id="解压全部文件">解压全部文件<a hidden class="anchor" aria-hidden="true" href="#解压全部文件">#</a></h3>
+<p>右键压缩包，选择解压到独立文件夹。不要直接在压缩包预览窗口中运行 <code>llama-server.exe</code>，否则相关 DLL 和模型路径容易找不到。</p>
+<h2 id="0210-下载-qwen36-35b-gguf-模型">02:10 下载 Qwen3.6 35B GGUF 模型<a hidden class="anchor" aria-hidden="true" href="#0210-下载-qwen36-35b-gguf-模型">#</a></h2>
+<h3 id="第一步在-llamacpp-文件夹中创建-models-目录">第一步：在 llama.cpp 文件夹中创建 models 目录<a hidden class="anchor" aria-hidden="true" href="#第一步在-llamacpp-文件夹中创建-models-目录">#</a></h3>
+<p>打开刚刚解压的 llama.cpp 文件夹，在根目录中新建文件夹，命名为 <code>models</code>。这个目录用来集中存放主模型和视觉投影文件。</p>
+<h3 id="第二步打开模型仓库">第二步：打开模型仓库<a hidden class="anchor" aria-hidden="true" href="#第二步打开模型仓库">#</a></h3>
+<p>访问 <a href="https://huggingface.co/HauhauCS/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive">HauhauCS/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive</a>。</p>
+<h3 id="第三步理解量化文件的区别">第三步：理解量化文件的区别<a hidden class="anchor" aria-hidden="true" href="#第三步理解量化文件的区别">#</a></h3>
+<p>页面 Downloads 区域列出多个 GGUF 文件。量化越高，文件越大，通常质量越好，同时需要更多内存。主要比较以下两项：</p>
+<ul>
+<li><code>IQ2_M</code>：约 11 GB，资源占用较低，质量损失更明显</li>
+<li><code>IQ3_M</code>：约 15 GB，本教程使用的版本</li>
+</ul>
+<h3 id="第四步在任务管理器查看显存">第四步：在任务管理器查看显存<a hidden class="anchor" aria-hidden="true" href="#第四步在任务管理器查看显存">#</a></h3>
+<p>按 <code>Ctrl + Shift + Esc</code> 打开任务管理器，进入性能，点击左侧的 GPU。查看&quot;专用 GPU 内存&quot;总容量。</p>
+<h3 id="第五步根据总内存能力选择量化">第五步：根据总内存能力选择量化<a hidden class="anchor" aria-hidden="true" href="#第五步根据总内存能力选择量化">#</a></h3>
+<p>建议 4 GB 或 6 GB 显存尝试约 11 GB 的 IQ2_M，8 GB 及以上尝试约 15 GB 的 IQ3_M。这依赖 CPU 分层和系统内存，不代表模型能全部装进显存。内存不足时会加载失败，内存刚好够时也可能因为上下文缓存而崩溃。</p>
+<p>如果不确定，先下载较小的 IQ2_M。确认能够稳定启动后，再考虑更高质量的量化。</p>
+<h3 id="第六步下载-iq3_m-主模型">第六步：下载 IQ3_M 主模型<a hidden class="anchor" aria-hidden="true" href="#第六步下载-iq3_m-主模型">#</a></h3>
+<p>点击以下文件：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive-IQ3_M.gguf
+</span></span></code></pre></div><h3 id="第七步下载-mmproj-视觉文件">第七步：下载 mmproj 视觉文件<a hidden class="anchor" aria-hidden="true" href="#第七步下载-mmproj-视觉文件">#</a></h3>
+<p>同一页面还要下载：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>mmproj-Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive-f16.gguf
+</span></span></code></pre></div><p>该文件约 899 MB，用于图像等多模态输入。如果只打算文字对话，可以不启用视觉文件；但要完整复现教程配置，应当一起下载。</p>
+<h2 id="0300-整理模型和运行文件">03:00 整理模型和运行文件<a hidden class="anchor" aria-hidden="true" href="#0300-整理模型和运行文件">#</a></h2>
+<h3 id="第一步把两个-gguf-文件移入-models">第一步：把两个 GGUF 文件移入 models<a hidden class="anchor" aria-hidden="true" href="#第一步把两个-gguf-文件移入-models">#</a></h3>
+<p>回到 llama.cpp 解压目录，打开刚才创建的 <code>models</code> 文件夹。将 IQ3_M 主模型和 mmproj 文件一起拖进去。</p>
+<h3 id="第二步确认根目录中存在-llama-serverexe">第二步：确认根目录中存在 llama-server.exe<a hidden class="anchor" aria-hidden="true" href="#第二步确认根目录中存在-llama-serverexe">#</a></h3>
+<p>返回上一层。根目录应该能看到 <code>llama-server.exe</code> 以及随构建附带的 DLL。如果只有模型文件，没有可执行文件，说明下载或解压的包不对。</p>
+<h3 id="第三步把启动脚本放在根目录">第三步：把启动脚本放在根目录<a hidden class="anchor" aria-hidden="true" href="#第三步把启动脚本放在根目录">#</a></h3>
+<p>将名为 <code>start.bat</code> 的启动脚本放在 llama.cpp 根目录，与 <code>llama-server.exe</code> 同级。</p>
+<h3 id="推荐的文件夹结构">推荐的文件夹结构<a hidden class="anchor" aria-hidden="true" href="#推荐的文件夹结构">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>llama-b9673-bin-win-cuda-13.3-x64/
+</span></span><span style="display:flex;"><span>├── llama-server.exe
+</span></span><span style="display:flex;"><span>├── start.bat
+</span></span><span style="display:flex;"><span>├── 其他 DLL 和程序文件
+</span></span><span style="display:flex;"><span>└── models/
+</span></span><span style="display:flex;"><span>    ├── Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive-IQ3_M.gguf
+</span></span><span style="display:flex;"><span>    └── mmproj-Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive-f16.gguf
+</span></span></code></pre></div><h2 id="0400-创建可用的启动脚本">04:00 创建可用的启动脚本<a hidden class="anchor" aria-hidden="true" href="#0400-创建可用的启动脚本">#</a></h2>
+<h3 id="第一步新建-startbat">第一步：新建 start.bat<a hidden class="anchor" aria-hidden="true" href="#第一步新建-startbat">#</a></h3>
+<p>在 llama.cpp 根目录空白处右键，新建文本文档。打开资源管理器的查看 → 显示，启用&quot;文件扩展名&quot;，然后把文件重命名为 <code>start.bat</code>。</p>
+<h3 id="第二步写入启动命令">第二步：写入启动命令<a hidden class="anchor" aria-hidden="true" href="#第二步写入启动命令">#</a></h3>
+<p>右键 <code>start.bat</code>，选择编辑，写入以下内容：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bat" data-lang="bat"><span style="display:flex;"><span>@<span style="color:#ff79c6">echo</span> off
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">cd</span> /d <span style="color:#f1fa8c">&#34;</span><span style="color:#8be9fd;font-style:italic">%~dp0</span><span style="color:#f1fa8c">&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>llama-server.exe <span style="color:#f1fa8c">^
+</span></span></span><span style="display:flex;"><span><span style="color:#f1fa8c"> </span> -m <span style="color:#f1fa8c">&#34;models\Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive-IQ3_M.gguf&#34;</span> <span style="color:#f1fa8c">^
+</span></span></span><span style="display:flex;"><span><span style="color:#f1fa8c"> </span> --mmproj <span style="color:#f1fa8c">&#34;models\mmproj-Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive-f16.gguf&#34;</span> <span style="color:#f1fa8c">^
+</span></span></span><span style="display:flex;"><span><span style="color:#f1fa8c"> </span> --jinja <span style="color:#f1fa8c">^
+</span></span></span><span style="display:flex;"><span><span style="color:#f1fa8c"> </span> -c 131072 <span style="color:#f1fa8c">^
+</span></span></span><span style="display:flex;"><span><span style="color:#f1fa8c"> </span> -ngl 99 <span style="color:#f1fa8c">^
+</span></span></span><span style="display:flex;"><span><span style="color:#f1fa8c"> </span> --host 127.0.0.1 <span style="color:#f1fa8c">^
+</span></span></span><span style="display:flex;"><span><span style="color:#f1fa8c"> </span> --port 8080
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">pause</span>
+</span></span></code></pre></div><h3 id="第三步按自己的文件名修改路径">第三步：按自己的文件名修改路径<a hidden class="anchor" aria-hidden="true" href="#第三步按自己的文件名修改路径">#</a></h3>
+<p>如果下载的是 IQ2_M 或其他量化，必须修改 <code>-m</code> 后面的文件名。文件名需要与 <code>models</code> 文件夹里的实际文件完全一致。</p>
+<h3 id="第四步显存不足时降低-gpu-层数">第四步：显存不足时降低 GPU 层数<a hidden class="anchor" aria-hidden="true" href="#第四步显存不足时降低-gpu-层数">#</a></h3>
+<p><code>-ngl 99</code> 会尽可能把模型层卸载到 GPU。显存不足或启动时报 CUDA 内存错误时，可以把它改为较小数字，例如 <code>-ngl 40</code>，或者使用 <code>-ngl 0</code> 完全交给 CPU。数值越低，一般越慢。</p>
+<h3 id="第五步内存不足时降低上下文长度">第五步：内存不足时降低上下文长度<a hidden class="anchor" aria-hidden="true" href="#第五步内存不足时降低上下文长度">#</a></h3>
+<p>教程控制台显示上下文长度为 131072，即脚本中的 <code>-c 131072</code>。这是很大的上下文，会额外占用内存。如果启动困难，可以先改成 <code>-c 32768</code> 或 <code>-c 16384</code>，确认模型能正常运行后再调整。</p>
+<h2 id="0500-启动-llamacpp-本地服务">05:00 启动 llama.cpp 本地服务<a hidden class="anchor" aria-hidden="true" href="#0500-启动-llamacpp-本地服务">#</a></h2>
+<h3 id="第一步双击-startbat">第一步：双击 start.bat<a hidden class="anchor" aria-hidden="true" href="#第一步双击-startbat">#</a></h3>
+<p>双击启动脚本。Windows 会打开命令提示符窗口，llama.cpp 开始读取 GGUF 模型。第一次加载通常需要更久，不要在模型仍然加载时关闭窗口。</p>
+<h3 id="第二步观察加载日志">第二步：观察加载日志<a hidden class="anchor" aria-hidden="true" href="#第二步观察加载日志">#</a></h3>
+<p>正常情况下，窗口会持续输出模型结构、GPU 层、上下文和缓存信息。加载完成后显示服务器监听地址：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>http://127.0.0.1:8080
+</span></span></code></pre></div><p>看到 <code>server is listening on</code> 之类的信息后，才说明 Web 服务已经可以访问。</p>
+<h3 id="第三步保持命令窗口开启">第三步：保持命令窗口开启<a hidden class="anchor" aria-hidden="true" href="#第三步保持命令窗口开启">#</a></h3>
+<p>命令窗口就是本地模型服务。关闭窗口会立即停止模型，浏览器页面随后无法继续生成回答。</p>
+<h2 id="0545-在浏览器中打开-llamacpp-webui">05:45 在浏览器中打开 llama.cpp WebUI<a hidden class="anchor" aria-hidden="true" href="#0545-在浏览器中打开-llamacpp-webui">#</a></h2>
+<h3 id="第一步复制本地地址">第一步：复制本地地址<a hidden class="anchor" aria-hidden="true" href="#第一步复制本地地址">#</a></h3>
+<p>打开浏览器，在地址栏输入 <code>http://127.0.0.1:8080</code>。这是回环地址，只能访问当前电脑上的服务，不是互联网网站。</p>
+<h3 id="第二步确认聊天界面出现">第二步：确认聊天界面出现<a hidden class="anchor" aria-hidden="true" href="#第二步确认聊天界面出现">#</a></h3>
+<p>页面打开后会显示 llama.cpp 自带的聊天界面。底部输入框附近可以看到当前加载的模型名称和量化。</p>
+<h3 id="第三步先发送简单测试消息">第三步：先发送简单测试消息<a hidden class="anchor" aria-hidden="true" href="#第三步先发送简单测试消息">#</a></h3>
+<p>先输入&quot;你好&quot;，模型能够正常回复。用短消息测试可以快速判断模型是否加载成功，不必一开始就提交长任务。</p>
+<h2 id="0610-测试模型生成个人博客网页">06:10 测试模型生成个人博客网页<a hidden class="anchor" aria-hidden="true" href="#0610-测试模型生成个人博客网页">#</a></h2>
+<h3 id="第一步输入网页生成要求">第一步：输入网页生成要求<a hidden class="anchor" aria-hidden="true" href="#第一步输入网页生成要求">#</a></h3>
+<p>输入的核心要求是：开发一个个人博客主页，只使用 HTML。模型随后生成一整段 HTML 代码。</p>
+<h3 id="第二步等待代码生成完成">第二步：等待代码生成完成<a hidden class="anchor" aria-hidden="true" href="#第二步等待代码生成完成">#</a></h3>
+<p>不要在模型仍然输出时提前复制。等代码块完整结束后，点击代码块右上角的复制按钮。</p>
+<h3 id="第三步创建-indexhtml">第三步：创建 index.html<a hidden class="anchor" aria-hidden="true" href="#第三步创建-indexhtml">#</a></h3>
+<p>在桌面新建文本文档，启用文件扩展名显示，把它重命名为 <code>index.html</code>。Windows 提示更改扩展名可能导致文件不可用时，点击确认。</p>
+<h3 id="第四步用记事本粘贴代码">第四步：用记事本粘贴代码<a hidden class="anchor" aria-hidden="true" href="#第四步用记事本粘贴代码">#</a></h3>
+<p>右键 <code>index.html</code>，选择用记事本编辑。粘贴模型生成的完整代码，按 <code>Ctrl + S</code> 保存。</p>
+<h3 id="第五步双击打开网页">第五步：双击打开网页<a hidden class="anchor" aria-hidden="true" href="#第五步双击打开网页">#</a></h3>
+<p>保存后双击 <code>index.html</code>。系统会用默认浏览器打开本地页面。生成结果是一个包含标题、导航、文章列表和侧栏的个人博客主页。</p>
+<h2 id="常见问题">常见问题<a hidden class="anchor" aria-hidden="true" href="#常见问题">#</a></h2>
+<h3 id="双击-startbat-后窗口立即关闭怎么办">双击 start.bat 后窗口立即关闭怎么办？<a hidden class="anchor" aria-hidden="true" href="#双击-startbat-后窗口立即关闭怎么办">#</a></h3>
+<p>在脚本最后保留 <code>pause</code>，重新运行后读取错误信息。最常见原因是模型文件名写错、相对路径不对、缺少 DLL，或者下载了不适合当前硬件的构建。</p>
+<h3 id="提示找不到模型文件怎么办">提示找不到模型文件怎么办？<a hidden class="anchor" aria-hidden="true" href="#提示找不到模型文件怎么办">#</a></h3>
+<p>检查 <code>models</code> 文件夹名称、脚本中的文件名和实际 GGUF 文件名。Windows 资源管理器应开启文件扩展名显示，避免文件名末尾藏着额外的 <code>.txt</code>。</p>
+<h3 id="出现-cuda-out-of-memory-怎么办">出现 CUDA out of memory 怎么办？<a hidden class="anchor" aria-hidden="true" href="#出现-cuda-out-of-memory-怎么办">#</a></h3>
+<p>降低 <code>-ngl</code> 数值，减小 <code>-c</code> 上下文长度，关闭占用显存的程序，或改用更小的 IQ2_M 量化。显存不足时不要反复强行启动同一配置。</p>
+<h3 id="为什么-1270018080-打不开">为什么 127.0.0.1:8080 打不开？<a hidden class="anchor" aria-hidden="true" href="#为什么-1270018080-打不开">#</a></h3>
+<p>确认 llama-server 命令窗口没有关闭，并且日志已经显示监听 8080 端口。如果端口被占用，可以把脚本改为 <code>--port 8081</code>，再访问 <code>http://127.0.0.1:8081</code>。</p>
+<h3 id="模型加载成功但生成特别慢怎么办">模型加载成功但生成特别慢怎么办？<a hidden class="anchor" aria-hidden="true" href="#模型加载成功但生成特别慢怎么办">#</a></h3>
+<p>查看命令窗口中的 token/s。模型可能大部分运行在 CPU，或者上下文设置过大。使用较小量化、增加合理的 GPU 卸载层数，通常能改善速度。</p>
+<h3 id="mmproj-文件必须下载吗">mmproj 文件必须下载吗？<a hidden class="anchor" aria-hidden="true" href="#mmproj-文件必须下载吗">#</a></h3>
+<p>纯文字对话不是必须。要使用图片输入等视觉能力，才需要 mmproj，并在启动命令中加入 <code>--mmproj</code> 参数。</p>
+<h2 id="官方资料与相关链接">官方资料与相关链接<a hidden class="anchor" aria-hidden="true" href="#官方资料与相关链接">#</a></h2>
+<ul>
+<li><a href="https://github.com/ggml-org/llama.cpp">llama.cpp 官方仓库</a></li>
+<li><a href="https://github.com/ggml-org/llama.cpp/releases">llama.cpp 官方 Releases</a></li>
+<li><a href="https://github.com/ggml-org/llama.cpp/blob/master/tools/server/README.md">llama-server 官方使用文档</a></li>
+<li><a href="https://huggingface.co/HauhauCS/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive">模型仓库</a></li>
+</ul>
+<blockquote>
+<p>本文按 2026 年 6 月的教程整理。llama.cpp 构建编号、模型文件和下载页面可能更新。下载可执行文件和模型前，应重新核对项目所有者、文件名、许可证和页面说明。</p>
+</blockquote>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://mr-reliable-blog.pages.dev/tags/ai/">AI</a></li>
+      <li><a href="https://mr-reliable-blog.pages.dev/tags/llama.cpp/">Llama.cpp</a></li>
+      <li><a href="https://mr-reliable-blog.pages.dev/tags/qwen/">Qwen</a></li>
+      <li><a href="https://mr-reliable-blog.pages.dev/tags/%E6%9C%AC%E5%9C%B0%E9%83%A8%E7%BD%B2/">本地部署</a></li>
+      <li><a href="https://mr-reliable-blog.pages.dev/tags/windows/">Windows</a></li>
+    </ul>
+<nav class="paginav">
+  <a class="prev" href="https://mr-reliable-blog.pages.dev/posts/qwen36-local-deploy/">
+    <span class="title">« 上一页</span>
+    <span>Qwen3.6 越狱版来了！Windows 本地部署 35B 模型｜llama.cpp 完整教程</span>
+  </a>
+</nav>
+
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2026 <a href="https://mr-reliable-blog.pages.dev/">先生靠谱的技术博客</a></span> · 
+
+    
+    
+    <span>
+        Powered by
+        <a href="https://gohugo.io/?utm_source=papermod" rel="noopener" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" id="top-link" class="top-link hidden" aria-label="go to top" title="Go to Top (Alt + G)" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevrons-up">
+        <polyline points="17 11 12 6 7 11"></polyline>
+        <polyline points="17 18 12 13 7 18"></polyline>
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var toplink = document.getElementById("top-link");
+    window.onscroll = function () {
+        const scrollThreshold = window.innerHeight;
+        if (document.body.scrollTop > scrollThreshold || document.documentElement.scrollTop > scrollThreshold) {
+            toplink.classList.remove("hidden");
+        } else {
+            toplink.classList.add("hidden");
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = '复制';
+
+        function copyingDone() {
+            copybutton.innerHTML = '已复制！';
+            setTimeout(() => {
+                copybutton.innerHTML = '复制';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>

@@ -15,5 +15,12 @@
       <guid>https://mr-reliable-blog.pages.dev/posts/qwen36-local-deploy/</guid>
       <description>手把手教你在 Windows 上用 llama.cpp 部署 Qwen3.6-35B 无审查模型，支持 RTX3070 8G 显存。</description>
     </item>
+    <item>
+      <title>Qwen3.6 越狱版来了！Windows 本地部署 35B 模型｜llama.cpp 完整教程</title>
+      <link>https://mr-reliable-blog.pages.dev/posts/qwen36-uncensored-windows-llamacpp/</link>
+      <pubDate>Mon, 29 Jun 2026 18:00:00 +0800</pubDate>
+      <guid>https://mr-reliable-blog.pages.dev/posts/qwen36-uncensored-windows-llamacpp/</guid>
+      <description>手把手教你在 Windows 上用 llama.cpp 部署 Qwen3.6-35B 无审查模型，支持 CUDA/Vulkan/CPU 全平台。</description>
+    </item>
   </channel>
 </rss>
