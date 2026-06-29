@@ -1,26 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Hermes on 千华落影</title>
-    <link>https://0149.cc.cd/tags/hermes/</link>
-    <description>Recent content in Hermes on 千华落影</description>
+    <title>Agent on 千华落影</title>
+    <link>https://0149.cc.cd/tags/agent/</link>
+    <description>Recent content in Agent on 千华落影</description>
     <generator>Hugo</generator>
     <language>zh-CN</language>
     <lastBuildDate>Mon, 29 Jun 2026 11:00:00 +0800</lastBuildDate>
-    <atom:link href="https://0149.cc.cd/tags/hermes/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://0149.cc.cd/tags/agent/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hermes Agent 桌面版正式发布！Windows / macOS / Linux 全平台支持，小白也能轻松上手！</title>
       <link>https://0149.cc.cd/posts/hermes-desktop-release/</link>
       <pubDate>Mon, 29 Jun 2026 11:00:00 +0800</pubDate>
       <guid>https://0149.cc.cd/posts/hermes-desktop-release/</guid>
       <description>Hermes Agent 官方桌面版正式发布，支持 Windows、macOS、Linux 三大平台，图形化界面安装配置，小白也能轻松上手。</description>
-    </item>
-    <item>
-      <title>AI 一句话帮你部署博客：Hugo &#43; GitHub &#43; Cloudflare Pages 完整教程</title>
-      <link>https://0149.cc.cd/posts/hermes-auto-deploy-blog/</link>
-      <pubDate>Mon, 29 Jun 2026 10:00:00 +0800</pubDate>
-      <guid>https://0149.cc.cd/posts/hermes-auto-deploy-blog/</guid>
-      <description>用 AI 代理（Hermes）一句话完成博客搭建：Hugo + GitHub + Cloudflare Pages，从零到上线全流程。</description>
     </item>
   </channel>
 </rss>
