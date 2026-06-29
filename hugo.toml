@@ -1,0 +1,60 @@
+baseURL = "https://blog.linhuiguo.pages.dev/"
+languageCode = "zh-CN"
+defaultContentLanguage = "zh"
+title = "先生靠谱的技术博客"
+theme = "PaperMod"
+paginate = 10
+
+[params]
+  author = "先生靠谱"
+  description = "分享 AI、编程、部署等技术文章"
+  defaultTheme = "dark"
+  ShowReadingTime = true
+  ShowShareButtons = false
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+  ShowCodeCopyButtons = true
+  ShowWordCount = true
+  ShowToc = true
+  TocOpen = false
+  comments = false
+
+  [params.homeInfoParams]
+    Title = "👋 你好，我是先生靠谱"
+    Content = "一个技术博主，分享 AI 大模型、本地部署、编程开发等实用教程。"
+
+  [[params.socialIcons]]
+    name = "github"
+    url = "https://github.com/linhuiguo"
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
+[menu]
+  [[menu.main]]
+    identifier = "posts"
+    name = "文章"
+    url = "/posts/"
+    weight = 10
+  [[menu.main]]
+    identifier = "tags"
+    name = "标签"
+    url = "/tags/"
+    weight = 20
+  [[menu.main]]
+    identifier = "categories"
+    name = "分类"
+    url = "/categories/"
+    weight = 30
+  [[menu.main]]
+    identifier = "search"
+    name = "搜索"
+    url = "/search/"
+    weight = 40
+
+[markup]
+  [markup.highlight]
+    codeFences = true
+    guessSyntax = true
+    lineNos = false
+    style = "dracula"
