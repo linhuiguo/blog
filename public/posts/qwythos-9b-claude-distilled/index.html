@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="zh" dir="auto" data-theme="dark">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>4G 显存跑 Claude Mythos 5？Qwythos-9B 突然开源，百万上下文免费用 | 千华落影</title>
+<meta name="keywords" content="Qwen, Claude, 开源模型, 本地部署, 推理">
+<meta name="description" content="Qwythos-9B 突然开源，吸收 Claude Mythos 5 推理能力，百万 Token 上下文，4GB 显存即可本地部署。">
+<meta name="author" content="千华落影">
+<link rel="canonical" href="https://www.0149.cc.cd/posts/qwythos-9b-claude-distilled/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.89ca4972ab5e6aaa05e9a0dae0c4bb64b26585bc79e36f5cf33614eea0283abe.css" integrity="sha256-icpJcqteaqoF6aDa4MS7ZLJlhbx5429c8zYU7qAoOr4=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://www.0149.cc.cd/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://www.0149.cc.cd/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://www.0149.cc.cd/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://www.0149.cc.cd/apple-touch-icon.png">
+<link rel="mask-icon" href="https://www.0149.cc.cd/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="zh" href="https://www.0149.cc.cd/posts/qwythos-9b-claude-distilled/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "light") {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script><meta property="og:url" content="https://www.0149.cc.cd/posts/qwythos-9b-claude-distilled/">
+  <meta property="og:site_name" content="千华落影">
+  <meta property="og:title" content="4G 显存跑 Claude Mythos 5？Qwythos-9B 突然开源，百万上下文免费用">
+  <meta property="og:description" content="Qwythos-9B 突然开源，吸收 Claude Mythos 5 推理能力，百万 Token 上下文，4GB 显存即可本地部署。">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2026-06-29T19:00:00+08:00">
+    <meta property="article:modified_time" content="2026-06-29T19:00:00+08:00">
+    <meta property="article:tag" content="Qwen">
+    <meta property="article:tag" content="Claude">
+    <meta property="article:tag" content="开源模型">
+    <meta property="article:tag" content="本地部署">
+    <meta property="article:tag" content="推理">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="4G 显存跑 Claude Mythos 5？Qwythos-9B 突然开源，百万上下文免费用">
+  <meta name="twitter:description" content="Qwythos-9B 突然开源，吸收 Claude Mythos 5 推理能力，百万 Token 上下文，4GB 显存即可本地部署。">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://www.0149.cc.cd/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "4G 显存跑 Claude Mythos 5？Qwythos-9B 突然开源，百万上下文免费用",
+      "item": "https://www.0149.cc.cd/posts/qwythos-9b-claude-distilled/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "4G 显存跑 Claude Mythos 5？Qwythos-9B 突然开源，百万上下文免费用",
+  "name": "4G 显存跑 Claude Mythos 5？Qwythos-9B 突然开源，百万上下文免费用",
+  "description": "Qwythos-9B 突然开源，吸收 Claude Mythos 5 推理能力，百万 Token 上下文，4GB 显存即可本地部署。",
+  "keywords": [
+    "Qwen", "Claude", "开源模型", "本地部署", "推理"
+  ],
+  "articleBody": "前言 不得不说，现在开源 AI 模型的发展速度，正在变得越来越快！\n就在前两天，一款名为 Qwythos-9B-Claude-Mythos-5-1M 的全新开源推理模型悄然发布，并迅速引起了本地 AI 社区的广泛关注。\n与传统开源模型不同，Qwythos-9B 最大的亮点在于它吸收了大量来自 Claude Mythos 和 Claude Fable 的高质量推理轨迹，并通过专门的后训练技术，将这些推理能力迁移到一个仅有 9B 参数的开源模型之中。\n更令人惊讶的是，它不仅支持超过 104 万 Token 的超长上下文窗口，同时还提供 GGUF 量化版本，最低仅需 4GB 显存即可本地部署运行。\n那么这款被誉为\"Claude Mythos 开源平替\"的模型究竟表现如何？本文将带大家深入了解这款近期爆火的开源推理模型。\n一、什么是 Qwythos-9B？ Qwythos-9B 是一个基于 Qwen3.5-9B 架构训练的全参数推理模型。\n开发团队 Empero AI 在深度未审查版本的 Qwen3.5-9B 基础上，使用超过 5 亿条高质量 Claude Mythos 与 Claude Fable 推理轨迹进行了后训练。\n这些推理轨迹并非简单问答数据，而是包含完整思维链（Chain of Thought）的高质量推理过程，其逻辑链由 Empero AI 内部的 rethink 系统自动生成。\n简单来说，你可以把它理解为：\n将 Claude Mythos 的推理思维方式迁移到了一个仅有 9B 参数的开源模型之中。\n最终得到了一款兼顾推理能力、部署成本以及长上下文能力的新型开源模型。\n二、本地部署要求 Qwythos 已提供 GGUF 格式，可通过以下工具直接运行：\nllama.cpp llama-server OpenWebUI Cherry Studio OpenClaw 不同量化版本对应显存需求如下：\n显存 推荐量化 4GB Q4_K_M 6GB Q5_K_M 8GB Q6_K 12GB Q8_K_M 16GB BF16 24GB MTP-BF16 如果使用 BF16 全精度版本，则建议至少配备 24GB 显存。\n三、部署教程 1、下载 Qwythos 模型 下载地址：HuggingFace - Qwythos-9B GGUF\n2、安装 llama.cpp 下载地址：GitHub - llama.cpp\n3、启动命令 根据你的显存选择对应的量化版本和上下文长度：\n4GB 显存（Q4_K_M）：\nllama-server.exe \\ -m \"models\\Qwythos-9B-Q4_K_M.gguf\" \\ -ngl 999 \\ -c 16384 \\ -n 2048 \\ -fa on \\ --jinja \\ --host 127.0.0.1 \\ --port 8080 8GB 显存（Q6_K）：\nllama-server.exe \\ -m \"models\\Qwythos-9B-Q6_K.gguf\" \\ -ngl 999 \\ -c 65536 \\ -n 2048 \\ -fa on \\ --jinja \\ --host 127.0.0.1 \\ --port 8080 12GB+ 显存（Q8_K_M）：\nllama-server.exe \\ -m \"models\\Qwythos-9B-Q8_K_M.gguf\" \\ -ngl 999 \\ -c 131072 \\ -n 2048 \\ -fa on \\ --jinja \\ --host 127.0.0.1 \\ --port 8080 启动后 API 地址为 http://127.0.0.1:8080/v1，可对接：\nOpenWebUI Cherry Studio OpenClaw Hermes 任何 OpenAI 兼容客户端 四、总结 要点 说明 模型架构 基于 Qwen3.5-9B 训练数据 5 亿+ Claude Mythos/Fable 推理轨迹 上下文长度 超过 104 万 Token 最低显存 4GB（Q4_K_M 量化） 推理能力 接近 Claude Mythos 水平 开源格式 GGUF 量化版 兼容工具 llama.cpp / OpenWebUI / Cherry Studio / OpenClaw Qwythos-9B 的出现，让普通用户也能在 4GB 显存的消费级显卡上体验接近 Claude Mythos 的推理能力。如果你对 AI 推理感兴趣，强烈建议试试这个模型。\n参考资料 HuggingFace - Empero AI llama.cpp GitHub OpenWebUI ",
+  "wordCount" : "257",
+  "inLanguage": "zh",
+  "datePublished": "2026-06-29T19:00:00+08:00",
+  "dateModified": "2026-06-29T19:00:00+08:00",
+  "author":{
+    "@type": "Person",
+    "name": "千华落影"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.0149.cc.cd/posts/qwythos-9b-claude-distilled/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "千华落影",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.0149.cc.cd/favicon.ico"
+    }
+  }
+}
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2416788946087777" crossorigin="anonymous"></script>
+</head>
+<body id="top">
+    <header class="header">
+    <nav class="header-nav">
+        <div class="logo">
+            <a href="https://www.0149.cc.cd/" accesskey="h" title="千华落影 (Alt + H)">千华落影</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" class="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg class="moon" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg class="sun" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu" class="menu">
+            <li>
+                <a href="https://www.0149.cc.cd/posts/" title="文章">
+                    <span>文章</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.0149.cc.cd/tags/" title="标签">
+                    <span>标签</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.0149.cc.cd/categories/" title="分类">
+                    <span>分类</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.0149.cc.cd/search/" title="搜索 (Alt &#43; /)" accesskey=/>
+                    <span>搜索</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <nav class="breadcrumbs" role="navigation" aria-label="Breadcrumb">
+            <a href="/">主页</a>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right">
+                <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
+            <a href="/posts/">Posts</a>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right">
+        <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+</nav>
+    <h1 class="post-title entry-hint-parent">
+      4G 显存跑 Claude Mythos 5？Qwythos-9B 突然开源，百万上下文免费用
+    </h1>
+    <div class="post-meta">
+
+<span title='2026-06-29 19:00:00 +0800 CST'>2026年6月29日</span>&nbsp;·&nbsp;<span>2 分钟</span>&nbsp;·&nbsp;<span>257 字</span>&nbsp;·&nbsp;<span>千华落影</span>
+
+</div>
+  </header> <details class="toc" >
+    <summary accesskey="c" title="(Alt + C)">
+        <span class="title">目录</span>
+    </summary>
+
+    <div class="inner"><ul>
+            <li>
+                <a href="#%e5%89%8d%e8%a8%80" aria-label="前言">前言</a></li>
+            <li>
+                <a href="#%e4%b8%80%e4%bb%80%e4%b9%88%e6%98%af-qwythos-9b" aria-label="一、什么是 Qwythos-9B？">一、什么是 Qwythos-9B？</a></li>
+            <li>
+                <a href="#%e4%ba%8c%e6%9c%ac%e5%9c%b0%e9%83%a8%e7%bd%b2%e8%a6%81%e6%b1%82" aria-label="二、本地部署要求">二、本地部署要求</a></li>
+            <li>
+                <a href="#%e4%b8%89%e9%83%a8%e7%bd%b2%e6%95%99%e7%a8%8b" aria-label="三、部署教程">三、部署教程</a><ul>
+                    
+            <li>
+                <a href="#1%e4%b8%8b%e8%bd%bd-qwythos-%e6%a8%a1%e5%9e%8b" aria-label="1、下载 Qwythos 模型">1、下载 Qwythos 模型</a></li>
+            <li>
+                <a href="#2%e5%ae%89%e8%a3%85-llamacpp" aria-label="2、安装 llama.cpp">2、安装 llama.cpp</a></li>
+            <li>
+                <a href="#3%e5%90%af%e5%8a%a8%e5%91%bd%e4%bb%a4" aria-label="3、启动命令">3、启动命令</a></li></ul>
+            </li>
+            <li>
+                <a href="#%e5%9b%9b%e6%80%bb%e7%bb%93" aria-label="四、总结">四、总结</a></li>
+            <li>
+                <a href="#%e5%8f%82%e8%80%83%e8%b5%84%e6%96%99" aria-label="参考资料">参考资料</a>
+            </li>
+        </ul>
+    </div>
+</details>
+
+  <div class="post-content md-content"><h2 id="前言">前言<a hidden class="anchor" aria-hidden="true" href="#前言">#</a></h2>
+<p>不得不说，现在开源 AI 模型的发展速度，正在变得越来越快！</p>
+<p>就在前两天，一款名为 <strong>Qwythos-9B-Claude-Mythos-5-1M</strong> 的全新开源推理模型悄然发布，并迅速引起了本地 AI 社区的广泛关注。</p>
+<p>与传统开源模型不同，Qwythos-9B 最大的亮点在于它<strong>吸收了大量来自 Claude Mythos 和 Claude Fable 的高质量推理轨迹</strong>，并通过专门的后训练技术，将这些推理能力迁移到一个仅有 9B 参数的开源模型之中。</p>
+<p><img alt="Qwythos-9B 介绍" loading="lazy" src="/images/qwythos/1.webp"></p>
+<p>更令人惊讶的是，它不仅支持<strong>超过 104 万 Token 的超长上下文窗口</strong>，同时还提供 GGUF 量化版本，<strong>最低仅需 4GB 显存即可本地部署运行</strong>。</p>
+<p>那么这款被誉为&quot;Claude Mythos 开源平替&quot;的模型究竟表现如何？本文将带大家深入了解这款近期爆火的开源推理模型。</p>
+<p><img alt="Qwythos-9B 详情" loading="lazy" src="/images/qwythos/2.webp"></p>
+<h2 id="一什么是-qwythos-9b">一、什么是 Qwythos-9B？<a hidden class="anchor" aria-hidden="true" href="#一什么是-qwythos-9b">#</a></h2>
+<p>Qwythos-9B 是一个基于 <strong>Qwen3.5-9B 架构</strong>训练的全参数推理模型。</p>
+<p>开发团队 Empero AI 在深度未审查版本的 Qwen3.5-9B 基础上，使用超过 <strong>5 亿条高质量 Claude Mythos 与 Claude Fable 推理轨迹</strong>进行了后训练。</p>
+<p>这些推理轨迹并非简单问答数据，而是包含完整思维链（Chain of Thought）的高质量推理过程，其逻辑链由 Empero AI 内部的 rethink 系统自动生成。</p>
+<p>简单来说，你可以把它理解为：</p>
+<blockquote>
+<p><strong>将 Claude Mythos 的推理思维方式迁移到了一个仅有 9B 参数的开源模型之中。</strong></p>
+</blockquote>
+<p>最终得到了一款兼顾推理能力、部署成本以及长上下文能力的新型开源模型。</p>
+<h2 id="二本地部署要求">二、本地部署要求<a hidden class="anchor" aria-hidden="true" href="#二本地部署要求">#</a></h2>
+<p>Qwythos 已提供 GGUF 格式，可通过以下工具直接运行：</p>
+<ul>
+<li>llama.cpp</li>
+<li>llama-server</li>
+<li>OpenWebUI</li>
+<li>Cherry Studio</li>
+<li>OpenClaw</li>
+</ul>
+<p>不同量化版本对应显存需求如下：</p>
+<table>
+	<thead>
+			<tr>
+					<th>显存</th>
+					<th>推荐量化</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>4GB</td>
+					<td>Q4_K_M</td>
+			</tr>
+			<tr>
+					<td>6GB</td>
+					<td>Q5_K_M</td>
+			</tr>
+			<tr>
+					<td>8GB</td>
+					<td>Q6_K</td>
+			</tr>
+			<tr>
+					<td>12GB</td>
+					<td>Q8_K_M</td>
+			</tr>
+			<tr>
+					<td>16GB</td>
+					<td>BF16</td>
+			</tr>
+			<tr>
+					<td>24GB</td>
+					<td>MTP-BF16</td>
+			</tr>
+	</tbody>
+</table>
+<p>如果使用 BF16 全精度版本，则建议至少配备 24GB 显存。</p>
+<h2 id="三部署教程">三、部署教程<a hidden class="anchor" aria-hidden="true" href="#三部署教程">#</a></h2>
+<h3 id="1下载-qwythos-模型">1、下载 Qwythos 模型<a hidden class="anchor" aria-hidden="true" href="#1下载-qwythos-模型">#</a></h3>
+<p>下载地址：<a href="https://huggingface.co/empero-ai/Qwythos-9B-Claude-Mythos-5-1M-GGUF">HuggingFace - Qwythos-9B GGUF</a></p>
+<p><img alt="模型下载" loading="lazy" src="/images/qwythos/3.webp"></p>
+<h3 id="2安装-llamacpp">2、安装 llama.cpp<a hidden class="anchor" aria-hidden="true" href="#2安装-llamacpp">#</a></h3>
+<p>下载地址：<a href="https://github.com/ggml-org/llama.cpp/releases">GitHub - llama.cpp</a></p>
+<p><img alt="llama.cpp 安装" loading="lazy" src="/images/qwythos/4.webp"></p>
+<h3 id="3启动命令">3、启动命令<a hidden class="anchor" aria-hidden="true" href="#3启动命令">#</a></h3>
+<p>根据你的显存选择对应的量化版本和上下文长度：</p>
+<p><strong>4GB 显存（Q4_K_M）：</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>llama-server.exe <span style="color:#f1fa8c">\
+</span></span></span><span style="display:flex;"><span>  -m <span style="color:#f1fa8c">&#34;models\Qwythos-9B-Q4_K_M.gguf&#34;</span> <span style="color:#f1fa8c">\
+</span></span></span><span style="display:flex;"><span>  -ngl <span style="color:#bd93f9">999</span> <span style="color:#f1fa8c">\
+</span></span></span><span style="display:flex;"><span>  -c <span style="color:#bd93f9">16384</span> <span style="color:#f1fa8c">\
+</span></span></span><span style="display:flex;"><span>  -n <span style="color:#bd93f9">2048</span> <span style="color:#f1fa8c">\
+</span></span></span><span style="display:flex;"><span>  -fa on <span style="color:#f1fa8c">\
+</span></span></span><span style="display:flex;"><span>  --jinja <span style="color:#f1fa8c">\
+</span></span></span><span style="display:flex;"><span>  --host 127.0.0.1 <span style="color:#f1fa8c">\
+</span></span></span><span style="display:flex;"><span>  --port <span style="color:#bd93f9">8080</span>
+</span></span></code></pre></div><p><strong>8GB 显存（Q6_K）：</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>llama-server.exe <span style="color:#f1fa8c">\
+</span></span></span><span style="display:flex;"><span>  -m <span style="color:#f1fa8c">&#34;models\Qwythos-9B-Q6_K.gguf&#34;</span> <span style="color:#f1fa8c">\
+</span></span></span><span style="display:flex;"><span>  -ngl <span style="color:#bd93f9">999</span> <span style="color:#f1fa8c">\
+</span></span></span><span style="display:flex;"><span>  -c <span style="color:#bd93f9">65536</span> <span style="color:#f1fa8c">\
+</span></span></span><span style="display:flex;"><span>  -n <span style="color:#bd93f9">2048</span> <span style="color:#f1fa8c">\
+</span></span></span><span style="display:flex;"><span>  -fa on <span style="color:#f1fa8c">\
+</span></span></span><span style="display:flex;"><span>  --jinja <span style="color:#f1fa8c">\
+</span></span></span><span style="display:flex;"><span>  --host 127.0.0.1 <span style="color:#f1fa8c">\
+</span></span></span><span style="display:flex;"><span>  --port <span style="color:#bd93f9">8080</span>
+</span></span></code></pre></div><p><strong>12GB+ 显存（Q8_K_M）：</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>llama-server.exe <span style="color:#f1fa8c">\
+</span></span></span><span style="display:flex;"><span>  -m <span style="color:#f1fa8c">&#34;models\Qwythos-9B-Q8_K_M.gguf&#34;</span> <span style="color:#f1fa8c">\
+</span></span></span><span style="display:flex;"><span>  -ngl <span style="color:#bd93f9">999</span> <span style="color:#f1fa8c">\
+</span></span></span><span style="display:flex;"><span>  -c <span style="color:#bd93f9">131072</span> <span style="color:#f1fa8c">\
+</span></span></span><span style="display:flex;"><span>  -n <span style="color:#bd93f9">2048</span> <span style="color:#f1fa8c">\
+</span></span></span><span style="display:flex;"><span>  -fa on <span style="color:#f1fa8c">\
+</span></span></span><span style="display:flex;"><span>  --jinja <span style="color:#f1fa8c">\
+</span></span></span><span style="display:flex;"><span>  --host 127.0.0.1 <span style="color:#f1fa8c">\
+</span></span></span><span style="display:flex;"><span>  --port <span style="color:#bd93f9">8080</span>
+</span></span></code></pre></div><p>启动后 API 地址为 <code>http://127.0.0.1:8080/v1</code>，可对接：</p>
+<ul>
+<li>OpenWebUI</li>
+<li>Cherry Studio</li>
+<li>OpenClaw</li>
+<li>Hermes</li>
+<li>任何 OpenAI 兼容客户端</li>
+</ul>
+<h2 id="四总结">四、总结<a hidden class="anchor" aria-hidden="true" href="#四总结">#</a></h2>
+<table>
+	<thead>
+			<tr>
+					<th>要点</th>
+					<th>说明</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><strong>模型架构</strong></td>
+					<td>基于 Qwen3.5-9B</td>
+			</tr>
+			<tr>
+					<td><strong>训练数据</strong></td>
+					<td>5 亿+ Claude Mythos/Fable 推理轨迹</td>
+			</tr>
+			<tr>
+					<td><strong>上下文长度</strong></td>
+					<td>超过 104 万 Token</td>
+			</tr>
+			<tr>
+					<td><strong>最低显存</strong></td>
+					<td>4GB（Q4_K_M 量化）</td>
+			</tr>
+			<tr>
+					<td><strong>推理能力</strong></td>
+					<td>接近 Claude Mythos 水平</td>
+			</tr>
+			<tr>
+					<td><strong>开源格式</strong></td>
+					<td>GGUF 量化版</td>
+			</tr>
+			<tr>
+					<td><strong>兼容工具</strong></td>
+					<td>llama.cpp / OpenWebUI / Cherry Studio / OpenClaw</td>
+			</tr>
+	</tbody>
+</table>
+<p>Qwythos-9B 的出现，让普通用户也能在 4GB 显存的消费级显卡上体验接近 Claude Mythos 的推理能力。如果你对 AI 推理感兴趣，强烈建议试试这个模型。</p>
+<h2 id="参考资料">参考资料<a hidden class="anchor" aria-hidden="true" href="#参考资料">#</a></h2>
+<ul>
+<li><a href="https://huggingface.co/EmperoAI">HuggingFace - Empero AI</a></li>
+<li><a href="https://github.com/ggml-org/llama.cpp">llama.cpp GitHub</a></li>
+<li><a href="https://openwebui.com">OpenWebUI</a></li>
+</ul>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://www.0149.cc.cd/tags/qwen/">Qwen</a></li>
+      <li><a href="https://www.0149.cc.cd/tags/claude/">Claude</a></li>
+      <li><a href="https://www.0149.cc.cd/tags/%E5%BC%80%E6%BA%90%E6%A8%A1%E5%9E%8B/">开源模型</a></li>
+      <li><a href="https://www.0149.cc.cd/tags/%E6%9C%AC%E5%9C%B0%E9%83%A8%E7%BD%B2/">本地部署</a></li>
+      <li><a href="https://www.0149.cc.cd/tags/%E6%8E%A8%E7%90%86/">推理</a></li>
+    </ul>
+<nav class="paginav">
+  <a class="next" href="https://www.0149.cc.cd/posts/qwen36-uncensored-windows-llamacpp/">
+    <span class="title">下一页 »</span>
+    <span>Qwen3.6 越狱版来了！Windows 本地部署 35B 模型｜llama.cpp 完整教程</span>
+  </a>
+</nav>
+
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2026 <a href="https://www.0149.cc.cd/">千华落影</a></span> · 
+
+    
+    
+    <span>
+        Powered by
+        <a href="https://gohugo.io/?utm_source=papermod" rel="noopener" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" id="top-link" class="top-link hidden" aria-label="go to top" title="Go to Top (Alt + G)" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevrons-up">
+        <polyline points="17 11 12 6 7 11"></polyline>
+        <polyline points="17 18 12 13 7 18"></polyline>
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var toplink = document.getElementById("top-link");
+    window.onscroll = function () {
+        const scrollThreshold = window.innerHeight;
+        if (document.body.scrollTop > scrollThreshold || document.documentElement.scrollTop > scrollThreshold) {
+            toplink.classList.remove("hidden");
+        } else {
+            toplink.classList.add("hidden");
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = '复制';
+
+        function copyingDone() {
+            copybutton.innerHTML = '已复制！';
+            setTimeout(() => {
+                copybutton.innerHTML = '复制';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>

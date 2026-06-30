@@ -6,8 +6,43 @@
     <description>Recent content in Tags on 千华落影</description>
     <generator>Hugo</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Mon, 29 Jun 2026 18:00:00 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 29 Jun 2026 19:00:00 +0800</lastBuildDate>
     <atom:link href="https://www.0149.cc.cd/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Claude</title>
+      <link>https://www.0149.cc.cd/tags/claude/</link>
+      <pubDate>Mon, 29 Jun 2026 19:00:00 +0800</pubDate>
+      <guid>https://www.0149.cc.cd/tags/claude/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Qwen</title>
+      <link>https://www.0149.cc.cd/tags/qwen/</link>
+      <pubDate>Mon, 29 Jun 2026 19:00:00 +0800</pubDate>
+      <guid>https://www.0149.cc.cd/tags/qwen/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>本地部署</title>
+      <link>https://www.0149.cc.cd/tags/%E6%9C%AC%E5%9C%B0%E9%83%A8%E7%BD%B2/</link>
+      <pubDate>Mon, 29 Jun 2026 19:00:00 +0800</pubDate>
+      <guid>https://www.0149.cc.cd/tags/%E6%9C%AC%E5%9C%B0%E9%83%A8%E7%BD%B2/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>开源模型</title>
+      <link>https://www.0149.cc.cd/tags/%E5%BC%80%E6%BA%90%E6%A8%A1%E5%9E%8B/</link>
+      <pubDate>Mon, 29 Jun 2026 19:00:00 +0800</pubDate>
+      <guid>https://www.0149.cc.cd/tags/%E5%BC%80%E6%BA%90%E6%A8%A1%E5%9E%8B/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>推理</title>
+      <link>https://www.0149.cc.cd/tags/%E6%8E%A8%E7%90%86/</link>
+      <pubDate>Mon, 29 Jun 2026 19:00:00 +0800</pubDate>
+      <guid>https://www.0149.cc.cd/tags/%E6%8E%A8%E7%90%86/</guid>
+      <description></description>
+    </item>
     <item>
       <title>AI</title>
       <link>https://www.0149.cc.cd/tags/ai/</link>
@@ -44,24 +79,10 @@
       <description></description>
     </item>
     <item>
-      <title>Qwen</title>
-      <link>https://www.0149.cc.cd/tags/qwen/</link>
-      <pubDate>Mon, 29 Jun 2026 18:00:00 +0800</pubDate>
-      <guid>https://www.0149.cc.cd/tags/qwen/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>Windows</title>
       <link>https://www.0149.cc.cd/tags/windows/</link>
       <pubDate>Mon, 29 Jun 2026 18:00:00 +0800</pubDate>
       <guid>https://www.0149.cc.cd/tags/windows/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>本地部署</title>
-      <link>https://www.0149.cc.cd/tags/%E6%9C%AC%E5%9C%B0%E9%83%A8%E7%BD%B2/</link>
-      <pubDate>Mon, 29 Jun 2026 18:00:00 +0800</pubDate>
-      <guid>https://www.0149.cc.cd/tags/%E6%9C%AC%E5%9C%B0%E9%83%A8%E7%BD%B2/</guid>
       <description></description>
     </item>
     <item>

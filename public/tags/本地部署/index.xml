@@ -6,8 +6,15 @@
     <description>Recent content in 本地部署 on 千华落影</description>
     <generator>Hugo</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Mon, 29 Jun 2026 18:00:00 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 29 Jun 2026 19:00:00 +0800</lastBuildDate>
     <atom:link href="https://www.0149.cc.cd/tags/%E6%9C%AC%E5%9C%B0%E9%83%A8%E7%BD%B2/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>4G 显存跑 Claude Mythos 5？Qwythos-9B 突然开源，百万上下文免费用</title>
+      <link>https://www.0149.cc.cd/posts/qwythos-9b-claude-distilled/</link>
+      <pubDate>Mon, 29 Jun 2026 19:00:00 +0800</pubDate>
+      <guid>https://www.0149.cc.cd/posts/qwythos-9b-claude-distilled/</guid>
+      <description>Qwythos-9B 突然开源，吸收 Claude Mythos 5 推理能力，百万 Token 上下文，4GB 显存即可本地部署。</description>
+    </item>
     <item>
       <title>Qwen3.6 越狱版来了！Windows 本地部署 35B 模型｜llama.cpp 完整教程</title>
       <link>https://www.0149.cc.cd/posts/qwen36-uncensored-windows-llamacpp/</link>
