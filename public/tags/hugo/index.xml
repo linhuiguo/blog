@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Hugo on 千华落影</title>
-    <link>https://0149.cc.cd/tags/hugo/</link>
+    <link>https://www.0149.cc.cd/tags/hugo/</link>
     <description>Recent content in Hugo on 千华落影</description>
     <generator>Hugo</generator>
     <language>zh-CN</language>
     <lastBuildDate>Mon, 29 Jun 2026 10:00:00 +0800</lastBuildDate>
-    <atom:link href="https://0149.cc.cd/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://www.0149.cc.cd/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>AI 一句话帮你部署博客：Hugo &#43; GitHub &#43; Cloudflare Pages 完整教程</title>
-      <link>https://0149.cc.cd/posts/hermes-auto-deploy-blog/</link>
+      <link>https://www.0149.cc.cd/posts/hermes-auto-deploy-blog/</link>
       <pubDate>Mon, 29 Jun 2026 10:00:00 +0800</pubDate>
-      <guid>https://0149.cc.cd/posts/hermes-auto-deploy-blog/</guid>
+      <guid>https://www.0149.cc.cd/posts/hermes-auto-deploy-blog/</guid>
       <description>用 AI 代理（Hermes）一句话完成博客搭建：Hugo + GitHub + Cloudflare Pages，从零到上线全流程。</description>
     </item>
   </channel>

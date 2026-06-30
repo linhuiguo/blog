@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>OpenAI on 千华落影</title>
-    <link>https://0149.cc.cd/tags/openai/</link>
+    <link>https://www.0149.cc.cd/tags/openai/</link>
     <description>Recent content in OpenAI on 千华落影</description>
     <generator>Hugo</generator>
     <language>zh-CN</language>
     <lastBuildDate>Mon, 29 Jun 2026 17:00:00 +0800</lastBuildDate>
-    <atom:link href="https://0149.cc.cd/tags/openai/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://www.0149.cc.cd/tags/openai/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>白嫖 GPT-5.5！微软 Copilot 变成免费 API，本地 AI Agent 直接对接</title>
-      <link>https://0149.cc.cd/posts/copilot-free-api/</link>
+      <link>https://www.0149.cc.cd/posts/copilot-free-api/</link>
       <pubDate>Mon, 29 Jun 2026 17:00:00 +0800</pubDate>
-      <guid>https://0149.cc.cd/posts/copilot-free-api/</guid>
+      <guid>https://www.0149.cc.cd/posts/copilot-free-api/</guid>
       <description>Windows-Copilot-API 开源项目将微软 Copilot 封装成 OpenAI 兼容 API，无需 API Key，免费调用 GPT-4o、GPT-5.5 等模型，直接对接本地 AI Agent。</description>
     </item>
     <item>
       <title>GPT-Image-2 实测：与谷歌、豆包文生图效果对比</title>
-      <link>https://0149.cc.cd/posts/gpt-image2-review/</link>
+      <link>https://www.0149.cc.cd/posts/gpt-image2-review/</link>
       <pubDate>Mon, 29 Jun 2026 14:00:00 +0800</pubDate>
-      <guid>https://0149.cc.cd/posts/gpt-image2-review/</guid>
+      <guid>https://www.0149.cc.cd/posts/gpt-image2-review/</guid>
       <description>免费体验 OpenAI 最新文生图模型 GPT-Image-2，用「曹操抖音直播卖布洛芬」同一提示词，横向对比谷歌模型与豆包模型的生成效果。</description>
     </item>
     <item>
       <title>Codex AI 完整使用教程：从下载安装到使用技巧全指南</title>
-      <link>https://0149.cc.cd/posts/codex-ai-tutorial/</link>
+      <link>https://www.0149.cc.cd/posts/codex-ai-tutorial/</link>
       <pubDate>Mon, 29 Jun 2026 12:00:00 +0800</pubDate>
-      <guid>https://0149.cc.cd/posts/codex-ai-tutorial/</guid>
+      <guid>https://www.0149.cc.cd/posts/codex-ai-tutorial/</guid>
       <description>详细介绍 Codex AI 工具的完整使用教程，包括下载安装步骤、登录方法、权限管理和使用技巧，帮你快速上手这款强大的 AI 助手。</description>
     </item>
   </channel>

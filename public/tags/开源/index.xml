@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>开源 on 千华落影</title>
+    <link>https://www.0149.cc.cd/tags/%E5%BC%80%E6%BA%90/</link>
+    <description>Recent content in 开源 on 千华落影</description>
+    <generator>Hugo</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Mon, 29 Jun 2026 18:00:00 +0800</lastBuildDate>
+    <atom:link href="https://www.0149.cc.cd/tags/%E5%BC%80%E6%BA%90/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>开源版 GPT-Image？Ideogram 4 免费本地部署，效果碾压 FLUX</title>
+      <link>https://www.0149.cc.cd/posts/ideogram4-local-deploy/</link>
+      <pubDate>Mon, 29 Jun 2026 18:00:00 +0800</pubDate>
+      <guid>https://www.0149.cc.cd/posts/ideogram4-local-deploy/</guid>
+      <description>Ideogram 4 开源 9B 模型正式发布，本地部署、LoRA 微调、ComfyUI 工作流全支持，效果媲美 GPT-Image 和 Midjourney。</description>
+    </item>
+  </channel>
+</rss>

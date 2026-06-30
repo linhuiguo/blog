@@ -1,4 +1,4 @@
-baseURL = "https://0149.cc.cd/"
+baseURL = "https://www.0149.cc.cd/"
 languageCode = "zh-CN"
 defaultContentLanguage = "zh"
 title = "千华落影"
@@ -19,6 +19,11 @@ paginate = 10
   TocOpen = false
   comments = false
 
+  [params.cover]
+    hidden = false
+
+  customHeadHTML = """<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2416788946087777" crossorigin="anonymous"></script>"""
+
   [params.homeInfoParams]
     Title = "👋 你好，我是千华落影"
     Content = "一个技术博主，分享 AI 大模型、本地部署、编程开发等实用教程。"
@@ -26,6 +31,19 @@ paginate = 10
   [[params.socialIcons]]
     name = "github"
     url = "https://github.com/linhuiguo"
+
+  [params.analytics]
+    enable = true
+    [params.analytics.google]
+      ID = "G-QHMXZN4MX8"
+
+[markup.goldmark]
+  [markup.goldmark.renderer]
+    unsafe = true
+
+[security.http]
+  methods = ["(?i)GET|POST"]
+  urls = ['.*']
 
 [outputs]
   home = ["HTML", "RSS", "JSON"]

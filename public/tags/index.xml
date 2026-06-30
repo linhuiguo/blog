@@ -2,220 +2,241 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Tags on 千华落影</title>
-    <link>https://0149.cc.cd/tags/</link>
+    <link>https://www.0149.cc.cd/tags/</link>
     <description>Recent content in Tags on 千华落影</description>
     <generator>Hugo</generator>
     <language>zh-CN</language>
     <lastBuildDate>Mon, 29 Jun 2026 18:00:00 +0800</lastBuildDate>
-    <atom:link href="https://0149.cc.cd/tags/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://www.0149.cc.cd/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>AI</title>
-      <link>https://0149.cc.cd/tags/ai/</link>
+      <link>https://www.0149.cc.cd/tags/ai/</link>
       <pubDate>Mon, 29 Jun 2026 18:00:00 +0800</pubDate>
-      <guid>https://0149.cc.cd/tags/ai/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Llama.cpp</title>
-      <link>https://0149.cc.cd/tags/llama.cpp/</link>
-      <pubDate>Mon, 29 Jun 2026 18:00:00 +0800</pubDate>
-      <guid>https://0149.cc.cd/tags/llama.cpp/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Qwen</title>
-      <link>https://0149.cc.cd/tags/qwen/</link>
-      <pubDate>Mon, 29 Jun 2026 18:00:00 +0800</pubDate>
-      <guid>https://0149.cc.cd/tags/qwen/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Windows</title>
-      <link>https://0149.cc.cd/tags/windows/</link>
-      <pubDate>Mon, 29 Jun 2026 18:00:00 +0800</pubDate>
-      <guid>https://0149.cc.cd/tags/windows/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>本地部署</title>
-      <link>https://0149.cc.cd/tags/%E6%9C%AC%E5%9C%B0%E9%83%A8%E7%BD%B2/</link>
-      <pubDate>Mon, 29 Jun 2026 18:00:00 +0800</pubDate>
-      <guid>https://0149.cc.cd/tags/%E6%9C%AC%E5%9C%B0%E9%83%A8%E7%BD%B2/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>AI Agent</title>
-      <link>https://0149.cc.cd/tags/ai-agent/</link>
-      <pubDate>Mon, 29 Jun 2026 17:00:00 +0800</pubDate>
-      <guid>https://0149.cc.cd/tags/ai-agent/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Copilot</title>
-      <link>https://0149.cc.cd/tags/copilot/</link>
-      <pubDate>Mon, 29 Jun 2026 17:00:00 +0800</pubDate>
-      <guid>https://0149.cc.cd/tags/copilot/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>GPT-5</title>
-      <link>https://0149.cc.cd/tags/gpt-5/</link>
-      <pubDate>Mon, 29 Jun 2026 17:00:00 +0800</pubDate>
-      <guid>https://0149.cc.cd/tags/gpt-5/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>OpenAI</title>
-      <link>https://0149.cc.cd/tags/openai/</link>
-      <pubDate>Mon, 29 Jun 2026 17:00:00 +0800</pubDate>
-      <guid>https://0149.cc.cd/tags/openai/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>免费API</title>
-      <link>https://0149.cc.cd/tags/%E5%85%8D%E8%B4%B9api/</link>
-      <pubDate>Mon, 29 Jun 2026 17:00:00 +0800</pubDate>
-      <guid>https://0149.cc.cd/tags/%E5%85%8D%E8%B4%B9api/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Agent</title>
-      <link>https://0149.cc.cd/tags/agent/</link>
-      <pubDate>Mon, 29 Jun 2026 16:00:00 +0800</pubDate>
-      <guid>https://0149.cc.cd/tags/agent/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>AI编程</title>
-      <link>https://0149.cc.cd/tags/ai%E7%BC%96%E7%A8%8B/</link>
-      <pubDate>Mon, 29 Jun 2026 16:00:00 +0800</pubDate>
-      <guid>https://0149.cc.cd/tags/ai%E7%BC%96%E7%A8%8B/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Codex</title>
-      <link>https://0149.cc.cd/tags/codex/</link>
-      <pubDate>Mon, 29 Jun 2026 16:00:00 +0800</pubDate>
-      <guid>https://0149.cc.cd/tags/codex/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Ollama</title>
-      <link>https://0149.cc.cd/tags/ollama/</link>
-      <pubDate>Mon, 29 Jun 2026 16:00:00 +0800</pubDate>
-      <guid>https://0149.cc.cd/tags/ollama/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>AI助手</title>
-      <link>https://0149.cc.cd/tags/ai%E5%8A%A9%E6%89%8B/</link>
-      <pubDate>Mon, 29 Jun 2026 15:00:00 +0800</pubDate>
-      <guid>https://0149.cc.cd/tags/ai%E5%8A%A9%E6%89%8B/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>OpenClaw</title>
-      <link>https://0149.cc.cd/tags/openclaw/</link>
-      <pubDate>Mon, 29 Jun 2026 15:00:00 +0800</pubDate>
-      <guid>https://0149.cc.cd/tags/openclaw/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>教程</title>
-      <link>https://0149.cc.cd/tags/%E6%95%99%E7%A8%8B/</link>
-      <pubDate>Mon, 29 Jun 2026 15:00:00 +0800</pubDate>
-      <guid>https://0149.cc.cd/tags/%E6%95%99%E7%A8%8B/</guid>
+      <guid>https://www.0149.cc.cd/tags/ai/</guid>
       <description></description>
     </item>
     <item>
       <title>AI画图</title>
-      <link>https://0149.cc.cd/tags/ai%E7%94%BB%E5%9B%BE/</link>
-      <pubDate>Mon, 29 Jun 2026 14:00:00 +0800</pubDate>
-      <guid>https://0149.cc.cd/tags/ai%E7%94%BB%E5%9B%BE/</guid>
+      <link>https://www.0149.cc.cd/tags/ai%E7%94%BB%E5%9B%BE/</link>
+      <pubDate>Mon, 29 Jun 2026 18:00:00 +0800</pubDate>
+      <guid>https://www.0149.cc.cd/tags/ai%E7%94%BB%E5%9B%BE/</guid>
       <description></description>
     </item>
     <item>
-      <title>ChatGPT</title>
-      <link>https://0149.cc.cd/tags/chatgpt/</link>
-      <pubDate>Mon, 29 Jun 2026 14:00:00 +0800</pubDate>
-      <guid>https://0149.cc.cd/tags/chatgpt/</guid>
+      <title>ComfyUI</title>
+      <link>https://www.0149.cc.cd/tags/comfyui/</link>
+      <pubDate>Mon, 29 Jun 2026 18:00:00 +0800</pubDate>
+      <guid>https://www.0149.cc.cd/tags/comfyui/</guid>
       <description></description>
     </item>
     <item>
-      <title>GPT-Image-2</title>
-      <link>https://0149.cc.cd/tags/gpt-image-2/</link>
-      <pubDate>Mon, 29 Jun 2026 14:00:00 +0800</pubDate>
-      <guid>https://0149.cc.cd/tags/gpt-image-2/</guid>
+      <title>Ideogram</title>
+      <link>https://www.0149.cc.cd/tags/ideogram/</link>
+      <pubDate>Mon, 29 Jun 2026 18:00:00 +0800</pubDate>
+      <guid>https://www.0149.cc.cd/tags/ideogram/</guid>
       <description></description>
     </item>
     <item>
-      <title>豆包</title>
-      <link>https://0149.cc.cd/tags/%E8%B1%86%E5%8C%85/</link>
-      <pubDate>Mon, 29 Jun 2026 14:00:00 +0800</pubDate>
-      <guid>https://0149.cc.cd/tags/%E8%B1%86%E5%8C%85/</guid>
+      <title>Llama.cpp</title>
+      <link>https://www.0149.cc.cd/tags/llama.cpp/</link>
+      <pubDate>Mon, 29 Jun 2026 18:00:00 +0800</pubDate>
+      <guid>https://www.0149.cc.cd/tags/llama.cpp/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Qwen</title>
+      <link>https://www.0149.cc.cd/tags/qwen/</link>
+      <pubDate>Mon, 29 Jun 2026 18:00:00 +0800</pubDate>
+      <guid>https://www.0149.cc.cd/tags/qwen/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Windows</title>
+      <link>https://www.0149.cc.cd/tags/windows/</link>
+      <pubDate>Mon, 29 Jun 2026 18:00:00 +0800</pubDate>
+      <guid>https://www.0149.cc.cd/tags/windows/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>本地部署</title>
+      <link>https://www.0149.cc.cd/tags/%E6%9C%AC%E5%9C%B0%E9%83%A8%E7%BD%B2/</link>
+      <pubDate>Mon, 29 Jun 2026 18:00:00 +0800</pubDate>
+      <guid>https://www.0149.cc.cd/tags/%E6%9C%AC%E5%9C%B0%E9%83%A8%E7%BD%B2/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>开源</title>
+      <link>https://www.0149.cc.cd/tags/%E5%BC%80%E6%BA%90/</link>
+      <pubDate>Mon, 29 Jun 2026 18:00:00 +0800</pubDate>
+      <guid>https://www.0149.cc.cd/tags/%E5%BC%80%E6%BA%90/</guid>
       <description></description>
     </item>
     <item>
       <title>文生图</title>
-      <link>https://0149.cc.cd/tags/%E6%96%87%E7%94%9F%E5%9B%BE/</link>
+      <link>https://www.0149.cc.cd/tags/%E6%96%87%E7%94%9F%E5%9B%BE/</link>
+      <pubDate>Mon, 29 Jun 2026 18:00:00 +0800</pubDate>
+      <guid>https://www.0149.cc.cd/tags/%E6%96%87%E7%94%9F%E5%9B%BE/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>AI Agent</title>
+      <link>https://www.0149.cc.cd/tags/ai-agent/</link>
+      <pubDate>Mon, 29 Jun 2026 17:00:00 +0800</pubDate>
+      <guid>https://www.0149.cc.cd/tags/ai-agent/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Copilot</title>
+      <link>https://www.0149.cc.cd/tags/copilot/</link>
+      <pubDate>Mon, 29 Jun 2026 17:00:00 +0800</pubDate>
+      <guid>https://www.0149.cc.cd/tags/copilot/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>GPT-5</title>
+      <link>https://www.0149.cc.cd/tags/gpt-5/</link>
+      <pubDate>Mon, 29 Jun 2026 17:00:00 +0800</pubDate>
+      <guid>https://www.0149.cc.cd/tags/gpt-5/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>OpenAI</title>
+      <link>https://www.0149.cc.cd/tags/openai/</link>
+      <pubDate>Mon, 29 Jun 2026 17:00:00 +0800</pubDate>
+      <guid>https://www.0149.cc.cd/tags/openai/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>免费API</title>
+      <link>https://www.0149.cc.cd/tags/%E5%85%8D%E8%B4%B9api/</link>
+      <pubDate>Mon, 29 Jun 2026 17:00:00 +0800</pubDate>
+      <guid>https://www.0149.cc.cd/tags/%E5%85%8D%E8%B4%B9api/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Agent</title>
+      <link>https://www.0149.cc.cd/tags/agent/</link>
+      <pubDate>Mon, 29 Jun 2026 16:00:00 +0800</pubDate>
+      <guid>https://www.0149.cc.cd/tags/agent/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>AI编程</title>
+      <link>https://www.0149.cc.cd/tags/ai%E7%BC%96%E7%A8%8B/</link>
+      <pubDate>Mon, 29 Jun 2026 16:00:00 +0800</pubDate>
+      <guid>https://www.0149.cc.cd/tags/ai%E7%BC%96%E7%A8%8B/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Codex</title>
+      <link>https://www.0149.cc.cd/tags/codex/</link>
+      <pubDate>Mon, 29 Jun 2026 16:00:00 +0800</pubDate>
+      <guid>https://www.0149.cc.cd/tags/codex/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Ollama</title>
+      <link>https://www.0149.cc.cd/tags/ollama/</link>
+      <pubDate>Mon, 29 Jun 2026 16:00:00 +0800</pubDate>
+      <guid>https://www.0149.cc.cd/tags/ollama/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>AI助手</title>
+      <link>https://www.0149.cc.cd/tags/ai%E5%8A%A9%E6%89%8B/</link>
+      <pubDate>Mon, 29 Jun 2026 15:00:00 +0800</pubDate>
+      <guid>https://www.0149.cc.cd/tags/ai%E5%8A%A9%E6%89%8B/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>OpenClaw</title>
+      <link>https://www.0149.cc.cd/tags/openclaw/</link>
+      <pubDate>Mon, 29 Jun 2026 15:00:00 +0800</pubDate>
+      <guid>https://www.0149.cc.cd/tags/openclaw/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>教程</title>
+      <link>https://www.0149.cc.cd/tags/%E6%95%99%E7%A8%8B/</link>
+      <pubDate>Mon, 29 Jun 2026 15:00:00 +0800</pubDate>
+      <guid>https://www.0149.cc.cd/tags/%E6%95%99%E7%A8%8B/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>ChatGPT</title>
+      <link>https://www.0149.cc.cd/tags/chatgpt/</link>
       <pubDate>Mon, 29 Jun 2026 14:00:00 +0800</pubDate>
-      <guid>https://0149.cc.cd/tags/%E6%96%87%E7%94%9F%E5%9B%BE/</guid>
+      <guid>https://www.0149.cc.cd/tags/chatgpt/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>GPT-Image-2</title>
+      <link>https://www.0149.cc.cd/tags/gpt-image-2/</link>
+      <pubDate>Mon, 29 Jun 2026 14:00:00 +0800</pubDate>
+      <guid>https://www.0149.cc.cd/tags/gpt-image-2/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>豆包</title>
+      <link>https://www.0149.cc.cd/tags/%E8%B1%86%E5%8C%85/</link>
+      <pubDate>Mon, 29 Jun 2026 14:00:00 +0800</pubDate>
+      <guid>https://www.0149.cc.cd/tags/%E8%B1%86%E5%8C%85/</guid>
       <description></description>
     </item>
     <item>
       <title>开源项目</title>
-      <link>https://0149.cc.cd/tags/%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE/</link>
+      <link>https://www.0149.cc.cd/tags/%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE/</link>
       <pubDate>Mon, 29 Jun 2026 13:00:00 +0800</pubDate>
-      <guid>https://0149.cc.cd/tags/%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE/</guid>
+      <guid>https://www.0149.cc.cd/tags/%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE/</guid>
       <description></description>
     </item>
     <item>
       <title>提示词</title>
-      <link>https://0149.cc.cd/tags/%E6%8F%90%E7%A4%BA%E8%AF%8D/</link>
+      <link>https://www.0149.cc.cd/tags/%E6%8F%90%E7%A4%BA%E8%AF%8D/</link>
       <pubDate>Mon, 29 Jun 2026 13:00:00 +0800</pubDate>
-      <guid>https://0149.cc.cd/tags/%E6%8F%90%E7%A4%BA%E8%AF%8D/</guid>
+      <guid>https://www.0149.cc.cd/tags/%E6%8F%90%E7%A4%BA%E8%AF%8D/</guid>
       <description></description>
     </item>
     <item>
       <title>图片生成</title>
-      <link>https://0149.cc.cd/tags/%E5%9B%BE%E7%89%87%E7%94%9F%E6%88%90/</link>
+      <link>https://www.0149.cc.cd/tags/%E5%9B%BE%E7%89%87%E7%94%9F%E6%88%90/</link>
       <pubDate>Mon, 29 Jun 2026 13:00:00 +0800</pubDate>
-      <guid>https://0149.cc.cd/tags/%E5%9B%BE%E7%89%87%E7%94%9F%E6%88%90/</guid>
+      <guid>https://www.0149.cc.cd/tags/%E5%9B%BE%E7%89%87%E7%94%9F%E6%88%90/</guid>
       <description></description>
     </item>
     <item>
       <title>Hermes</title>
-      <link>https://0149.cc.cd/tags/hermes/</link>
+      <link>https://www.0149.cc.cd/tags/hermes/</link>
       <pubDate>Mon, 29 Jun 2026 11:00:00 +0800</pubDate>
-      <guid>https://0149.cc.cd/tags/hermes/</guid>
+      <guid>https://www.0149.cc.cd/tags/hermes/</guid>
       <description></description>
     </item>
     <item>
       <title>桌面版</title>
-      <link>https://0149.cc.cd/tags/%E6%A1%8C%E9%9D%A2%E7%89%88/</link>
+      <link>https://www.0149.cc.cd/tags/%E6%A1%8C%E9%9D%A2%E7%89%88/</link>
       <pubDate>Mon, 29 Jun 2026 11:00:00 +0800</pubDate>
-      <guid>https://0149.cc.cd/tags/%E6%A1%8C%E9%9D%A2%E7%89%88/</guid>
+      <guid>https://www.0149.cc.cd/tags/%E6%A1%8C%E9%9D%A2%E7%89%88/</guid>
       <description></description>
     </item>
     <item>
       <title>Cloudflare</title>
-      <link>https://0149.cc.cd/tags/cloudflare/</link>
+      <link>https://www.0149.cc.cd/tags/cloudflare/</link>
       <pubDate>Mon, 29 Jun 2026 10:00:00 +0800</pubDate>
-      <guid>https://0149.cc.cd/tags/cloudflare/</guid>
+      <guid>https://www.0149.cc.cd/tags/cloudflare/</guid>
       <description></description>
     </item>
     <item>
       <title>Hugo</title>
-      <link>https://0149.cc.cd/tags/hugo/</link>
+      <link>https://www.0149.cc.cd/tags/hugo/</link>
       <pubDate>Mon, 29 Jun 2026 10:00:00 +0800</pubDate>
-      <guid>https://0149.cc.cd/tags/hugo/</guid>
+      <guid>https://www.0149.cc.cd/tags/hugo/</guid>
       <description></description>
     </item>
     <item>
       <title>博客部署</title>
-      <link>https://0149.cc.cd/tags/%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2/</link>
+      <link>https://www.0149.cc.cd/tags/%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2/</link>
       <pubDate>Mon, 29 Jun 2026 10:00:00 +0800</pubDate>
-      <guid>https://0149.cc.cd/tags/%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2/</guid>
+      <guid>https://www.0149.cc.cd/tags/%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2/</guid>
       <description></description>
     </item>
   </channel>

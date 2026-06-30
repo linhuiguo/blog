@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>OpenClaw on 千华落影</title>
-    <link>https://0149.cc.cd/tags/openclaw/</link>
+    <link>https://www.0149.cc.cd/tags/openclaw/</link>
     <description>Recent content in OpenClaw on 千华落影</description>
     <generator>Hugo</generator>
     <language>zh-CN</language>
     <lastBuildDate>Mon, 29 Jun 2026 15:00:00 +0800</lastBuildDate>
-    <atom:link href="https://0149.cc.cd/tags/openclaw/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://www.0149.cc.cd/tags/openclaw/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>OpenClaw 本地部署完整教程：Ollama &#43; OpenClaw 免费 AI 助手</title>
-      <link>https://0149.cc.cd/posts/openclaw-local-deploy/</link>
+      <link>https://www.0149.cc.cd/posts/openclaw-local-deploy/</link>
       <pubDate>Mon, 29 Jun 2026 15:00:00 +0800</pubDate>
-      <guid>https://0149.cc.cd/posts/openclaw-local-deploy/</guid>
+      <guid>https://www.0149.cc.cd/posts/openclaw-local-deploy/</guid>
       <description>通过 Ollama + OpenClaw 实现 100% 本地运行的 AI 助手，免费、断网可用、多模型切换，支持 GPT-OSS / Qwen 3 / GLM 4.7 等主流大模型。</description>
     </item>
   </channel>
