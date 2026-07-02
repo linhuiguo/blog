@@ -26,7 +26,7 @@ paginate = 10
 
   [params.homeInfoParams]
     Title = "👋 你好，我是千华落影"
-    Content = "一个技术博主，分享 AI 大模型、本地部署、编程开发等实用教程。"
+    Content = "一个技术博主，分享 AI 大模型、本地部署、编程开发等实用教程。\n\n💬 如果你看教程懒得自己动手或看不懂，可以加我微信：**vip2700549777**，我来帮你处理。"
 
   [[params.socialIcons]]
     name = "github"
