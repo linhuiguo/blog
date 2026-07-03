@@ -2,22 +2,43 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://www.0149.cc.cd/categories/ai-%E5%B7%A5%E5%85%B7/</loc>
+    <lastmod>2026-07-02T12:00:00+08:00</lastmod>
+  </url><url>
+    <loc>https://www.0149.cc.cd/tags/ai%E7%BC%96%E7%A8%8B/</loc>
+    <lastmod>2026-07-02T12:00:00+08:00</lastmod>
+  </url><url>
+    <loc>https://www.0149.cc.cd/tags/anthropic/</loc>
+    <lastmod>2026-07-02T12:00:00+08:00</lastmod>
+  </url><url>
+    <loc>https://www.0149.cc.cd/categories/</loc>
+    <lastmod>2026-07-02T12:00:00+08:00</lastmod>
+  </url><url>
+    <loc>https://www.0149.cc.cd/tags/claude/</loc>
+    <lastmod>2026-07-02T12:00:00+08:00</lastmod>
+  </url><url>
+    <loc>https://www.0149.cc.cd/posts/claude-fable5-relaunch/</loc>
+    <lastmod>2026-07-02T12:00:00+08:00</lastmod>
+  </url><url>
+    <loc>https://www.0149.cc.cd/tags/fable/</loc>
+    <lastmod>2026-07-02T12:00:00+08:00</lastmod>
+  </url><url>
+    <loc>https://www.0149.cc.cd/posts/</loc>
+    <lastmod>2026-07-02T12:00:00+08:00</lastmod>
+  </url><url>
+    <loc>https://www.0149.cc.cd/tags/sonnet-5/</loc>
+    <lastmod>2026-07-02T12:00:00+08:00</lastmod>
+  </url><url>
+    <loc>https://www.0149.cc.cd/tags/</loc>
+    <lastmod>2026-07-02T12:00:00+08:00</lastmod>
+  </url><url>
+    <loc>https://www.0149.cc.cd/</loc>
+    <lastmod>2026-07-02T12:00:00+08:00</lastmod>
+  </url><url>
     <loc>https://www.0149.cc.cd/posts/novel-suhenian-intro/</loc>
     <lastmod>2026-06-30T10:00:00+08:00</lastmod>
   </url><url>
-    <loc>https://www.0149.cc.cd/categories/</loc>
-    <lastmod>2026-06-30T10:00:00+08:00</lastmod>
-  </url><url>
-    <loc>https://www.0149.cc.cd/posts/</loc>
-    <lastmod>2026-06-30T10:00:00+08:00</lastmod>
-  </url><url>
-    <loc>https://www.0149.cc.cd/tags/</loc>
-    <lastmod>2026-06-30T10:00:00+08:00</lastmod>
-  </url><url>
     <loc>https://www.0149.cc.cd/tags/%E7%95%AA%E8%8C%84%E5%B0%8F%E8%AF%B4/</loc>
-    <lastmod>2026-06-30T10:00:00+08:00</lastmod>
-  </url><url>
-    <loc>https://www.0149.cc.cd/</loc>
     <lastmod>2026-06-30T10:00:00+08:00</lastmod>
   </url><url>
     <loc>https://www.0149.cc.cd/tags/%E8%8B%8F%E9%B9%A4%E5%B9%B4/</loc>
@@ -36,12 +57,6 @@
     <lastmod>2026-06-30T10:00:00+08:00</lastmod>
   </url><url>
     <loc>https://www.0149.cc.cd/posts/qwythos-9b-claude-distilled/</loc>
-    <lastmod>2026-06-29T19:00:00+08:00</lastmod>
-  </url><url>
-    <loc>https://www.0149.cc.cd/categories/ai-%E5%B7%A5%E5%85%B7/</loc>
-    <lastmod>2026-06-29T19:00:00+08:00</lastmod>
-  </url><url>
-    <loc>https://www.0149.cc.cd/tags/claude/</loc>
     <lastmod>2026-06-29T19:00:00+08:00</lastmod>
   </url><url>
     <loc>https://www.0149.cc.cd/tags/qwen/</loc>
@@ -108,9 +123,6 @@
     <lastmod>2026-06-29T17:00:00+08:00</lastmod>
   </url><url>
     <loc>https://www.0149.cc.cd/tags/agent/</loc>
-    <lastmod>2026-06-29T16:00:00+08:00</lastmod>
-  </url><url>
-    <loc>https://www.0149.cc.cd/tags/ai%E7%BC%96%E7%A8%8B/</loc>
     <lastmod>2026-06-29T16:00:00+08:00</lastmod>
   </url><url>
     <loc>https://www.0149.cc.cd/tags/codex/</loc>
