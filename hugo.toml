@@ -82,6 +82,7 @@ paginate = 10
     enable = true
     [params.analytics.google]
       ID = "G-QHMXZN4MX8"
+      SiteVerificationTag = "qlnVg1bXEBI0FWfy7hTg3gqSwMRR5f1g1et3_U5LzHE"
 
 [markup.goldmark]
   [markup.goldmark.renderer]
