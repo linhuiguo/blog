@@ -2,9 +2,11 @@
 title: "GPT-Image-2 实测：与谷歌、豆包文生图效果对比"
 date: 2026-06-29T14:00:00+08:00
 draft: false
-tags: ["GPT-Image-2", "文生图", "AI画图", "ChatGPT", "OpenAI", "豆包"]
+tags: ["GPT-Image-2", "文生图", "AI画图", "ChatGPT", "OpenAI", "豆包", "谷歌"]
 categories: ["AI 工具"]
 summary: "免费体验 OpenAI 最新文生图模型 GPT-Image-2，用「曹操抖音直播卖布洛芬」同一提示词，横向对比谷歌模型与豆包模型的生成效果。"
+description: "GPT-Image-2 实测：与谷歌、豆包文生图效果对比。免费体验 OpenAI 最新文生图模型 GPT-Image-2，用「曹操抖音直播卖布洛芬」同一提示词，横向对比谷歌模型与豆包模型的生成效果。"
+keywords: ["gpt-image-2 评测", "文生图模型对比", "ai 图片生成", "chatgpt 画图", "豆包 文生图"]
 ---
 
 ## 前言

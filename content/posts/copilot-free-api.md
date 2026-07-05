@@ -2,9 +2,11 @@
 title: "白嫖 GPT-5.5！微软 Copilot 变成免费 API，本地 AI Agent 直接对接"
 date: 2026-06-29T17:00:00+08:00
 draft: false
-tags: ["Copilot", "GPT-5", "免费API", "AI Agent", "OpenAI"]
+tags: ["Copilot", "GPT-5", "免费API", "AI Agent", "OpenAI", "微软Copilot", "本地AI"]
 categories: ["AI 工具"]
 summary: "Windows-Copilot-API 开源项目将微软 Copilot 封装成 OpenAI 兼容 API，无需 API Key，免费调用 GPT-4o、GPT-5.5 等模型，直接对接本地 AI Agent。"
+description: "白嫖 GPT-5.5！微软 Copilot 变成免费 API，本地 AI Agent 直接对接。Windows-Copilot-API 开源项目将微软 Copilot 封装成 OpenAI 兼容 API，无需 API Key，免费调用 GPT-4o、GPT-5.5 等模型，直接对接本地 AI Agent。"
+keywords: ["copilot 免费 api", "微软 copilot api", "gpt-5.5 本地调用", "免费 ai api", "本地 ai agent"]
 ---
 
 ## 前言

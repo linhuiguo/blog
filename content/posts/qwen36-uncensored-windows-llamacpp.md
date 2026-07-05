@@ -2,9 +2,11 @@
 title: "Qwen3.6 越狱版来了！Windows 本地部署 35B 模型｜llama.cpp 完整教程"
 date: 2026-06-29T18:00:00+08:00
 draft: false
-tags: ["AI", "llama.cpp", "Qwen", "本地部署", "Windows"]
+tags: ["AI", "llama.cpp", "Qwen", "本地部署", "Windows", "越狱版", "无审查"]
 categories: ["AI 大模型"]
 summary: "手把手教你在 Windows 上用 llama.cpp 部署 Qwen3.6-35B 无审查模型，支持 CUDA/Vulkan/CPU 全平台。"
+description: "Qwen3.6 越狱版来了！Windows 本地部署 35B 模型｜llama.cpp 完整教程。手把手教你在 Windows 上用 llama.cpp 部署 Qwen3.6-35B 无审查模型，支持 CUDA/Vulkan/CPU 全平台。"
+keywords: ["qwen3.6 本地部署", "qwen 越狱版下载", "llama.cpp qwen", "windows 本地部署", "无审查模型"]
 ---
 
 ## 重要说明

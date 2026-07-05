@@ -2,9 +2,11 @@
 title: "OpenClaw 本地部署完整教程：Ollama + OpenClaw 免费 AI 助手"
 date: 2026-06-29T15:00:00+08:00
 draft: false
-tags: ["OpenClaw", "Ollama", "AI助手", "本地部署", "教程"]
+tags: ["OpenClaw", "Ollama", "AI助手", "本地部署", "教程", "免费AI", "本地AI"]
 categories: ["AI 工具"]
 summary: "通过 Ollama + OpenClaw 实现 100% 本地运行的 AI 助手，免费、断网可用、多模型切换，支持 GPT-OSS / Qwen 3 / GLM 4.7 等主流大模型。"
+description: "OpenClaw 本地部署完整教程：Ollama + OpenClaw 免费 AI 助手。通过 Ollama + OpenClaw 实现 100% 本地运行的 AI 助手，免费、断网可用、多模型切换，支持 GPT-OSS / Qwen 3 / GLM 4.7 等主流大模型。"
+keywords: ["openclaw 本地部署教程", "openclaw ollama", "openclaw 免费", "本地 ai 助手", "ollama 部署"]
 ---
 
 ## 前言

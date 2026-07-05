@@ -2,9 +2,11 @@
 title: "Codex AI 完整使用教程：从下载安装到使用技巧全指南"
 date: 2026-06-29T12:00:00+08:00
 draft: false
-tags: ["Codex", "AI", "OpenAI", "教程", "AI助手"]
+tags: ["Codex", "AI", "OpenAI", "教程", "AI助手", "AI编程"]
 categories: ["AI 工具"]
 summary: "详细介绍 Codex AI 工具的完整使用教程，包括下载安装步骤、登录方法、权限管理和使用技巧，帮你快速上手这款强大的 AI 助手。"
+description: "Codex AI 完整使用教程：从下载安装到使用技巧全指南。详细介绍 Codex AI 工具的完整使用教程，包括下载安装步骤、登录方法、权限管理和使用技巧，帮你快速上手这款强大的 AI 助手。"
+keywords: ["codex ai 教程", "codex 下载安装", "openai codex", "ai 编程工具", "codex 使用技巧"]
 ---
 
 ## 前言

@@ -6,8 +6,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
 <title>Qwen3.6 越狱版来了！Windows 本地部署 35B 模型｜llama.cpp 完整教程 | 千华落影</title>
-<meta name="keywords" content="AI, llama.cpp, Qwen, 本地部署, Windows">
-<meta name="description" content="手把手教你在 Windows 上用 llama.cpp 部署 Qwen3.6-35B 无审查模型，支持 CUDA/Vulkan/CPU 全平台。">
+<meta name="keywords" content="qwen3.6 本地部署, qwen 越狱版下载, llama.cpp qwen, windows 本地部署, 无审查模型">
+<meta name="description" content="Qwen3.6 越狱版来了！Windows 本地部署 35B 模型｜llama.cpp 完整教程。手把手教你在 Windows 上用 llama.cpp 部署 Qwen3.6-35B 无审查模型，支持 CUDA/Vulkan/CPU 全平台。">
 <meta name="author" content="千华落影">
 <link rel="canonical" href="https://www.0149.cc.cd/posts/qwen36-uncensored-windows-llamacpp/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.89ca4972ab5e6aaa05e9a0dae0c4bb64b26585bc79e36f5cf33614eea0283abe.css" integrity="sha256-icpJcqteaqoF6aDa4MS7ZLJlhbx5429c8zYU7qAoOr4=" rel="preload stylesheet" as="style">
@@ -36,7 +36,7 @@
 </script><meta property="og:url" content="https://www.0149.cc.cd/posts/qwen36-uncensored-windows-llamacpp/">
   <meta property="og:site_name" content="千华落影">
   <meta property="og:title" content="Qwen3.6 越狱版来了！Windows 本地部署 35B 模型｜llama.cpp 完整教程">
-  <meta property="og:description" content="手把手教你在 Windows 上用 llama.cpp 部署 Qwen3.6-35B 无审查模型，支持 CUDA/Vulkan/CPU 全平台。">
+  <meta property="og:description" content="Qwen3.6 越狱版来了！Windows 本地部署 35B 模型｜llama.cpp 完整教程。手把手教你在 Windows 上用 llama.cpp 部署 Qwen3.6-35B 无审查模型，支持 CUDA/Vulkan/CPU 全平台。">
   <meta property="og:locale" content="zh_CN">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
@@ -47,10 +47,11 @@
     <meta property="article:tag" content="Qwen">
     <meta property="article:tag" content="本地部署">
     <meta property="article:tag" content="Windows">
+    <meta property="article:tag" content="越狱版">
 
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Qwen3.6 越狱版来了！Windows 本地部署 35B 模型｜llama.cpp 完整教程">
-  <meta name="twitter:description" content="手把手教你在 Windows 上用 llama.cpp 部署 Qwen3.6-35B 无审查模型，支持 CUDA/Vulkan/CPU 全平台。">
+  <meta name="twitter:description" content="Qwen3.6 越狱版来了！Windows 本地部署 35B 模型｜llama.cpp 完整教程。手把手教你在 Windows 上用 llama.cpp 部署 Qwen3.6-35B 无审查模型，支持 CUDA/Vulkan/CPU 全平台。">
 
 
 <script type="application/ld+json">
@@ -79,9 +80,9 @@
   "@type": "BlogPosting",
   "headline": "Qwen3.6 越狱版来了！Windows 本地部署 35B 模型｜llama.cpp 完整教程",
   "name": "Qwen3.6 越狱版来了！Windows 本地部署 35B 模型｜llama.cpp 完整教程",
-  "description": "手把手教你在 Windows 上用 llama.cpp 部署 Qwen3.6-35B 无审查模型，支持 CUDA/Vulkan/CPU 全平台。",
+  "description": "Qwen3.6 越狱版来了！Windows 本地部署 35B 模型｜llama.cpp 完整教程。手把手教你在 Windows 上用 llama.cpp 部署 Qwen3.6-35B 无审查模型，支持 CUDA/Vulkan/CPU 全平台。",
   "keywords": [
-    "AI", "llama.cpp", "Qwen", "本地部署", "Windows"
+    "qwen3.6 本地部署", "qwen 越狱版下载", "llama.cpp qwen", "windows 本地部署", "无审查模型"
   ],
   "articleBody": "重要说明 本文是基于社区模型的本地部署教程。使用的是社区作者 HauhauCS 发布的 Uncensored 微调版本，不是 Qwen 官方发布的安全对齐模型。“减少拒答\"不等于回答正确，也不等于使用时没有法律和安全责任。不要把模型输出直接用于违法、有害、侵犯隐私或高风险决策。\n开始前的准备 64 位 Windows 电脑 足够的磁盘空间（主模型约 15 GB，视觉文件约 899 MB，还要留空间给解压文件和运行缓存） 足够的系统内存（模型文件能下载下来，不代表一定能在电脑上顺利加载） 如果使用 GPU 加速，需要确认显卡品牌、显存容量和可用的驱动环境 能够访问 GitHub 和 Hugging Face 下载页面 注意：本文使用 RTX 5070 Ti 16 GB 显卡测试，选择约 15 GB 的 IQ3_M 量化。显存不足时，llama.cpp 可以把部分计算放到 CPU 和系统内存，但速度会下降。不要简单理解为\"模型文件小于显存就一定能跑”。\n本期会用到的网址 llama.cpp 官方 GitHub 仓库 llama.cpp 官方 Releases 下载页 Hugging Face 模型仓库 llama.cpp 默认本地 WebUI 地址 目录 00:00 开场与效果介绍 00:30 下载 llama.cpp 01:20 选择 CPU / GPU 版本 02:10 下载 GGUF 模型 03:00 整理运行文件 04:00 配置启动脚本 05:00 启动本地服务 05:45 在浏览器中使用模型 06:10 测试生成完整网页 00:00 这期教程部署的是什么 本教程演示的是 HauhauCS/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive。模型以 GGUF 格式发布，可以使用 llama.cpp 在本机运行。\n模型仓库标注为 35B 总参数、约 3B 激活参数的 MoE 模型，并支持文本和视觉输入。本教程使用 llama.cpp 自带的 llama-server，启动后通过浏览器访问本地聊天界面。\n本地运行的优势是对话主要在自己的电脑中处理，不需要按次调用云端 API。不过模型文件很大，下载、加载速度和生成速度都取决于硬件。\n00:30 打开 llama.cpp 并进入下载页 第一步：打开官方 GitHub 仓库 浏览器访问 github.com/ggml-org/llama.cpp。确认仓库所有者是 ggml-org，避免下载名字相似的第三方程序。\n第二步：进入 Releases 在仓库右侧找到 Releases，点击最新版本。版本会持续更新，通常应优先选择当前最新稳定构建。\n第三步：展开下载文件 在 Release 页面向下滚动到 Assets。文件很多，必须先判断自己的系统架构和加速后端，不要随便下载第一个压缩包。\n01:20 根据电脑选择 llama.cpp 构建 硬件情况 优先查看的构建 说明 NVIDIA 显卡 Windows x64 CUDA 选择与驱动兼容的 CUDA 版本 AMD 显卡 HIP 或 Vulkan HIP 面向 AMD GPU；兼容性不确定时可查看 Vulkan 构建 Intel 或其他支持 Vulkan 的 GPU Vulkan 实际支持情况取决于显卡和驱动 不使用 GPU Windows x64 CPU 可以运行，但 35B 模型通常会明显更慢 选择 CUDA 13.3 x64 本教程电脑使用 RTX 5070 Ti，因此点击 Windows x64 的 CUDA 13 构建，下载文件名类似 llama-b9673-bin-win-cuda-13.3-x64.zip。\n等待压缩包下载完成 下载完成后，把压缩包放到容易找到的位置。\n解压全部文件 右键压缩包，选择解压到独立文件夹。不要直接在压缩包预览窗口中运行 llama-server.exe，否则相关 DLL 和模型路径容易找不到。\n02:10 下载 Qwen3.6 35B GGUF 模型 第一步：在 llama.cpp 文件夹中创建 models 目录 打开刚刚解压的 llama.cpp 文件夹，在根目录中新建文件夹，命名为 models。这个目录用来集中存放主模型和视觉投影文件。\n第二步：打开模型仓库 访问 HauhauCS/Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive。\n第三步：理解量化文件的区别 页面 Downloads 区域列出多个 GGUF 文件。量化越高，文件越大，通常质量越好，同时需要更多内存。主要比较以下两项：\nIQ2_M：约 11 GB，资源占用较低，质量损失更明显 IQ3_M：约 15 GB，本教程使用的版本 第四步：在任务管理器查看显存 按 Ctrl + Shift + Esc 打开任务管理器，进入性能，点击左侧的 GPU。查看\"专用 GPU 内存\"总容量。\n第五步：根据总内存能力选择量化 建议 4 GB 或 6 GB 显存尝试约 11 GB 的 IQ2_M，8 GB 及以上尝试约 15 GB 的 IQ3_M。这依赖 CPU 分层和系统内存，不代表模型能全部装进显存。内存不足时会加载失败，内存刚好够时也可能因为上下文缓存而崩溃。\n如果不确定，先下载较小的 IQ2_M。确认能够稳定启动后，再考虑更高质量的量化。\n第六步：下载 IQ3_M 主模型 点击以下文件：\nQwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive-IQ3_M.gguf 第七步：下载 mmproj 视觉文件 同一页面还要下载：\nmmproj-Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive-f16.gguf 该文件约 899 MB，用于图像等多模态输入。如果只打算文字对话，可以不启用视觉文件；但要完整复现教程配置，应当一起下载。\n03:00 整理模型和运行文件 第一步：把两个 GGUF 文件移入 models 回到 llama.cpp 解压目录，打开刚才创建的 models 文件夹。将 IQ3_M 主模型和 mmproj 文件一起拖进去。\n第二步：确认根目录中存在 llama-server.exe 返回上一层。根目录应该能看到 llama-server.exe 以及随构建附带的 DLL。如果只有模型文件，没有可执行文件，说明下载或解压的包不对。\n第三步：把启动脚本放在根目录 将名为 start.bat 的启动脚本放在 llama.cpp 根目录，与 llama-server.exe 同级。\n推荐的文件夹结构 llama-b9673-bin-win-cuda-13.3-x64/ ├── llama-server.exe ├── start.bat ├── 其他 DLL 和程序文件 └── models/ ├── Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive-IQ3_M.gguf └── mmproj-Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive-f16.gguf 04:00 创建可用的启动脚本 第一步：新建 start.bat 在 llama.cpp 根目录空白处右键，新建文本文档。打开资源管理器的查看 → 显示，启用\"文件扩展名\"，然后把文件重命名为 start.bat。\n第二步：写入启动命令 右键 start.bat，选择编辑，写入以下内容：\n@echo off cd /d \"%~dp0\" llama-server.exe ^ -m \"models\\Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive-IQ3_M.gguf\" ^ --mmproj \"models\\mmproj-Qwen3.6-35B-A3B-Uncensored-HauhauCS-Aggressive-f16.gguf\" ^ --jinja ^ -c 131072 ^ -ngl 99 ^ --host 127.0.0.1 ^ --port 8080 pause 第三步：按自己的文件名修改路径 如果下载的是 IQ2_M 或其他量化，必须修改 -m 后面的文件名。文件名需要与 models 文件夹里的实际文件完全一致。\n第四步：显存不足时降低 GPU 层数 -ngl 99 会尽可能把模型层卸载到 GPU。显存不足或启动时报 CUDA 内存错误时，可以把它改为较小数字，例如 -ngl 40，或者使用 -ngl 0 完全交给 CPU。数值越低，一般越慢。\n第五步：内存不足时降低上下文长度 教程控制台显示上下文长度为 131072，即脚本中的 -c 131072。这是很大的上下文，会额外占用内存。如果启动困难，可以先改成 -c 32768 或 -c 16384，确认模型能正常运行后再调整。\n05:00 启动 llama.cpp 本地服务 第一步：双击 start.bat 双击启动脚本。Windows 会打开命令提示符窗口，llama.cpp 开始读取 GGUF 模型。第一次加载通常需要更久，不要在模型仍然加载时关闭窗口。\n第二步：观察加载日志 正常情况下，窗口会持续输出模型结构、GPU 层、上下文和缓存信息。加载完成后显示服务器监听地址：\nhttp://127.0.0.1:8080 看到 server is listening on 之类的信息后，才说明 Web 服务已经可以访问。\n第三步：保持命令窗口开启 命令窗口就是本地模型服务。关闭窗口会立即停止模型，浏览器页面随后无法继续生成回答。\n05:45 在浏览器中打开 llama.cpp WebUI 第一步：复制本地地址 打开浏览器，在地址栏输入 http://127.0.0.1:8080。这是回环地址，只能访问当前电脑上的服务，不是互联网网站。\n第二步：确认聊天界面出现 页面打开后会显示 llama.cpp 自带的聊天界面。底部输入框附近可以看到当前加载的模型名称和量化。\n第三步：先发送简单测试消息 先输入\"你好\"，模型能够正常回复。用短消息测试可以快速判断模型是否加载成功，不必一开始就提交长任务。\n06:10 测试模型生成个人博客网页 第一步：输入网页生成要求 输入的核心要求是：开发一个个人博客主页，只使用 HTML。模型随后生成一整段 HTML 代码。\n第二步：等待代码生成完成 不要在模型仍然输出时提前复制。等代码块完整结束后，点击代码块右上角的复制按钮。\n第三步：创建 index.html 在桌面新建文本文档，启用文件扩展名显示，把它重命名为 index.html。Windows 提示更改扩展名可能导致文件不可用时，点击确认。\n第四步：用记事本粘贴代码 右键 index.html，选择用记事本编辑。粘贴模型生成的完整代码，按 Ctrl + S 保存。\n第五步：双击打开网页 保存后双击 index.html。系统会用默认浏览器打开本地页面。生成结果是一个包含标题、导航、文章列表和侧栏的个人博客主页。\n常见问题 双击 start.bat 后窗口立即关闭怎么办？ 在脚本最后保留 pause，重新运行后读取错误信息。最常见原因是模型文件名写错、相对路径不对、缺少 DLL，或者下载了不适合当前硬件的构建。\n提示找不到模型文件怎么办？ 检查 models 文件夹名称、脚本中的文件名和实际 GGUF 文件名。Windows 资源管理器应开启文件扩展名显示，避免文件名末尾藏着额外的 .txt。\n出现 CUDA out of memory 怎么办？ 降低 -ngl 数值，减小 -c 上下文长度，关闭占用显存的程序，或改用更小的 IQ2_M 量化。显存不足时不要反复强行启动同一配置。\n为什么 127.0.0.1:8080 打不开？ 确认 llama-server 命令窗口没有关闭，并且日志已经显示监听 8080 端口。如果端口被占用，可以把脚本改为 --port 8081，再访问 http://127.0.0.1:8081。\n模型加载成功但生成特别慢怎么办？ 查看命令窗口中的 token/s。模型可能大部分运行在 CPU，或者上下文设置过大。使用较小量化、增加合理的 GPU 卸载层数，通常能改善速度。\nmmproj 文件必须下载吗？ 纯文字对话不是必须。要使用图片输入等视觉能力，才需要 mmproj，并在启动命令中加入 --mmproj 参数。\n官方资料与相关链接 llama.cpp 官方仓库 llama.cpp 官方 Releases llama-server 官方使用文档 模型仓库 本文按 2026 年 6 月的教程整理。llama.cpp 构建编号、模型文件和下载页面可能更新。下载可执行文件和模型前，应重新核对项目所有者、文件名、许可证和页面说明。\n",
   "wordCount" : "509",
@@ -179,6 +180,9 @@
     <h1 class="post-title entry-hint-parent">
       Qwen3.6 越狱版来了！Windows 本地部署 35B 模型｜llama.cpp 完整教程
     </h1>
+    <div class="post-description">
+      Qwen3.6 越狱版来了！Windows 本地部署 35B 模型｜llama.cpp 完整教程。手把手教你在 Windows 上用 llama.cpp 部署 Qwen3.6-35B 无审查模型，支持 CUDA/Vulkan/CPU 全平台。
+    </div>
     <div class="post-meta">
 
 <span title='2026-06-29 18:00:00 +0800 CST'>2026年6月29日</span>&nbsp;·&nbsp;<span>3 分钟</span>&nbsp;·&nbsp;<span>509 字</span>&nbsp;·&nbsp;<span>千华落影</span>
@@ -527,6 +531,8 @@
       <li><a href="https://www.0149.cc.cd/tags/qwen/">Qwen</a></li>
       <li><a href="https://www.0149.cc.cd/tags/%E6%9C%AC%E5%9C%B0%E9%83%A8%E7%BD%B2/">本地部署</a></li>
       <li><a href="https://www.0149.cc.cd/tags/windows/">Windows</a></li>
+      <li><a href="https://www.0149.cc.cd/tags/%E8%B6%8A%E7%8B%B1%E7%89%88/">越狱版</a></li>
+      <li><a href="https://www.0149.cc.cd/tags/%E6%97%A0%E5%AE%A1%E6%9F%A5/">无审查</a></li>
     </ul>
 <nav class="paginav">
   <a class="prev" href="https://www.0149.cc.cd/posts/qwythos-9b-claude-distilled/">
@@ -538,6 +544,74 @@
     <span>开源版 GPT-Image？Ideogram 4 免费本地部署，效果碾压 FLUX</span>
   </a>
 </nav>
+
+
+<ul class="share-buttons">
+    <li>
+        <a target="_blank" rel="noopener noreferrer" aria-label="share Qwen3.6 越狱版来了！Windows 本地部署 35B 模型｜llama.cpp 完整教程 on x"
+            href="https://x.com/intent/tweet/?text=Qwen3.6%20%e8%b6%8a%e7%8b%b1%e7%89%88%e6%9d%a5%e4%ba%86%ef%bc%81Windows%20%e6%9c%ac%e5%9c%b0%e9%83%a8%e7%bd%b2%2035B%20%e6%a8%a1%e5%9e%8b%ef%bd%9cllama.cpp%20%e5%ae%8c%e6%95%b4%e6%95%99%e7%a8%8b&amp;url=https%3a%2f%2fwww.0149.cc.cd%2fposts%2fqwen36-uncensored-windows-llamacpp%2f&amp;hashtags=AI%2cllama.cpp%2cQwen%2c%e6%9c%ac%e5%9c%b0%e9%83%a8%e7%bd%b2%2cWindows%2c%e8%b6%8a%e7%8b%b1%e7%89%88%2c%e6%97%a0%e5%ae%a1%e6%9f%a5">
+            <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+                <path
+                    d="M512 62.554 L 512 449.446 C 512 483.97 483.97 512 449.446 512 L 62.554 512 C 28.03 512 0 483.97 0 449.446 L 0 62.554 C 0 28.03 28.029 0 62.554 0 L 449.446 0 C 483.971 0 512 28.03 512 62.554 Z M 269.951 190.75 L 182.567 75.216 L 56 75.216 L 207.216 272.95 L 63.9 436.783 L 125.266 436.783 L 235.9 310.383 L 332.567 436.783 L 456 436.783 L 298.367 228.367 L 432.367 75.216 L 371.033 75.216 Z M 127.633 110 L 164.101 110 L 383.481 400.065 L 349.5 400.065 Z" />
+            </svg>
+        </a>
+    </li>
+    <li>
+        <a target="_blank" rel="noopener noreferrer" aria-label="share Qwen3.6 越狱版来了！Windows 本地部署 35B 模型｜llama.cpp 完整教程 on linkedin"
+            href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fwww.0149.cc.cd%2fposts%2fqwen36-uncensored-windows-llamacpp%2f&amp;title=Qwen3.6%20%e8%b6%8a%e7%8b%b1%e7%89%88%e6%9d%a5%e4%ba%86%ef%bc%81Windows%20%e6%9c%ac%e5%9c%b0%e9%83%a8%e7%bd%b2%2035B%20%e6%a8%a1%e5%9e%8b%ef%bd%9cllama.cpp%20%e5%ae%8c%e6%95%b4%e6%95%99%e7%a8%8b&amp;summary=Qwen3.6%20%e8%b6%8a%e7%8b%b1%e7%89%88%e6%9d%a5%e4%ba%86%ef%bc%81Windows%20%e6%9c%ac%e5%9c%b0%e9%83%a8%e7%bd%b2%2035B%20%e6%a8%a1%e5%9e%8b%ef%bd%9cllama.cpp%20%e5%ae%8c%e6%95%b4%e6%95%99%e7%a8%8b&amp;source=https%3a%2f%2fwww.0149.cc.cd%2fposts%2fqwen36-uncensored-windows-llamacpp%2f">
+            <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+                <path
+                    d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-288.985,423.278l0,-225.717l-75.04,0l0,225.717l75.04,0Zm270.539,0l0,-129.439c0,-69.333 -37.018,-101.586 -86.381,-101.586c-39.804,0 -57.634,21.891 -67.617,37.266l0,-31.958l-75.021,0c0.995,21.181 0,225.717 0,225.717l75.02,0l0,-126.056c0,-6.748 0.486,-13.492 2.474,-18.315c5.414,-13.475 17.767,-27.434 38.494,-27.434c27.135,0 38.007,20.707 38.007,51.037l0,120.768l75.024,0Zm-307.552,-334.556c-25.674,0 -42.448,16.879 -42.448,39.002c0,21.658 16.264,39.002 41.455,39.002l0.484,0c26.165,0 42.452,-17.344 42.452,-39.002c-0.485,-22.092 -16.241,-38.954 -41.943,-39.002Z" />
+            </svg>
+        </a>
+    </li>
+    <li>
+        <a target="_blank" rel="noopener noreferrer" aria-label="share Qwen3.6 越狱版来了！Windows 本地部署 35B 模型｜llama.cpp 完整教程 on reddit"
+            href="https://reddit.com/submit?url=https%3a%2f%2fwww.0149.cc.cd%2fposts%2fqwen36-uncensored-windows-llamacpp%2f&title=Qwen3.6%20%e8%b6%8a%e7%8b%b1%e7%89%88%e6%9d%a5%e4%ba%86%ef%bc%81Windows%20%e6%9c%ac%e5%9c%b0%e9%83%a8%e7%bd%b2%2035B%20%e6%a8%a1%e5%9e%8b%ef%bd%9cllama.cpp%20%e5%ae%8c%e6%95%b4%e6%95%99%e7%a8%8b">
+            <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+                <path
+                    d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-3.446,265.638c0,-22.964 -18.616,-41.58 -41.58,-41.58c-11.211,0 -21.361,4.457 -28.841,11.666c-28.424,-20.508 -67.586,-33.757 -111.204,-35.278l18.941,-89.121l61.884,13.157c0.756,15.734 13.642,28.29 29.56,28.29c16.407,0 29.706,-13.299 29.706,-29.701c0,-16.403 -13.299,-29.702 -29.706,-29.702c-11.666,0 -21.657,6.792 -26.515,16.578l-69.105,-14.69c-1.922,-0.418 -3.939,-0.042 -5.585,1.036c-1.658,1.073 -2.811,2.761 -3.224,4.686l-21.152,99.438c-44.258,1.228 -84.046,14.494 -112.837,35.232c-7.468,-7.164 -17.589,-11.591 -28.757,-11.591c-22.965,0 -41.585,18.616 -41.585,41.58c0,16.896 10.095,31.41 24.568,37.918c-0.639,4.135 -0.99,8.328 -0.99,12.576c0,63.977 74.469,115.836 166.33,115.836c91.861,0 166.334,-51.859 166.334,-115.836c0,-4.218 -0.347,-8.387 -0.977,-12.493c14.564,-6.47 24.735,-21.034 24.735,-38.001Zm-119.474,108.193c-20.27,20.241 -59.115,21.816 -70.534,21.816c-11.428,0 -50.277,-1.575 -70.522,-21.82c-3.007,-3.008 -3.007,-7.882 0,-10.889c3.003,-2.999 7.882,-3.003 10.885,0c12.777,12.781 40.11,17.317 59.637,17.317c19.522,0 46.86,-4.536 59.657,-17.321c3.016,-2.999 7.886,-2.995 10.885,0.008c3.008,3.011 3.003,7.882 -0.008,10.889Zm-5.23,-48.781c-16.373,0 -29.701,-13.324 -29.701,-29.698c0,-16.381 13.328,-29.714 29.701,-29.714c16.378,0 29.706,13.333 29.706,29.714c0,16.374 -13.328,29.698 -29.706,29.698Zm-160.386,-29.702c0,-16.381 13.328,-29.71 29.714,-29.71c16.369,0 29.689,13.329 29.689,29.71c0,16.373 -13.32,29.693 -29.689,29.693c-16.386,0 -29.714,-13.32 -29.714,-29.693Z" />
+            </svg>
+        </a>
+    </li>
+    <li>
+        <a target="_blank" rel="noopener noreferrer" aria-label="share Qwen3.6 越狱版来了！Windows 本地部署 35B 模型｜llama.cpp 完整教程 on facebook"
+            href="https://facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.0149.cc.cd%2fposts%2fqwen36-uncensored-windows-llamacpp%2f">
+            <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+                <path
+                    d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-106.468,0l0,-192.915l66.6,0l12.672,-82.621l-79.272,0l0,-53.617c0,-22.603 11.073,-44.636 46.58,-44.636l36.042,0l0,-70.34c0,0 -32.71,-5.582 -63.982,-5.582c-65.288,0 -107.96,39.569 -107.96,111.204l0,62.971l-72.573,0l0,82.621l72.573,0l0,192.915l-191.104,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Z" />
+            </svg>
+        </a>
+    </li>
+    <li>
+        <a target="_blank" rel="noopener noreferrer" aria-label="share Qwen3.6 越狱版来了！Windows 本地部署 35B 模型｜llama.cpp 完整教程 on whatsapp"
+            href="https://api.whatsapp.com/send?text=Qwen3.6%20%e8%b6%8a%e7%8b%b1%e7%89%88%e6%9d%a5%e4%ba%86%ef%bc%81Windows%20%e6%9c%ac%e5%9c%b0%e9%83%a8%e7%bd%b2%2035B%20%e6%a8%a1%e5%9e%8b%ef%bd%9cllama.cpp%20%e5%ae%8c%e6%95%b4%e6%95%99%e7%a8%8b%20-%20https%3a%2f%2fwww.0149.cc.cd%2fposts%2fqwen36-uncensored-windows-llamacpp%2f">
+            <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+                <path
+                    d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-58.673,127.703c-33.842,-33.881 -78.847,-52.548 -126.798,-52.568c-98.799,0 -179.21,80.405 -179.249,179.234c-0.013,31.593 8.241,62.428 23.927,89.612l-25.429,92.884l95.021,-24.925c26.181,14.28 55.659,21.807 85.658,21.816l0.074,0c98.789,0 179.206,-80.413 179.247,-179.243c0.018,-47.895 -18.61,-92.93 -52.451,-126.81Zm-126.797,275.782l-0.06,0c-26.734,-0.01 -52.954,-7.193 -75.828,-20.767l-5.441,-3.229l-56.386,14.792l15.05,-54.977l-3.542,-5.637c-14.913,-23.72 -22.791,-51.136 -22.779,-79.287c0.033,-82.142 66.867,-148.971 149.046,-148.971c39.793,0.014 77.199,15.531 105.329,43.692c28.128,28.16 43.609,65.592 43.594,105.4c-0.034,82.149 -66.866,148.983 -148.983,148.984Zm81.721,-111.581c-4.479,-2.242 -26.499,-13.075 -30.604,-14.571c-4.105,-1.495 -7.091,-2.241 -10.077,2.241c-2.986,4.483 -11.569,14.572 -14.182,17.562c-2.612,2.988 -5.225,3.364 -9.703,1.12c-4.479,-2.241 -18.91,-6.97 -36.017,-22.23c-13.314,-11.876 -22.304,-26.542 -24.916,-31.026c-2.612,-4.484 -0.279,-6.908 1.963,-9.14c2.016,-2.007 4.48,-5.232 6.719,-7.847c2.24,-2.615 2.986,-4.484 4.479,-7.472c1.493,-2.99 0.747,-5.604 -0.374,-7.846c-1.119,-2.241 -10.077,-24.288 -13.809,-33.256c-3.635,-8.733 -7.327,-7.55 -10.077,-7.688c-2.609,-0.13 -5.598,-0.158 -8.583,-0.158c-2.986,0 -7.839,1.121 -11.944,5.604c-4.105,4.484 -15.675,15.32 -15.675,37.364c0,22.046 16.048,43.342 18.287,46.332c2.24,2.99 31.582,48.227 76.511,67.627c10.685,4.615 19.028,7.371 25.533,9.434c10.728,3.41 20.492,2.929 28.209,1.775c8.605,-1.285 26.499,-10.833 30.231,-21.295c3.732,-10.464 3.732,-19.431 2.612,-21.298c-1.119,-1.869 -4.105,-2.99 -8.583,-5.232Z" />
+            </svg>
+        </a>
+    </li>
+    <li>
+        <a target="_blank" rel="noopener noreferrer" aria-label="share Qwen3.6 越狱版来了！Windows 本地部署 35B 模型｜llama.cpp 完整教程 on telegram"
+            href="https://telegram.me/share/url?text=Qwen3.6%20%e8%b6%8a%e7%8b%b1%e7%89%88%e6%9d%a5%e4%ba%86%ef%bc%81Windows%20%e6%9c%ac%e5%9c%b0%e9%83%a8%e7%bd%b2%2035B%20%e6%a8%a1%e5%9e%8b%ef%bd%9cllama.cpp%20%e5%ae%8c%e6%95%b4%e6%95%99%e7%a8%8b&amp;url=https%3a%2f%2fwww.0149.cc.cd%2fposts%2fqwen36-uncensored-windows-llamacpp%2f">
+            <svg version="1.1" xml:space="preserve" viewBox="2 2 28 28" height="30px" width="30px" fill="currentColor">
+                <path
+                    d="M26.49,29.86H5.5a3.37,3.37,0,0,1-2.47-1,3.35,3.35,0,0,1-1-2.47V5.48A3.36,3.36,0,0,1,3,3,3.37,3.37,0,0,1,5.5,2h21A3.38,3.38,0,0,1,29,3a3.36,3.36,0,0,1,1,2.46V26.37a3.35,3.35,0,0,1-1,2.47A3.38,3.38,0,0,1,26.49,29.86Zm-5.38-6.71a.79.79,0,0,0,.85-.66L24.73,9.24a.55.55,0,0,0-.18-.46.62.62,0,0,0-.41-.17q-.08,0-16.53,6.11a.59.59,0,0,0-.41.59.57.57,0,0,0,.43.52l4,1.24,1.61,4.83a.62.62,0,0,0,.63.43.56.56,0,0,0,.4-.17L16.54,20l4.09,3A.9.9,0,0,0,21.11,23.15ZM13.8,20.71l-1.21-4q8.72-5.55,8.78-5.55c.15,0,.23,0,.23.16a.18.18,0,0,1,0,.06s-2.51,2.3-7.52,6.8Z" />
+            </svg>
+        </a>
+    </li>
+    <li>
+        <a target="_blank" rel="noopener noreferrer" aria-label="share Qwen3.6 越狱版来了！Windows 本地部署 35B 模型｜llama.cpp 完整教程 on ycombinator"
+            href="https://news.ycombinator.com/submitlink?t=Qwen3.6%20%e8%b6%8a%e7%8b%b1%e7%89%88%e6%9d%a5%e4%ba%86%ef%bc%81Windows%20%e6%9c%ac%e5%9c%b0%e9%83%a8%e7%bd%b2%2035B%20%e6%a8%a1%e5%9e%8b%ef%bd%9cllama.cpp%20%e5%ae%8c%e6%95%b4%e6%95%99%e7%a8%8b&u=https%3a%2f%2fwww.0149.cc.cd%2fposts%2fqwen36-uncensored-windows-llamacpp%2f">
+            <svg version="1.1" xml:space="preserve" width="30px" height="30px" viewBox="0 0 512 512" fill="currentColor"
+                xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape">
+                <path
+                    d="M449.446 0C483.971 0 512 28.03 512 62.554L512 449.446C512 483.97 483.97 512 449.446 512L62.554 512C28.03 512 0 483.97 0 449.446L0 62.554C0 28.03 28.029 0 62.554 0L449.446 0ZM183.8767 87.9921H121.8427L230.6673 292.4508V424.0079H281.3328V292.4508L390.1575 87.9921H328.1233L256 238.2489z" />
+            </svg>
+        </a>
+    </li>
+</ul>
 
   </footer>
 </article>

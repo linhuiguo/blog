@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>断网可用 on 千华落影</title>
+    <link>https://www.0149.cc.cd/tags/%E6%96%AD%E7%BD%91%E5%8F%AF%E7%94%A8/</link>
+    <description>Recent content in 断网可用 on 千华落影</description>
+    <generator>Hugo</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Mon, 29 Jun 2026 16:00:00 +0800</lastBuildDate>
+    <atom:link href="https://www.0149.cc.cd/tags/%E6%96%AD%E7%BD%91%E5%8F%AF%E7%94%A8/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ollama &#43; Codex App 本地 AI 编程：断网也能自动写代码</title>
+      <link>https://www.0149.cc.cd/posts/ollama-codex-local-coding/</link>
+      <pubDate>Mon, 29 Jun 2026 16:00:00 +0800</pubDate>
+      <guid>https://www.0149.cc.cd/posts/ollama-codex-local-coding/</guid>
+      <description>Ollama &#43; Codex App 本地 AI 编程：断网也能自动写代码。最新版 Ollama 正式支持接入 Codex App，本地大模型直接变身 AI 自动编程 Agent，断网也能用，零 API 费用。</description>
+    </item>
+  </channel>
+</rss>

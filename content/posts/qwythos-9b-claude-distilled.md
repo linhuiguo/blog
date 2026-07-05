@@ -2,9 +2,11 @@
 title: "4G 显存跑 Claude Mythos 5？Qwythos-9B 突然开源，百万上下文免费用"
 date: 2026-06-29T19:00:00+08:00
 draft: false
-tags: ["Qwen", "Claude", "开源模型", "本地部署", "推理"]
+tags: ["Qwen", "Claude", "开源模型", "本地部署", "推理", "Qwythos"]
 categories: ["AI 工具"]
 summary: "Qwythos-9B 突然开源，吸收 Claude Mythos 5 推理能力，百万 Token 上下文，4GB 显存即可本地部署。"
+description: "4G 显存跑 Claude Mythos 5？Qwythos-9B 突然开源，百万上下文免费用。Qwythos-9B 突然开源，吸收 Claude Mythos 5 推理能力，百万 Token 上下文，4GB 显存即可本地部署。"
+keywords: ["qwythos-9b", "claude mythos 5", "本地部署模型", "4g 显存 ai", "开源 ai 模型"]
 ---
 
 ## 前言

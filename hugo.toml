@@ -7,10 +7,10 @@ paginate = 10
 
 [params]
   author = "千华落影"
-  description = "分享 AI、编程、部署等技术文章"
+  description = "分享 AI 大模型、本地部署、编程开发等实用教程，让技术更简单易懂"
   defaultTheme = "dark"
   ShowReadingTime = true
-  ShowShareButtons = false
+  ShowShareButtons = true
   ShowPostNavLinks = true
   ShowBreadCrumbs = true
   ShowCodeCopyButtons = true
@@ -18,11 +18,57 @@ paginate = 10
   ShowToc = true
   TocOpen = false
   comments = false
-
+  
+  # SEO 优化参数
+  [params.seo]
+    # 主关键词
+    keywords = ["AI 教程", "本地部署", "大模型", "Claude", "GPT", "Qwen", "OpenClaw", "llama.cpp", "Ollama", "AI 编程"]
+    # 网站描述
+    siteDescription = "千华落影 - 分享 AI 大模型、本地部署、编程开发等实用教程，让技术更简单易懂"
+    # Twitter 卡片
+    twitterSite = "@linhuiguo"
+    # Open Graph
+    ogLocale = "zh_CN"
+    ogType = "website"
+  
   [params.cover]
     hidden = false
 
-  customHeadHTML = """<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2416788946087777" crossorigin="anonymous"></script>"""
+  customHeadHTML = """<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2416788946087777" crossorigin="anonymous"></script>
+  <meta name="google-site-verification" content="qlnVg1bXEBI0FWfy7hTg3gqSwMRR5f1g1et3_U5LzHE" />
+  <meta name="robots" content="index, follow">
+  <meta name="googlebot" content="index, follow">
+  <meta name="bingbot" content="index, follow">
+  <link rel="alternate" type="application/rss+xml" href="/index.xml" title="千华落影 RSS">
+  <link rel="alternate" type="application/json" href="/index.json" title="千华落影 JSON">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "name": "千华落影",
+    "url": "https://www.0149.cc.cd/",
+    "description": "分享 AI 大模型、本地部署、编程开发等实用教程，让技术更简单易懂",
+    "author": {
+      "@type": "Person",
+      "name": "千华落影",
+      "url": "https://github.com/linhuiguo"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "千华落影",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.0149.cc.cd/favicon.ico"
+      }
+    },
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://www.0149.cc.cd/search/?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+  """
 
   [params.homeInfoParams]
     Title = "👋 你好，我是千华落影"

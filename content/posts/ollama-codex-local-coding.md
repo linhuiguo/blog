@@ -2,9 +2,11 @@
 title: "Ollama + Codex App 本地 AI 编程：断网也能自动写代码"
 date: 2026-06-29T16:00:00+08:00
 draft: false
-tags: ["Ollama", "Codex", "AI编程", "本地部署", "Agent"]
+tags: ["Ollama", "Codex", "AI编程", "本地部署", "Agent", "免费", "断网可用"]
 categories: ["AI 工具"]
 summary: "最新版 Ollama 正式支持接入 Codex App，本地大模型直接变身 AI 自动编程 Agent，断网也能用，零 API 费用。"
+description: "Ollama + Codex App 本地 AI 编程：断网也能自动写代码。最新版 Ollama 正式支持接入 Codex App，本地大模型直接变身 AI 自动编程 Agent，断网也能用，零 API 费用。"
+keywords: ["ollama codex", "本地 ai 编程", "免费 ai 编程", "断网 ai 编程", "ollama 部署"]
 ---
 
 ## 前言

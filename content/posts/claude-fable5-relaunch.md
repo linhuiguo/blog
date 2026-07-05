@@ -2,9 +2,11 @@
 title: "Claude Fable 5 解禁！全网炸了，AI 编程天花板再次被掀翻"
 date: 2026-07-02T12:00:00+08:00
 draft: false
-tags: ["Claude", "Fable", "AI编程", "Anthropic", "Sonnet 5"]
+tags: ["Claude", "Fable", "AI编程", "Anthropic", "Sonnet 5", "Claude 5"]
 categories: ["AI 工具"]
 summary: "Claude Fable 5 正式解禁回归，限时 50% 额度福利。全网 12 个高质量实测案例，看完你就知道这个模型有多强。"
+description: "Claude Fable 5 解禁！全网炸了，AI 编程天花板再次被掀翻。Claude Fable 5 正式解禁回归，限时 50% 额度福利。全网 12 个高质量实测案例，看完你就知道这个模型有多强。"
+keywords: ["claude fable 5", "claude 5 解禁", "ai 编程模型", "anthropic claude", "claude sonnet 5"]
 ---
 
 ## 前言

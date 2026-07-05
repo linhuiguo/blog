@@ -2,9 +2,11 @@
 title: "AI 一句话帮你部署博客：Hugo + GitHub + Cloudflare Pages 完整教程"
 date: 2026-06-29T10:00:00+08:00
 draft: false
-tags: ["AI", "Hermes", "博客部署", "Cloudflare", "Hugo", "教程"]
+tags: ["AI", "Hermes", "博客部署", "Cloudflare", "Hugo", "教程", "GitHub"]
 categories: ["AI 工具"]
 summary: "用 AI 代理（Hermes）一句话完成博客搭建：Hugo + GitHub + Cloudflare Pages，从零到上线全流程。"
+description: "AI 一句话帮你部署博客：Hugo + GitHub + Cloudflare Pages 完整教程。用 AI 代理（Hermes）一句话完成博客搭建：Hugo + GitHub + Cloudflare Pages，从零到上线全流程。"
+keywords: ["hugo 博客部署", "cloudflare pages 教程", "github pages 博客", "ai 部署博客", "hugo 教程"]
 ---
 
 ## 前言

@@ -2,9 +2,11 @@
 title: "AI 文生图提示词宝库：2.8k star 开源项目，让你的图片更真实"
 date: 2026-06-29T13:00:00+08:00
 draft: false
-tags: ["AI", "文生图", "提示词", "开源项目", "图片生成"]
+tags: ["AI", "文生图", "提示词", "开源项目", "图片生成", "GPT", "豆包"]
 categories: ["AI 工具"]
 summary: "分享一个 star 达 2.8k 的文生图提示词开源项目 gpt4o-image-prompts，内含大量高质量提示词示例，搭配豆包、Gemini 等 AI 工具，轻松生成真实感十足的图片。"
+description: "AI 文生图提示词宝库：2.8k star 开源项目，让你的图片更真实。分享一个 star 达 2.8k 的文生图提示词开源项目 gpt4o-image-prompts，内含大量高质量提示词示例，搭配豆包、Gemini 等 AI 工具，轻松生成真实感十足的图片。"
+keywords: ["ai 文生图提示词", "gpt4o image prompts", "ai 图片生成", "提示词模板", "开源 ai 项目"]
 ---
 
 ## 前言

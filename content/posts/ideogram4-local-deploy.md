@@ -2,9 +2,11 @@
 title: "开源版 GPT-Image？Ideogram 4 免费本地部署，效果碾压 FLUX"
 date: 2026-06-29T18:00:00+08:00
 draft: false
-tags: ["Ideogram", "AI画图", "文生图", "开源", "ComfyUI", "本地部署"]
+tags: ["Ideogram", "AI画图", "文生图", "开源", "ComfyUI", "本地部署", "免费"]
 categories: ["AI 工具"]
 summary: "Ideogram 4 开源 9B 模型正式发布，本地部署、LoRA 微调、ComfyUI 工作流全支持，效果媲美 GPT-Image 和 Midjourney。"
+description: "开源版 GPT-Image？Ideogram 4 免费本地部署，效果碾压 FLUX。Ideogram 4 开源 9B 模型正式发布，本地部署、LoRA 微调、ComfyUI 工作流全支持，效果媲美 GPT-Image 和 Midjourney。"
+keywords: ["ideogram 4 本地部署", "开源 ai 图片生成", "comfyui 部署", "免费 ai 画图", "文生图模型"]
 ---
 
 ## 前言

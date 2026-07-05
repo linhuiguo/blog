@@ -2,9 +2,11 @@
 title: "Hermes Agent 桌面版正式发布！Windows / macOS / Linux 全平台支持，小白也能轻松上手！"
 date: 2026-06-29T11:00:00+08:00
 draft: false
-tags: ["AI", "Hermes", "Agent", "桌面版", "教程"]
+tags: ["AI", "Hermes", "Agent", "桌面版", "教程", "Windows", "macOS", "Linux"]
 categories: ["AI 工具"]
 summary: "Hermes Agent 官方桌面版正式发布，支持 Windows、macOS、Linux 三大平台，图形化界面安装配置，小白也能轻松上手。"
+description: "Hermes Agent 桌面版正式发布！Windows / macOS / Linux 全平台支持，小白也能轻松上手！Hermes Agent 官方桌面版正式发布，支持 Windows、macOS、Linux 三大平台，图形化界面安装配置，小白也能轻松上手。"
+keywords: ["hermes agent 桌面版", "ai agent 下载", "hermes 安装教程", "ai agent 桌面应用", "hermes 使用教程"]
 ---
 
 对于经常使用 AI Agent 的用户来说，Hermes Agent 应该并不陌生。凭借强大的自动化能力和灵活的扩展性，它已经成为不少开发者和 AI 爱好者的重要工具。不过一直以来，Hermes Agent 的安装和部署过程都存在一定门槛，特别是对于普通用户而言，需要频繁使用命令行、安装依赖环境以及进行各种配置操作，这也让不少人望而却步。
