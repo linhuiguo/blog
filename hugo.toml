@@ -1,13 +1,13 @@
 baseURL = "https://www.0149.cc.cd/"
 languageCode = "zh-CN"
 defaultContentLanguage = "zh"
-title = "千华落影"
+title = "0149 - 千华落影"
 theme = "PaperMod"
 paginate = 10
 
 [params]
   author = "千华落影"
-  description = "分享 AI 大模型、本地部署、编程开发等实用教程，让技术更简单易懂"
+  description = "0149 千华落影 - 分享 AI 大模型、本地部署、编程开发等实用教程，让技术更简单易懂"
   defaultTheme = "dark"
   ShowReadingTime = true
   ShowShareButtons = true
@@ -22,9 +22,9 @@ paginate = 10
   # SEO 优化参数
   [params.seo]
     # 主关键词
-    keywords = ["AI 教程", "本地部署", "大模型", "Claude", "GPT", "Qwen", "OpenClaw", "llama.cpp", "Ollama", "AI 编程"]
+    keywords = ["0149", "千华落影", "AI 教程", "本地部署", "大模型", "Claude", "GPT", "Qwen", "OpenClaw", "llama.cpp", "Ollama", "AI 编程"]
     # 网站描述
-    siteDescription = "千华落影 - 分享 AI 大模型、本地部署、编程开发等实用教程，让技术更简单易懂"
+    siteDescription = "0149 千华落影 - 分享 AI 大模型、本地部署、编程开发等实用教程，让技术更简单易懂"
     # Twitter 卡片
     twitterSite = "@linhuiguo"
     # Open Graph
@@ -45,9 +45,9 @@ paginate = 10
   {
     "@context": "https://schema.org",
     "@type": "Blog",
-    "name": "千华落影",
+    "name": "0149 - 千华落影",
     "url": "https://www.0149.cc.cd/",
-    "description": "分享 AI 大模型、本地部署、编程开发等实用教程，让技术更简单易懂",
+    "description": "0149 千华落影 - 分享 AI 大模型、本地部署、编程开发等实用教程，让技术更简单易懂",
     "author": {
       "@type": "Person",
       "name": "千华落影",
@@ -55,7 +55,7 @@ paginate = 10
     },
     "publisher": {
       "@type": "Organization",
-      "name": "千华落影",
+      "name": "0149 - 千华落影",
       "logo": {
         "@type": "ImageObject",
         "url": "https://www.0149.cc.cd/favicon.ico"
@@ -71,8 +71,8 @@ paginate = 10
   """
 
   [params.homeInfoParams]
-    Title = "👋 你好，我是千华落影"
-    Content = "一个技术博主，分享 AI 大模型、本地部署、编程开发等实用教程。\n\n💬 如果你看教程懒得自己动手或看不懂，可以加我微信：**vip2700549777**，我来帮你处理。"
+    Title = "👋 你好，欢迎来到 0149"
+    Content = "0149 千华落影 - 分享 AI 大模型、本地部署、编程开发等实用教程。\n\n💬 如果你看教程懒得自己动手或看不懂，可以加我微信：**vip2700549777**，我来帮你处理。"
 
   [[params.socialIcons]]
     name = "github"
