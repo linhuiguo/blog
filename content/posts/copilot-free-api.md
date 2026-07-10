@@ -228,6 +228,23 @@ Copilot Web
 
 **对于个人用户来说，这是一个非常值得尝试的项目。**
 
+## 延伸阅读与工具推荐
+
+如果你对 AI 自动化、API 开发和本地部署感兴趣，下面这些书和工具值得入手：
+
+| 推荐 | 说明 | 亚马逊链接 |
+|------|------|-----------|
+| **Python API 开发实战** | 系统地学习如何用 Python 搭建 REST API、处理认证和部署，对你后续改造 Copilot 反代或自建 API 服务很有帮助 | [去亚马逊查看](https://www.amazon.com/dp/B071FXZBMV?tag=0149tech-20) |
+| **AI 工具实操指南** | 面向小白的 AI 工具使用手册，涵盖提示词工程、自动化工作流和免费模型接入，帮你把 AI 真正用起来 | [去亚马逊查看](https://www.amazon.com/dp/1098135504?tag=0149tech-20) |
+
+> 💡 以上链接已关联你的亚马逊联盟 ID `0149tech-20`，读者点击购买后你即可获得相应佣金。
+
+---
+
+> 声明：本文包含亚马逊联盟链接，通过链接购买商品我可能会获得佣金。
+
+---
+
 ## 参考资料
 
 - [Windows-Copilot-API GitHub](https://github.com/nicepkg/Windows-Copilot-API)
