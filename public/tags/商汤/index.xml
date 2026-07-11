@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>商汤 on 0149 - 千华落影</title>
+    <link>https://www.0149.cc.cd/tags/%E5%95%86%E6%B1%A4/</link>
+    <description>Recent content in 商汤 on 0149 - 千华落影</description>
+    <generator>Hugo</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Sat, 11 Jul 2026 23:00:00 +0800</lastBuildDate>
+    <atom:link href="https://www.0149.cc.cd/tags/%E5%95%86%E6%B1%A4/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>从零配置 OpenClaw 环境 &#43; 接入商汤「日日新」模型（Win10/Win11 保姆级）</title>
+      <link>https://www.0149.cc.cd/posts/openclaw-env-sensenova-guide/</link>
+      <pubDate>Sat, 11 Jul 2026 23:00:00 +0800</pubDate>
+      <guid>https://www.0149.cc.cd/posts/openclaw-env-sensenova-guide/</guid>
+      <description>Windows 从零配置 OpenClaw 环境并接入商汤日日新（SenseNova）模型的保姆级教程，包含 winget/Git/Node/Python/C&#43;&#43; 依赖检查、OpenClaw 安装、交互式选择器配置 Custom Provider、API Key 获取等完整步骤。</description>
+    </item>
+  </channel>
+</rss>
