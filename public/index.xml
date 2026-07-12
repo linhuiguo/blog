@@ -6,8 +6,99 @@
     <description>Recent content on 0149 - 千华落影</description>
     <generator>Hugo</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Sat, 11 Jul 2026 23:00:00 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 12 Jul 2026 15:00:00 +0800</lastBuildDate>
     <atom:link href="https://www.0149.cc.cd/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Grok 4.5 正式发布！免费用，编码能力拉满，附使用教程</title>
+      <link>https://www.0149.cc.cd/posts/grok45-release/</link>
+      <pubDate>Sun, 12 Jul 2026 15:00:00 +0800</pubDate>
+      <guid>https://www.0149.cc.cd/posts/grok45-release/</guid>
+      <description>xAI 发布 Grok 4.5，免费开放试用，编码能力极强，支持 Grok Build 和 Cursor，附使用教程。</description>
+    </item>
+    <item>
+      <title>替身新娘</title>
+      <link>https://www.0149.cc.cd/posts/su-hennian-short-novel-substitute-bride/</link>
+      <pubDate>Sun, 12 Jul 2026 00:30:00 +0800</pubDate>
+      <guid>https://www.0149.cc.cd/posts/su-hennian-short-novel-substitute-bride/</guid>
+      <description>苏鹤年短篇小说，替身新娘身份反转，少量擦边元素，主打爽感和反转，苏鹤年女主自带性感外形描写。</description>
+    </item>
+    <item>
+      <title>直接白嫖！GitHub 大神写的副业赚钱工具，自动发短视频&#43;推商品&#43;发推（保姆级）</title>
+      <link>https://www.0149.cc.cd/posts/moneyprinter-v2-side-hustle/</link>
+      <pubDate>Sun, 12 Jul 2026 00:20:00 +0800</pubDate>
+      <guid>https://www.0149.cc.cd/posts/moneyprinter-v2-side-hustle/</guid>
+      <description>MoneyPrinterV2 GitHub 大神真实副业赚钱工具，自动化 YouTube Shorts、Twitter 营销、Amazon 联盟营销，Python 开源免费。</description>
+    </item>
+    <item>
+      <title>股市钓鱼，不拼运气！用 AI 科学选股，每日自动推送决策（保姆级）</title>
+      <link>https://www.0149.cc.cd/posts/daily-stock-analysis-guide/</link>
+      <pubDate>Sun, 12 Jul 2026 00:15:00 +0800</pubDate>
+      <guid>https://www.0149.cc.cd/posts/daily-stock-analysis-guide/</guid>
+      <description>AI 股票钓鱼法教程，用 LLM 分析多市场股票，自动推送决策看板，科学选股不拼运气，零成本副业增加收入。</description>
+    </item>
+    <item>
+      <title>闲电脑挂机赚零花！量化钓鱼法，80%把握才出手，安全躺赚（保姆级）</title>
+      <link>https://www.0149.cc.cd/posts/quantdinger-quant-fishing-guide/</link>
+      <pubDate>Sun, 12 Jul 2026 00:10:00 +0800</pubDate>
+      <guid>https://www.0149.cc.cd/posts/quantdinger-quant-fishing-guide/</guid>
+      <description>闲电脑挂机量化教程，量化钓鱼法提高触发门槛，80%把握才出手，安全副业增加收入，用开源工具 QuantDinger 实现。</description>
+    </item>
+    <item>
+      <title>AI 量化交易平台白嫖！开源免费，回测&#43;实盘，小白也能跑（保姆级）</title>
+      <link>https://www.0149.cc.cd/posts/quantdinger-ai-quant-guide/</link>
+      <pubDate>Sun, 12 Jul 2026 00:05:00 +0800</pubDate>
+      <guid>https://www.0149.cc.cd/posts/quantdinger-ai-quant-guide/</guid>
+      <description>QuantDinger 开源 AI 量化交易平台保姆级教程，Python 实现，支持 Binance/Alpaca 实盘交易，内置回测、市场数据、AI 策略模板，免费开源。</description>
+    </item>
+    <item>
+      <title>白嫖 AI 生图！免费无限次，文生图图生图都行，小白也能用</title>
+      <link>https://www.0149.cc.cd/posts/agnes-ai-free-image-generation/</link>
+      <pubDate>Sun, 12 Jul 2026 00:05:00 +0800</pubDate>
+      <guid>https://www.0149.cc.cd/posts/agnes-ai-free-image-generation/</guid>
+      <description>Agnes AI 免费生图保姆级教程，注册→拿 Key→一行命令生图，支持文生图和图生图，零成本无限次使用。</description>
+    </item>
+    <item>
+      <title>Claude 的 MCP 服务器爆了！DesktopCommanderMCP 让 Claude 直接操作你的电脑（保姆级）</title>
+      <link>https://www.0149.cc.cd/posts/desktopcommander-mcp-guide/</link>
+      <pubDate>Sun, 12 Jul 2026 00:00:00 +0800</pubDate>
+      <guid>https://www.0149.cc.cd/posts/desktopcommander-mcp-guide/</guid>
+      <description>DesktopCommanderMCP 保姆级教程，让 Claude 通过 MCP 协议直接操作你的电脑，终端命令、文件搜索、代码 diff 编辑，小白也能装。</description>
+    </item>
+    <item>
+      <title>一条龙！GitHub 选题 → AI 写文 → 自动配图 → 直接发布（保姆级）</title>
+      <link>https://www.0149.cc.cd/posts/one-click-content-pipeline/</link>
+      <pubDate>Sun, 12 Jul 2026 00:00:00 +0800</pubDate>
+      <guid>https://www.0149.cc.cd/posts/one-click-content-pipeline/</guid>
+      <description>一条龙内容生产流水线：GitHub 热榜选题→AI 写小白教程→归藏材质配图→填头条编辑框→发博客，全自动完成。</description>
+    </item>
+    <item>
+      <title>AI 自动给文章配图！归藏材质插画风格，告别找图焦虑（保姆级）</title>
+      <link>https://www.0149.cc.cd/posts/guizang-material-illustration-guide/</link>
+      <pubDate>Sat, 11 Jul 2026 23:55:00 +0800</pubDate>
+      <guid>https://www.0149.cc.cd/posts/guizang-material-illustration-guide/</guid>
+      <description>归藏材质插画保姆级教程，教你用 AI 文章配图生成带中文标签的 3D 材质解释图，适合头条/公众号/PPT/教程配图。</description>
+    </item>
+    <item>
+      <title>百度开源了无限 OCR！图片文字随便识别，免费（需要 GPU，小白慎入）</title>
+      <link>https://www.0149.cc.cd/posts/unlimited-ocr-guide/</link>
+      <pubDate>Sat, 11 Jul 2026 23:55:00 +0800</pubDate>
+      <guid>https://www.0149.cc.cd/posts/unlimited-ocr-guide/</guid>
+      <description>百度 Unlimited-OCR 保姆级安装教程，从检查显卡到一行命令跑通，需要 Python 3.12 &#43; 英伟达 GPU，没有 GPU 可以用在线 Demo。</description>
+    </item>
+    <item>
+      <title>小米开源了 AI 编程助手！一行命令白嫖，Windows 也能用（保姆级）</title>
+      <link>https://www.0149.cc.cd/posts/mimo-code-ai-assistant/</link>
+      <pubDate>Sat, 11 Jul 2026 23:45:00 +0800</pubDate>
+      <guid>https://www.0149.cc.cd/posts/mimo-code-ai-assistant/</guid>
+      <description>小米开源 MiMo Code 保姆级安装教程，从检查 PowerShell 到一行命令装好，Win10/Win11 差异已标出。小白也能用的 AI 编程助手。</description>
+    </item>
+    <item>
+      <title>GitHub 热榜 8K 星的音乐播放器！免费开源，网易云 QQ 音乐都能听（小白版）</title>
+      <link>https://www.0149.cc.cd/posts/mineradio-music-player/</link>
+      <pubDate>Sat, 11 Jul 2026 23:30:00 +0800</pubDate>
+      <guid>https://www.0149.cc.cd/posts/mineradio-music-player/</guid>
+      <description>GitHub 热榜 Mineradio 音乐播放器保姆级安装教程，从下载到听歌每一步都给小白看，零命令行，双击即用。</description>
+    </item>
     <item>
       <title>从零配置 OpenClaw 环境 &#43; 接入商汤「日日新」模型（Win10/Win11 保姆级）</title>
       <link>https://www.0149.cc.cd/posts/openclaw-env-sensenova-guide/</link>
@@ -105,6 +196,52 @@
       <pubDate>Mon, 29 Jun 2026 10:00:00 +0800</pubDate>
       <guid>https://www.0149.cc.cd/posts/hermes-auto-deploy-blog/</guid>
       <description>AI 一句话帮你部署博客：Hugo &#43; GitHub &#43; Cloudflare Pages 完整教程。用 AI 代理（Hermes）一句话完成博客搭建：Hugo &#43; GitHub &#43; Cloudflare Pages，从零到上线全流程。</description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://www.0149.cc.cd/posts/perchance-free-ai-image/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://www.0149.cc.cd/posts/perchance-free-ai-image/</guid>
+      <description>&lt;h1 id=&#34;发现一个无限生图网站连登录都不用速度超快小白也能用&#34;&gt;发现一个无限生图网站，连登录都不用，速度超快，小白也能用&lt;/h1&gt;
+&lt;p&gt;大家好，我是千华落影。&lt;/p&gt;
+&lt;p&gt;今天给大家分享一个我发现的宝藏网站——&lt;strong&gt;Perchance AI Character Generator&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;说实话，用过这么多 AI 生图工具，这个是我见过最&amp;quot;无脑&amp;quot;的一个。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;不用注册，不用登录，打开网页直接用，免费无限制。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;就这么简单。&lt;/p&gt;
+&lt;h2 id=&#34;什么是-perchance&#34;&gt;什么是 Perchance&lt;/h2&gt;
+&lt;p&gt;Perchance 是一个在线 AI 生成器平台，上面有各种网友分享的工具，从 AI 聊天、文生图到故事生成器都有。&lt;/p&gt;
+&lt;p&gt;今天重点说它的 &lt;strong&gt;AI Character Generator&lt;/strong&gt;（AI 角色生成器），这是我用过的最顺手的免费生图工具。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;地址&lt;/strong&gt;：https://perchance.org/ai-character-generator&lt;/p&gt;
+&lt;h2 id=&#34;它有多好用&#34;&gt;它有多好用？&lt;/h2&gt;
+&lt;h3 id=&#34;1-不用登录打开就能用&#34;&gt;1. 不用登录，打开就能用&lt;/h3&gt;
+&lt;p&gt;没错，连账号都不用注册。打开网页，输入你想画的内容，点 generate，图片就出来了。&lt;/p&gt;
+&lt;p&gt;没有广告弹窗，没有&amp;quot;请先登录&amp;quot;，没有&amp;quot;积分不足&amp;quot;。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;直接用。&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;2-几十种艺术画风随便切换&#34;&gt;2. 几十种艺术画风随便切换&lt;/h3&gt;
+&lt;p&gt;这是我觉得最牛的地方。它内置了超多画风：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Painted Anime&lt;/strong&gt;（手绘动漫风）&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;3D Disney Character&lt;/strong&gt;（3D 迪士尼风格）&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Ghibli&lt;/strong&gt;（吉卜力风格）&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Your Name&lt;/strong&gt;（你的名字风格）&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Paprika&lt;/strong&gt;（红辣椒/今敏风格）&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;My Hero Academia&lt;/strong&gt;（我的英雄学院）&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Hunter x Hunter&lt;/strong&gt;（猎人）&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Attack on Titan&lt;/strong&gt;（进击的巨人）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;每种风格生成出来的效果完全不一样，可以随便试。&lt;/p&gt;
+&lt;h3 id=&#34;3-三种画面比例&#34;&gt;3. 三种画面比例&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Square&lt;/strong&gt;（方形）——适合头像、壁纸&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Portrait&lt;/strong&gt;（竖版）——适合手机壁纸&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Landscape&lt;/strong&gt;（横版）——适合封面、横幅&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;4-一次生成多张&#34;&gt;4. 一次生成多张&lt;/h3&gt;
+&lt;p&gt;可以设置一次生成 1-6 张，不满意就再点一次 generate，完全不心疼。&lt;/p&gt;
+&lt;h3 id=&#34;5-追加风格特效&#34;&gt;5. 追加风格特效&lt;/h3&gt;
+&lt;p&gt;除了选画风，还能追加风格叠加。比如你选了动漫风，再叠加一个&amp;quot;红辣椒&amp;quot;风格，出来的效果又不一样。&lt;/p&gt;
+&lt;h2 id=&#34;怎么用&#34;&gt;怎么用？&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;三步搞定&lt;/strong&gt;：&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

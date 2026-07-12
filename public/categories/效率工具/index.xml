@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>效率工具 on 0149 - 千华落影</title>
+    <link>https://www.0149.cc.cd/categories/%E6%95%88%E7%8E%87%E5%B7%A5%E5%85%B7/</link>
+    <description>Recent content in 效率工具 on 0149 - 千华落影</description>
+    <generator>Hugo</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Sun, 12 Jul 2026 00:00:00 +0800</lastBuildDate>
+    <atom:link href="https://www.0149.cc.cd/categories/%E6%95%88%E7%8E%87%E5%B7%A5%E5%85%B7/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>一条龙！GitHub 选题 → AI 写文 → 自动配图 → 直接发布（保姆级）</title>
+      <link>https://www.0149.cc.cd/posts/one-click-content-pipeline/</link>
+      <pubDate>Sun, 12 Jul 2026 00:00:00 +0800</pubDate>
+      <guid>https://www.0149.cc.cd/posts/one-click-content-pipeline/</guid>
+      <description>一条龙内容生产流水线：GitHub 热榜选题→AI 写小白教程→归藏材质配图→填头条编辑框→发博客，全自动完成。</description>
+    </item>
+  </channel>
+</rss>

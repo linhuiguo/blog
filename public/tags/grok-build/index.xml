@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Grok Build on 0149 - 千华落影</title>
+    <link>https://www.0149.cc.cd/tags/grok-build/</link>
+    <description>Recent content in Grok Build on 0149 - 千华落影</description>
+    <generator>Hugo</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Sun, 12 Jul 2026 15:00:00 +0800</lastBuildDate>
+    <atom:link href="https://www.0149.cc.cd/tags/grok-build/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Grok 4.5 正式发布！免费用，编码能力拉满，附使用教程</title>
+      <link>https://www.0149.cc.cd/posts/grok45-release/</link>
+      <pubDate>Sun, 12 Jul 2026 15:00:00 +0800</pubDate>
+      <guid>https://www.0149.cc.cd/posts/grok45-release/</guid>
+      <description>xAI 发布 Grok 4.5，免费开放试用，编码能力极强，支持 Grok Build 和 Cursor，附使用教程。</description>
+    </item>
+  </channel>
+</rss>

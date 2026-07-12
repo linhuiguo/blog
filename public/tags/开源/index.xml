@@ -6,8 +6,36 @@
     <description>Recent content in 开源 on 0149 - 千华落影</description>
     <generator>Hugo</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Mon, 29 Jun 2026 18:00:00 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 12 Jul 2026 00:05:00 +0800</lastBuildDate>
     <atom:link href="https://www.0149.cc.cd/tags/%E5%BC%80%E6%BA%90/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AI 量化交易平台白嫖！开源免费，回测&#43;实盘，小白也能跑（保姆级）</title>
+      <link>https://www.0149.cc.cd/posts/quantdinger-ai-quant-guide/</link>
+      <pubDate>Sun, 12 Jul 2026 00:05:00 +0800</pubDate>
+      <guid>https://www.0149.cc.cd/posts/quantdinger-ai-quant-guide/</guid>
+      <description>QuantDinger 开源 AI 量化交易平台保姆级教程，Python 实现，支持 Binance/Alpaca 实盘交易，内置回测、市场数据、AI 策略模板，免费开源。</description>
+    </item>
+    <item>
+      <title>百度开源了无限 OCR！图片文字随便识别，免费（需要 GPU，小白慎入）</title>
+      <link>https://www.0149.cc.cd/posts/unlimited-ocr-guide/</link>
+      <pubDate>Sat, 11 Jul 2026 23:55:00 +0800</pubDate>
+      <guid>https://www.0149.cc.cd/posts/unlimited-ocr-guide/</guid>
+      <description>百度 Unlimited-OCR 保姆级安装教程，从检查显卡到一行命令跑通，需要 Python 3.12 &#43; 英伟达 GPU，没有 GPU 可以用在线 Demo。</description>
+    </item>
+    <item>
+      <title>小米开源了 AI 编程助手！一行命令白嫖，Windows 也能用（保姆级）</title>
+      <link>https://www.0149.cc.cd/posts/mimo-code-ai-assistant/</link>
+      <pubDate>Sat, 11 Jul 2026 23:45:00 +0800</pubDate>
+      <guid>https://www.0149.cc.cd/posts/mimo-code-ai-assistant/</guid>
+      <description>小米开源 MiMo Code 保姆级安装教程，从检查 PowerShell 到一行命令装好，Win10/Win11 差异已标出。小白也能用的 AI 编程助手。</description>
+    </item>
+    <item>
+      <title>GitHub 热榜 8K 星的音乐播放器！免费开源，网易云 QQ 音乐都能听（小白版）</title>
+      <link>https://www.0149.cc.cd/posts/mineradio-music-player/</link>
+      <pubDate>Sat, 11 Jul 2026 23:30:00 +0800</pubDate>
+      <guid>https://www.0149.cc.cd/posts/mineradio-music-player/</guid>
+      <description>GitHub 热榜 Mineradio 音乐播放器保姆级安装教程，从下载到听歌每一步都给小白看，零命令行，双击即用。</description>
+    </item>
     <item>
       <title>开源版 GPT-Image？Ideogram 4 免费本地部署，效果碾压 FLUX</title>
       <link>https://www.0149.cc.cd/posts/ideogram4-local-deploy/</link>

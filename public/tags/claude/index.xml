@@ -6,8 +6,15 @@
     <description>Recent content in Claude on 0149 - 千华落影</description>
     <generator>Hugo</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Thu, 02 Jul 2026 12:00:00 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 12 Jul 2026 00:00:00 +0800</lastBuildDate>
     <atom:link href="https://www.0149.cc.cd/tags/claude/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Claude 的 MCP 服务器爆了！DesktopCommanderMCP 让 Claude 直接操作你的电脑（保姆级）</title>
+      <link>https://www.0149.cc.cd/posts/desktopcommander-mcp-guide/</link>
+      <pubDate>Sun, 12 Jul 2026 00:00:00 +0800</pubDate>
+      <guid>https://www.0149.cc.cd/posts/desktopcommander-mcp-guide/</guid>
+      <description>DesktopCommanderMCP 保姆级教程，让 Claude 通过 MCP 协议直接操作你的电脑，终端命令、文件搜索、代码 diff 编辑，小白也能装。</description>
+    </item>
     <item>
       <title>Claude Fable 5 解禁！全网炸了，AI 编程天花板再次被掀翻</title>
       <link>https://www.0149.cc.cd/posts/claude-fable5-relaunch/</link>

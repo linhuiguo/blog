@@ -6,8 +6,85 @@
     <description>Recent content in 保姆级教程 on 0149 - 千华落影</description>
     <generator>Hugo</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Sat, 11 Jul 2026 23:00:00 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 12 Jul 2026 00:20:00 +0800</lastBuildDate>
     <atom:link href="https://www.0149.cc.cd/tags/%E4%BF%9D%E5%A7%86%E7%BA%A7%E6%95%99%E7%A8%8B/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>直接白嫖！GitHub 大神写的副业赚钱工具，自动发短视频&#43;推商品&#43;发推（保姆级）</title>
+      <link>https://www.0149.cc.cd/posts/moneyprinter-v2-side-hustle/</link>
+      <pubDate>Sun, 12 Jul 2026 00:20:00 +0800</pubDate>
+      <guid>https://www.0149.cc.cd/posts/moneyprinter-v2-side-hustle/</guid>
+      <description>MoneyPrinterV2 GitHub 大神真实副业赚钱工具，自动化 YouTube Shorts、Twitter 营销、Amazon 联盟营销，Python 开源免费。</description>
+    </item>
+    <item>
+      <title>股市钓鱼，不拼运气！用 AI 科学选股，每日自动推送决策（保姆级）</title>
+      <link>https://www.0149.cc.cd/posts/daily-stock-analysis-guide/</link>
+      <pubDate>Sun, 12 Jul 2026 00:15:00 +0800</pubDate>
+      <guid>https://www.0149.cc.cd/posts/daily-stock-analysis-guide/</guid>
+      <description>AI 股票钓鱼法教程，用 LLM 分析多市场股票，自动推送决策看板，科学选股不拼运气，零成本副业增加收入。</description>
+    </item>
+    <item>
+      <title>闲电脑挂机赚零花！量化钓鱼法，80%把握才出手，安全躺赚（保姆级）</title>
+      <link>https://www.0149.cc.cd/posts/quantdinger-quant-fishing-guide/</link>
+      <pubDate>Sun, 12 Jul 2026 00:10:00 +0800</pubDate>
+      <guid>https://www.0149.cc.cd/posts/quantdinger-quant-fishing-guide/</guid>
+      <description>闲电脑挂机量化教程，量化钓鱼法提高触发门槛，80%把握才出手，安全副业增加收入，用开源工具 QuantDinger 实现。</description>
+    </item>
+    <item>
+      <title>AI 量化交易平台白嫖！开源免费，回测&#43;实盘，小白也能跑（保姆级）</title>
+      <link>https://www.0149.cc.cd/posts/quantdinger-ai-quant-guide/</link>
+      <pubDate>Sun, 12 Jul 2026 00:05:00 +0800</pubDate>
+      <guid>https://www.0149.cc.cd/posts/quantdinger-ai-quant-guide/</guid>
+      <description>QuantDinger 开源 AI 量化交易平台保姆级教程，Python 实现，支持 Binance/Alpaca 实盘交易，内置回测、市场数据、AI 策略模板，免费开源。</description>
+    </item>
+    <item>
+      <title>白嫖 AI 生图！免费无限次，文生图图生图都行，小白也能用</title>
+      <link>https://www.0149.cc.cd/posts/agnes-ai-free-image-generation/</link>
+      <pubDate>Sun, 12 Jul 2026 00:05:00 +0800</pubDate>
+      <guid>https://www.0149.cc.cd/posts/agnes-ai-free-image-generation/</guid>
+      <description>Agnes AI 免费生图保姆级教程，注册→拿 Key→一行命令生图，支持文生图和图生图，零成本无限次使用。</description>
+    </item>
+    <item>
+      <title>Claude 的 MCP 服务器爆了！DesktopCommanderMCP 让 Claude 直接操作你的电脑（保姆级）</title>
+      <link>https://www.0149.cc.cd/posts/desktopcommander-mcp-guide/</link>
+      <pubDate>Sun, 12 Jul 2026 00:00:00 +0800</pubDate>
+      <guid>https://www.0149.cc.cd/posts/desktopcommander-mcp-guide/</guid>
+      <description>DesktopCommanderMCP 保姆级教程，让 Claude 通过 MCP 协议直接操作你的电脑，终端命令、文件搜索、代码 diff 编辑，小白也能装。</description>
+    </item>
+    <item>
+      <title>一条龙！GitHub 选题 → AI 写文 → 自动配图 → 直接发布（保姆级）</title>
+      <link>https://www.0149.cc.cd/posts/one-click-content-pipeline/</link>
+      <pubDate>Sun, 12 Jul 2026 00:00:00 +0800</pubDate>
+      <guid>https://www.0149.cc.cd/posts/one-click-content-pipeline/</guid>
+      <description>一条龙内容生产流水线：GitHub 热榜选题→AI 写小白教程→归藏材质配图→填头条编辑框→发博客，全自动完成。</description>
+    </item>
+    <item>
+      <title>AI 自动给文章配图！归藏材质插画风格，告别找图焦虑（保姆级）</title>
+      <link>https://www.0149.cc.cd/posts/guizang-material-illustration-guide/</link>
+      <pubDate>Sat, 11 Jul 2026 23:55:00 +0800</pubDate>
+      <guid>https://www.0149.cc.cd/posts/guizang-material-illustration-guide/</guid>
+      <description>归藏材质插画保姆级教程，教你用 AI 文章配图生成带中文标签的 3D 材质解释图，适合头条/公众号/PPT/教程配图。</description>
+    </item>
+    <item>
+      <title>百度开源了无限 OCR！图片文字随便识别，免费（需要 GPU，小白慎入）</title>
+      <link>https://www.0149.cc.cd/posts/unlimited-ocr-guide/</link>
+      <pubDate>Sat, 11 Jul 2026 23:55:00 +0800</pubDate>
+      <guid>https://www.0149.cc.cd/posts/unlimited-ocr-guide/</guid>
+      <description>百度 Unlimited-OCR 保姆级安装教程，从检查显卡到一行命令跑通，需要 Python 3.12 &#43; 英伟达 GPU，没有 GPU 可以用在线 Demo。</description>
+    </item>
+    <item>
+      <title>小米开源了 AI 编程助手！一行命令白嫖，Windows 也能用（保姆级）</title>
+      <link>https://www.0149.cc.cd/posts/mimo-code-ai-assistant/</link>
+      <pubDate>Sat, 11 Jul 2026 23:45:00 +0800</pubDate>
+      <guid>https://www.0149.cc.cd/posts/mimo-code-ai-assistant/</guid>
+      <description>小米开源 MiMo Code 保姆级安装教程，从检查 PowerShell 到一行命令装好，Win10/Win11 差异已标出。小白也能用的 AI 编程助手。</description>
+    </item>
+    <item>
+      <title>GitHub 热榜 8K 星的音乐播放器！免费开源，网易云 QQ 音乐都能听（小白版）</title>
+      <link>https://www.0149.cc.cd/posts/mineradio-music-player/</link>
+      <pubDate>Sat, 11 Jul 2026 23:30:00 +0800</pubDate>
+      <guid>https://www.0149.cc.cd/posts/mineradio-music-player/</guid>
+      <description>GitHub 热榜 Mineradio 音乐播放器保姆级安装教程，从下载到听歌每一步都给小白看，零命令行，双击即用。</description>
+    </item>
     <item>
       <title>从零配置 OpenClaw 环境 &#43; 接入商汤「日日新」模型（Win10/Win11 保姆级）</title>
       <link>https://www.0149.cc.cd/posts/openclaw-env-sensenova-guide/</link>

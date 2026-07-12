@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>音乐播放器 on 0149 - 千华落影</title>
+    <link>https://www.0149.cc.cd/tags/%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8/</link>
+    <description>Recent content in 音乐播放器 on 0149 - 千华落影</description>
+    <generator>Hugo</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Sat, 11 Jul 2026 23:30:00 +0800</lastBuildDate>
+    <atom:link href="https://www.0149.cc.cd/tags/%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>GitHub 热榜 8K 星的音乐播放器！免费开源，网易云 QQ 音乐都能听（小白版）</title>
+      <link>https://www.0149.cc.cd/posts/mineradio-music-player/</link>
+      <pubDate>Sat, 11 Jul 2026 23:30:00 +0800</pubDate>
+      <guid>https://www.0149.cc.cd/posts/mineradio-music-player/</guid>
+      <description>GitHub 热榜 Mineradio 音乐播放器保姆级安装教程，从下载到听歌每一步都给小白看，零命令行，双击即用。</description>
+    </item>
+  </channel>
+</rss>

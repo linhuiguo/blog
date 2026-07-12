@@ -6,8 +6,22 @@
     <description>Recent content in Windows on 0149 - 千华落影</description>
     <generator>Hugo</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Sat, 11 Jul 2026 23:00:00 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 11 Jul 2026 23:45:00 +0800</lastBuildDate>
     <atom:link href="https://www.0149.cc.cd/tags/windows/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>小米开源了 AI 编程助手！一行命令白嫖，Windows 也能用（保姆级）</title>
+      <link>https://www.0149.cc.cd/posts/mimo-code-ai-assistant/</link>
+      <pubDate>Sat, 11 Jul 2026 23:45:00 +0800</pubDate>
+      <guid>https://www.0149.cc.cd/posts/mimo-code-ai-assistant/</guid>
+      <description>小米开源 MiMo Code 保姆级安装教程，从检查 PowerShell 到一行命令装好，Win10/Win11 差异已标出。小白也能用的 AI 编程助手。</description>
+    </item>
+    <item>
+      <title>GitHub 热榜 8K 星的音乐播放器！免费开源，网易云 QQ 音乐都能听（小白版）</title>
+      <link>https://www.0149.cc.cd/posts/mineradio-music-player/</link>
+      <pubDate>Sat, 11 Jul 2026 23:30:00 +0800</pubDate>
+      <guid>https://www.0149.cc.cd/posts/mineradio-music-player/</guid>
+      <description>GitHub 热榜 Mineradio 音乐播放器保姆级安装教程，从下载到听歌每一步都给小白看，零命令行，双击即用。</description>
+    </item>
     <item>
       <title>从零配置 OpenClaw 环境 &#43; 接入商汤「日日新」模型（Win10/Win11 保姆级）</title>
       <link>https://www.0149.cc.cd/posts/openclaw-env-sensenova-guide/</link>

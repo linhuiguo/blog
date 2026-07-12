@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Unlimited-OCR on 0149 - 千华落影</title>
+    <link>https://www.0149.cc.cd/tags/unlimited-ocr/</link>
+    <description>Recent content in Unlimited-OCR on 0149 - 千华落影</description>
+    <generator>Hugo</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Sat, 11 Jul 2026 23:55:00 +0800</lastBuildDate>
+    <atom:link href="https://www.0149.cc.cd/tags/unlimited-ocr/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>百度开源了无限 OCR！图片文字随便识别，免费（需要 GPU，小白慎入）</title>
+      <link>https://www.0149.cc.cd/posts/unlimited-ocr-guide/</link>
+      <pubDate>Sat, 11 Jul 2026 23:55:00 +0800</pubDate>
+      <guid>https://www.0149.cc.cd/posts/unlimited-ocr-guide/</guid>
+      <description>百度 Unlimited-OCR 保姆级安装教程，从检查显卡到一行命令跑通，需要 Python 3.12 &#43; 英伟达 GPU，没有 GPU 可以用在线 Demo。</description>
+    </item>
+  </channel>
+</rss>
