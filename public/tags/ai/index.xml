@@ -23,6 +23,13 @@
       <description>OpenBMB发布MiniCPM5-1B，1B参数干翻7B模型，128K超长上下文，本地2G显存就能跑，本文手把手教你部署。</description>
     </item>
     <item>
+      <title>2026 还能白嫖的免费 AI API 汇总：大模型、语音、OCR、生图全都有</title>
+      <link>https://www.0149.cc.cd/posts/free-ai-api-2026/</link>
+      <pubDate>Mon, 29 Jun 2026 20:00:00 +0800</pubDate>
+      <guid>https://www.0149.cc.cd/posts/free-ai-api-2026/</guid>
+      <description>整理了几个目前能直接拿 API Key 接入自己项目的免费 AI 资源，覆盖大模型、语音、OCR、生图，适合做 Agent 工作流和本地自动化。</description>
+    </item>
+    <item>
       <title>Qwen3.6 越狱版来了！Windows 本地部署 35B 模型｜llama.cpp 完整教程</title>
       <link>https://www.0149.cc.cd/posts/qwen36-uncensored-windows-llamacpp/</link>
       <pubDate>Mon, 29 Jun 2026 18:00:00 +0800</pubDate>

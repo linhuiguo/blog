@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>大模型 on 0149 - 千华落影</title>
+    <link>https://www.0149.cc.cd/tags/%E5%A4%A7%E6%A8%A1%E5%9E%8B/</link>
+    <description>Recent content in 大模型 on 0149 - 千华落影</description>
+    <generator>Hugo</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Mon, 29 Jun 2026 20:00:00 +0800</lastBuildDate>
+    <atom:link href="https://www.0149.cc.cd/tags/%E5%A4%A7%E6%A8%A1%E5%9E%8B/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>2026 还能白嫖的免费 AI API 汇总：大模型、语音、OCR、生图全都有</title>
+      <link>https://www.0149.cc.cd/posts/free-ai-api-2026/</link>
+      <pubDate>Mon, 29 Jun 2026 20:00:00 +0800</pubDate>
+      <guid>https://www.0149.cc.cd/posts/free-ai-api-2026/</guid>
+      <description>整理了几个目前能直接拿 API Key 接入自己项目的免费 AI 资源，覆盖大模型、语音、OCR、生图，适合做 Agent 工作流和本地自动化。</description>
+    </item>
+  </channel>
+</rss>

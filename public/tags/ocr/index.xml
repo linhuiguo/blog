@@ -15,5 +15,12 @@
       <guid>https://www.0149.cc.cd/posts/unlimited-ocr-guide/</guid>
       <description>百度 Unlimited-OCR 保姆级安装教程，从检查显卡到一行命令跑通，需要 Python 3.12 &#43; 英伟达 GPU，没有 GPU 可以用在线 Demo。</description>
     </item>
+    <item>
+      <title>2026 还能白嫖的免费 AI API 汇总：大模型、语音、OCR、生图全都有</title>
+      <link>https://www.0149.cc.cd/posts/free-ai-api-2026/</link>
+      <pubDate>Mon, 29 Jun 2026 20:00:00 +0800</pubDate>
+      <guid>https://www.0149.cc.cd/posts/free-ai-api-2026/</guid>
+      <description>整理了几个目前能直接拿 API Key 接入自己项目的免费 AI 资源，覆盖大模型、语音、OCR、生图，适合做 Agent 工作流和本地自动化。</description>
+    </item>
   </channel>
 </rss>
