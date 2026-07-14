@@ -23,6 +23,13 @@
       <description>Claude Fable 5 解禁！全网炸了，AI 编程天花板再次被掀翻。Claude Fable 5 正式解禁回归，限时 50% 额度福利。全网 12 个高质量实测案例，看完你就知道这个模型有多强。</description>
     </item>
     <item>
+      <title>1B参数碾压7B大模型！MiniCPM5-1B本地部署，128K上下文&#43;深度思考</title>
+      <link>https://www.0149.cc.cd/posts/minicpm5-1b-local-deploy/</link>
+      <pubDate>Mon, 29 Jun 2026 20:00:00 +0800</pubDate>
+      <guid>https://www.0149.cc.cd/posts/minicpm5-1b-local-deploy/</guid>
+      <description>OpenBMB发布MiniCPM5-1B，1B参数干翻7B模型，128K超长上下文，本地2G显存就能跑，本文手把手教你部署。</description>
+    </item>
+    <item>
       <title>4G 显存跑 Claude Mythos 5？Qwythos-9B 突然开源，百万上下文免费用</title>
       <link>https://www.0149.cc.cd/posts/qwythos-9b-claude-distilled/</link>
       <pubDate>Mon, 29 Jun 2026 19:00:00 +0800</pubDate>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>MiniCPM5-1B on 0149 - 千华落影</title>
+    <link>https://www.0149.cc.cd/tags/minicpm5-1b/</link>
+    <description>Recent content in MiniCPM5-1B on 0149 - 千华落影</description>
+    <generator>Hugo</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Mon, 29 Jun 2026 20:00:00 +0800</lastBuildDate>
+    <atom:link href="https://www.0149.cc.cd/tags/minicpm5-1b/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>1B参数碾压7B大模型！MiniCPM5-1B本地部署，128K上下文&#43;深度思考</title>
+      <link>https://www.0149.cc.cd/posts/minicpm5-1b-local-deploy/</link>
+      <pubDate>Mon, 29 Jun 2026 20:00:00 +0800</pubDate>
+      <guid>https://www.0149.cc.cd/posts/minicpm5-1b-local-deploy/</guid>
+      <description>OpenBMB发布MiniCPM5-1B，1B参数干翻7B模型，128K超长上下文，本地2G显存就能跑，本文手把手教你部署。</description>
+    </item>
+  </channel>
+</rss>

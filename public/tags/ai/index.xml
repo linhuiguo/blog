@@ -16,6 +16,13 @@
       <description>Windows 从零配置 OpenClaw 环境并接入商汤日日新（SenseNova）模型的保姆级教程，包含 winget/Git/Node/Python/C&#43;&#43; 依赖检查、OpenClaw 安装、交互式选择器配置 Custom Provider、API Key 获取等完整步骤。</description>
     </item>
     <item>
+      <title>1B参数碾压7B大模型！MiniCPM5-1B本地部署，128K上下文&#43;深度思考</title>
+      <link>https://www.0149.cc.cd/posts/minicpm5-1b-local-deploy/</link>
+      <pubDate>Mon, 29 Jun 2026 20:00:00 +0800</pubDate>
+      <guid>https://www.0149.cc.cd/posts/minicpm5-1b-local-deploy/</guid>
+      <description>OpenBMB发布MiniCPM5-1B，1B参数干翻7B模型，128K超长上下文，本地2G显存就能跑，本文手把手教你部署。</description>
+    </item>
+    <item>
       <title>Qwen3.6 越狱版来了！Windows 本地部署 35B 模型｜llama.cpp 完整教程</title>
       <link>https://www.0149.cc.cd/posts/qwen36-uncensored-windows-llamacpp/</link>
       <pubDate>Mon, 29 Jun 2026 18:00:00 +0800</pubDate>

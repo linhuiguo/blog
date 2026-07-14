@@ -121,6 +121,13 @@
       <description>《苏鹤年》：我写的第一部长篇武侠小说。《苏鹤年》是我写的长篇武侠小说，已上架番茄小说，完全免费阅读。</description>
     </item>
     <item>
+      <title>1B参数碾压7B大模型！MiniCPM5-1B本地部署，128K上下文&#43;深度思考</title>
+      <link>https://www.0149.cc.cd/posts/minicpm5-1b-local-deploy/</link>
+      <pubDate>Mon, 29 Jun 2026 20:00:00 +0800</pubDate>
+      <guid>https://www.0149.cc.cd/posts/minicpm5-1b-local-deploy/</guid>
+      <description>OpenBMB发布MiniCPM5-1B，1B参数干翻7B模型，128K超长上下文，本地2G显存就能跑，本文手把手教你部署。</description>
+    </item>
+    <item>
       <title>4G 显存跑 Claude Mythos 5？Qwythos-9B 突然开源，百万上下文免费用</title>
       <link>https://www.0149.cc.cd/posts/qwythos-9b-claude-distilled/</link>
       <pubDate>Mon, 29 Jun 2026 19:00:00 +0800</pubDate>
@@ -196,6 +203,33 @@
       <pubDate>Mon, 29 Jun 2026 10:00:00 +0800</pubDate>
       <guid>https://www.0149.cc.cd/posts/hermes-auto-deploy-blog/</guid>
       <description>AI 一句话帮你部署博客：Hugo &#43; GitHub &#43; Cloudflare Pages 完整教程。用 AI 代理（Hermes）一句话完成博客搭建：Hugo &#43; GitHub &#43; Cloudflare Pages，从零到上线全流程。</description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://www.0149.cc.cd/posts/claude-code-free-glm52/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://www.0149.cc.cd/posts/claude-code-free-glm52/</guid>
+      <description>&lt;h1 id=&#34;免费白嫖用-cloudflare-ai-gateway-跑-glm-52claude-code-零成本接入&#34;&gt;免费白嫖！用 Cloudflare AI Gateway 跑 GLM-5.2，Claude Code 零成本接入&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;标题：免费白嫖！用 Cloudflare AI Gateway 跑 GLM-5.2，Claude Code 零成本接入&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;想用 Claude Code 但又不想花钱？Cloudflare AI Gateway 上有免费的 GLM-5.2 和大模型，通过 LiteLLM 代理桥接到 Claude Code，完全免费。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;准备工作&#34;&gt;准备工作&lt;/h2&gt;
+&lt;p&gt;先确认你已安装：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Node.js / npm&lt;/strong&gt;（搜&amp;quot;Node.js 安装&amp;quot;按默认路径装即可）&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;uv&lt;/strong&gt;（Python 包管理器，比 pip 快）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;步骤-0安装-claude-code&#34;&gt;步骤 0：安装 Claude Code&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;npm install -g @anthropic-ai/claude-code
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h2 id=&#34;步骤-1单测-glm-52确认-cloudflare-模型能调用&#34;&gt;步骤 1：单测 GLM-5.2（确认 Cloudflare 模型能调用）&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;curl https://api.cloudflare.com/client/v4/accounts/你的ACCOUNT_ID/ai/gateway/ai-chat &lt;span style=&#34;color:#f1fa8c&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt; -H &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Authorization: Bearer 你的API_TOKEN&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f1fa8c&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt; -H &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Content-Type: application/json&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f1fa8c&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt; -d &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;{&amp;#34;messages&amp;#34;:[{&amp;#34;role&amp;#34;:&amp;#34;user&amp;#34;,&amp;#34;content&amp;#34;:&amp;#34;用一句话介绍你自己&amp;#34;}]}&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
+&lt;p&gt;把 &lt;code&gt;你的ACCOUNT_ID&lt;/code&gt; 和 &lt;code&gt;你的API_TOKEN&lt;/code&gt; 替换成你的 Cloudflare 信息。能返回模型回复就说明通了。&lt;/p&gt;</description>
     </item>
     <item>
       <title></title>
